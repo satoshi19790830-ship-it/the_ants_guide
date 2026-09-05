@@ -249,6 +249,7 @@
 </ul>
 </li>
 <li><a href="#current-status">Current status</a></li>
+<li><a href="#sources">Sources</a></li>
 </ul>
 </div>
 
@@ -316,10 +317,7 @@ Example: "Brutal Counter" (Bison Ant) — <strong>130%(+special ant Lv × 0.25%)
 Example: "Combat Speed: 952" breaks down as Evolution Meteorite 140 + Evolution 470 + Neutral Creature 140 + Cell 30 + Gene 50 + Bacteria 50 + Fungus 50 + Troop Modification 2 + VIP 20 = 952</p>
 </blockquote>
 <p>A striking number of systems (evolution, neutral creatures, buildings, cells, genes, bacteria, fungi, troop modification, treasures, VIP, awakening, and more) each add their own bonus to the same stat, and <strong>within a single stat category, they simply sum</strong> — not multiply.</p>
-<div class="source-note">
-Source: breakdown tooltips on our own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code>
-</div>
-
+<p><em>Source: breakdown tooltips on our own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code></em></p>
 <p>However, this farming log isn't clean enough on its own to isolate the ATK-vs-DEF relationship: against the identical opponent with an identical squad, skill activation counts vary randomly (one special ant's damage alone ranged from 9 to 16 activations), so total damage across runs swung from about 3.47B to 6.6B purely from RNG, not from stat differences.</p>
 <h3 id="whats-still-unconfirmed">What's still unconfirmed</h3>
 <p>We did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — we still don't have the minimal unit of data we need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what we need to collect: the <a href="data-collection.html">data submission form</a> now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so we can control for these known variables and isolate the pure ATK-vs-DEF relationship.</p>
@@ -330,15 +328,7 @@ Source: breakdown tooltips on our own account's combat detail screen (measured 2
 <li>A player reported losing a defense with 8M troop power against a raid of 130,000 vs their 100-120 defenders. A reply explained that damage can be "transferred" when the attacker reduces your kill count to zero, hinting at a specific mechanic/item.</li>
 <li>Practical advice: keep resources below the protected threshold, don't station marches outside garrisons.</li>
 </ul>
-<div class="source-note">
-Source: <a href="https://theantsforum.allstarunion.com/t/just-not-understanding-anthill-defense/12780">Official forum thread</a> (official forum, user experience report — not verified data)
-</div>
-
 <p>There are also official/semi-official creator videos specifically about combat math (transcripts still to be done):</p>
-<div class="source-note">
-See: <a href="https://www.youtube.com/watch?v=3Xh7mjK_XcA">understanding combat math and skill damage</a>, <a href="https://www.youtube.com/watch?v=48bErwFVi04">Tom's Guide To Battle Reports</a>, <a href="https://www.youtube.com/watch?v=u3ZODr0IhPw">how to read a battle report and hill tips</a>
-</div>
-
 <h3 id="japanese-community-win-rate-statistics-as-a-research-method">Japanese community: win-rate statistics as a research method</h3>
 <p>The Japanese guide site theants-kokuyo.com uses a method close to ours: instead of guessing a formula, they run 30+ identical matchups and compare win rates.</p>
 <ul>
@@ -346,20 +336,12 @@ See: <a href="https://www.youtube.com/watch?v=3Xh7mjK_XcA">understanding combat 
 <li>Ordering test between two special ants: Formation A 33 battles 20W-13L (60%) vs Formation B 34 battles 18W-16L (52%).</li>
 <li>Early-game special-ant duels: one recorded example dealt 225,154 total damage across only 6 skill activations, showing damage inflation matters more than activation count early on.</li>
 </ul>
-<div class="source-note">
-Sources: <a href="https://theants-kokuyo.com/shield-or-silence2/">Warden vs Ohagito win-rate comparison</a>, <a href="https://theants-kokuyo.com/inspection/">turn-order test</a>, <a href="https://theants-kokuyo.com/power-speed/">early-game duel data</a> (player-measured, high sample size)
-</div>
-
 <h3 id="chinese-community-concrete-percentages">Chinese community: concrete percentages</h3>
 <ul>
 <li>A squad containing a special ant reportedly takes 25% less damage from both normal attacks and skills.</li>
 <li>Special ant skill damage multipliers are commonly described in stepped percentages like "120% / 240% / 480%", likely scaling with skill level.</li>
 <li>One report: ~14M damage dealt to a wild "groundhog" boss in a single hit, reaching zone-war tier 9 after about 14 hits.</li>
 </ul>
-<div class="source-note">
-Source: <a href="https://www.taptap.cn/moment/363595786300163245">TapTap plunder/zone-war guide post</a> (player-measured, Chinese community)
-</div>
-
 <h3 id="common-qualitative-findings">Common qualitative findings</h3>
 <p>No directly contradicting formulas were found — instead, both communities converge on the same qualitative points:</p>
 <ol>
@@ -369,6 +351,14 @@ Source: <a href="https://www.taptap.cn/moment/363595786300163245">TapTap plunder
 </ol>
 <h2 id="current-status">Current status</h2>
 <p><strong>Data collection is in progress.</strong> No formula is published yet — please contribute via the <a href="data-collection.html">data submission form</a> if you have combat logs.</p>
+<h2 id="sources">Sources</h2>
+<p>External sources used for this page. Figures measured on my own account are noted inline where they appear.</p>
+<ul>
+<li>Source: <a href="https://theantsforum.allstarunion.com/t/just-not-understanding-anthill-defense/12780">Official forum thread</a> (official forum, user experience report — not verified data)</li>
+<li>See: <a href="https://www.youtube.com/watch?v=3Xh7mjK_XcA">understanding combat math and skill damage</a>, <a href="https://www.youtube.com/watch?v=48bErwFVi04">Tom's Guide To Battle Reports</a>, <a href="https://www.youtube.com/watch?v=u3ZODr0IhPw">how to read a battle report and hill tips</a></li>
+<li>Sources: <a href="https://theants-kokuyo.com/shield-or-silence2/">Warden vs Ohagito win-rate comparison</a>, <a href="https://theants-kokuyo.com/inspection/">turn-order test</a>, <a href="https://theants-kokuyo.com/power-speed/">early-game duel data</a> (player-measured, high sample size)</li>
+<li>Source: <a href="https://www.taptap.cn/moment/363595786300163245">TapTap plunder/zone-war guide post</a> (player-measured, Chinese community)</li>
+</ul>
     </div>
   </main>
 </div>

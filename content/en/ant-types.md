@@ -3,7 +3,7 @@ title: Ant Types & Stats
 description: Soldier ant categories, special ants, stats, and the evolution system in The Ants.
 category: Guides
 order: 20
-updated: 2026-07-19
+updated: 2026-09-06
 ---
 
 ## The 3 soldier ant types
@@ -13,10 +13,6 @@ updated: 2026-07-19
 - **Carrier Ant** — resource-hauling specialist, can also be built defensively
 
 Each type has 10 tiers (T1-T9 as the core range, with T10/T11 above that), unlocked by leveling the matching barracks.
-
-<div class="source-note">
-Sources: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>, <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a> (community wiki)
-</div>
 
 ## Full hatchery level table (own-account audit, 2026-07-19)
 
@@ -38,9 +34,7 @@ We recorded our own account's hatchery screens from level 1 through 25, plus pro
 
 Damage amp/reduction stays at 0% all the way through level 25, then climbs **+5% per promotion tier**, capping at +50% at promotion 10. This "damage amp / reduction amp" pair is part of the multiplicative layer discussed in [Verifying the Damage Formula](damage-calculation.html).
 
-<div class="source-note">
-Source: our own account's hatchery screens (measured 2026-07-19, all levels recorded)
-</div>
+*Source: our own account's hatchery screens (measured 2026-07-19, all levels recorded)*
 
 Example unlocks per hatchery (at Lv1 / Lv5 / Lv10 / Lv22) — our account is set to Japanese, so these names are our own tentative translations, not confirmed against the official English client:
 
@@ -56,9 +50,7 @@ Example unlocks per hatchery (at Lv1 / Lv5 / Lv10 / Lv22) — our account is set
 - Carrier Ant: DEF +10.0% (up to +20.0%)
 - Guardian Ant: HP +4.0% (up to +8.0%)
 
-<div class="source-note">
-Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>
-</div>
+The August 17, 2026 update added three more awakening parts to the Maze Store: Cyphomyrmex Rimosus, Saharan Silver Ant and Meranoplus Castaneus.
 
 ## Special Ants: rarity and roles
 
@@ -70,10 +62,6 @@ Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening"
 | Low | Green | 2 |
 
 Special ants split into "war type" and "develop type," with war type further divided into melee, ranged, support, military, auxiliary, and gathering roles. Only orange-rank war-type special ants can use the "Star Up" system after unlocking skill 6, pushing skill level past the normal cap of 10.
-
-<div class="source-note">
-Source: <a href="https://zhuanlan.zhihu.com/p/625725052">Zhihu: Special Ant progression guide</a> (Chinese-language player guide)
-</div>
 
 > Tier lists ranking special ants by strength are common on Chinese community sites, but they change frequently with balance updates, so we don't publish a fixed ranking here — check current guide sites for the latest.
 
@@ -87,10 +75,17 @@ Stat screens for special ants leading troops also show a "Special Ant Skill ATK 
 
 There are 21+ "evolution trees," each boosting a specific aspect of your colony (combat, resources, movement speed, etc.). Researching them consumes resources and time.
 
-<div class="source-note">
-Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Evolution_Fungi">Fandom Wiki: Evolution Fungi</a>
-</div>
+The August 3, 2026 update lowered the development resource cost of the Mutation System, Soldiers Reform, the Amp System and Special Ant Evolution, so these are cheaper to push than older guides suggest.
 
 ## How stats affect combat
 
 How ATK and DEF actually translate into damage is not officially documented. We're verifying this with real data — see [Verifying the Damage Formula](damage-calculation.html).
+
+## Sources
+
+External sources used for this page. Figures measured on my own account are noted inline where they appear.
+
+- Sources: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>, <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a> (community wiki)
+- Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>
+- Source: <a href="https://zhuanlan.zhihu.com/p/625725052">Zhihu: Special Ant progression guide</a> (Chinese-language player guide)
+- Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Evolution_Fungi">Fandom Wiki: Evolution Fungi</a>

@@ -3,12 +3,12 @@ title: Ant & Neutral Creature Compendium
 description: Verbatim skill data for The Ants special ants and neutral creatures, transcribed from real account screenshots.
 category: Compendium
 order: 25
-updated: 2026-08-02
+updated: 2026-09-06
 ---
 
 Transcribed word-for-word (via NotebookLM) from screenshots of our own account's skill tooltips, stat screens, and talent tree screens. This is verbatim in-game text, not a summary or paraphrase.
 
-> **This page is a work in progress.** Out of 407+115+179 screenshots on hand, batches 4-11 and part of the 260720 folder (roughly 393 screenshots — 25 special ants + 4 neutral creatures) are covered so far. More will be added as additional screenshots are transcribed. Images shown here are cropped from the stat screen to show just the creature. A few ants (not yet broken through in our account) only have some of their skills documented.
+> **This page is still being built.** So far it covers 25 special ants and 4 neutral creatures. Each one is transcribed by hand from stat screens captured on our own account, so it grows slowly. Images are cropped from the stat screen to show just the creature. Ants we have not broken through yet do not display all their skills in game, so only the known ones are listed.
 
 ## Special Ants
 
@@ -28,9 +28,7 @@ Transcribed word-for-word (via NotebookLM) from screenshots of our own account's
 | Reinforced Beak | Command skill (whole formation with the special ant) | Guardian Ant ATK +30% | Guardian Ant ATK +120% |
 | Valiant Stance | Pre-battle skill (formation with the special ant) | Formation damage dealt +1.5%. Each time a buff (heal/shield etc.) is gained: skill damage +0.5%, skill damage reduction +0.5%, etc. | Damage dealt +25%. Each buff gained: skill damage +8%, skill damage reduction +8%, healing received +8% (stacks up to 4) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch9_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch9_260719.md</code>*
 
 ### Wingless Tiger Beetle (S4 Melee / Carrier)
 
@@ -48,9 +46,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Crimson Joint | Command skill (whole formation with the special ant) | Carrier Ant HP +12.2% | Carrier Ant HP +54% |
 | Phantom Form | Combat skill (whole formation, range 2) | On each successful evasion, 42% chance for all your columns' skill damage +1% (skills requiring a wind-up gain +1% crit instead), 2 turns, stacking | 70% chance for skill damage +15% (or +15% crit), 2 turns, stacking |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM)*
 
 ### Giant Jaw (S5 Ranged / Guardian)
 
@@ -68,9 +64,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Blood-Stained Frame | Command skill (whole formation with the special ant) | Guardian Ant ATK +85% | +90% |
 | Tactical Strike | Combat skill (3 enemy columns, range 5) | 80% chance: 150% (+special ant Lv*1%) damage to all enemy columns. CC'd targets take an extra 150% (+special ant Lv*1%); non-CC'd targets get CC resistance -20% for 2 turns (non-stacking) | 154% (+special ant Lv*1%) damage |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code>*
 
 ### Blue Velvet (S5 Support / Guardian)
 
@@ -88,9 +82,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Blue Velvet Cuticle | Command skill (whole formation with the special ant) | Guardian Ant DEF +85% |
 | Sustained Reinforcement | Pre-battle skill (whole formation, range 5) | Every turn, all your columns' ATK/DEF +20% (stacking, lasts until battle ends). Front row additionally gets damage reduction +3% |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code>*
 
 ### Indigo Velvet (S5 Melee / Shooter)
 
@@ -107,9 +99,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Bristled Armor | Command skill (whole formation with the special ant) | Shooter Ant HP +37.5% |
 | Coordinated Pursuit | Combat skill (1 enemy column, range 5) | On turns 2/4/6/8, shares 82% of own buffs with the back row. When the back row deals damage, 35% chance to deal 203% extra damage to a random enemy column |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code> and <code>batch5_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code> and <code>batch5_260719.md</code>*
 
 ### Azure Crazy (S5 Ranged / Shooter)
 
@@ -127,9 +117,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Indigo-Patterned Abdomen | Command skill (whole formation with the special ant) | Shooter Ant ATK +90% |
 | Purifying Field | Pre-battle skill (formation with the special ant) | Every 4 hits dealt: clear own debuffs, next skill damage dealt +32% |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>*
 
 ### Rainbow Scarlet (S5 Ranged / Carrier)
 
@@ -147,9 +135,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Iridescent Carapace | Command skill (whole formation with the special ant) | Carrier Ant ATK +90% |
 | Bloodthirsty Slaughter | Pre-battle skill (2 enemy columns, range 5) | Own dmg dealt +21%, converts 20% of it into own troop count. At the start of each turn, 2 random enemy columns get dmg taken +10.5% / healing received -22% (1 turn) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>*
 
 ### White Crystal (S4 Ranged / Guardian)
 
@@ -167,9 +153,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Sharpened Mandibles | Command skill (whole formation with the special ant) | Guardian Ant ATK +79.5% |
 | Precision Strike | Combat skill (range 5) | 60% chance: 180% damage to all enemy columns, +10% skill damage rate per hit on a Shooter column (cap 5 stacks) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>*
 
 ### Sly Hunter (S4 Support / Shooter)
 
@@ -187,9 +171,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Hardened Carapace | Command skill (whole formation with the special ant) | Shooter Ant DEF +79.5% |
 | Efficient Support | Pre-battle skill (whole formation, range 4) | From turn 2 onward, all allied columns' first damage dealt each turn +41%, triggers a heal afterward (heal rate 124%) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code> and <code>batch6_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code> and <code>batch6_260719.md</code>*
 
 ### (unnamed — Anselephila pedestris, S4 Support / Carrier)
 
@@ -207,9 +189,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Solid Underbelly | Command skill (whole formation with the special ant) | Carrier Ant DEF +79.5% |
 | Savage Devour | Pre-battle skill (all enemy columns, range 5) | After 1 turn of setup, 80% chance: 255% damage to all enemy columns, heals the allied column with lowest troop count at 455% rate (+25% per enemy debuff) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>*
 
 ### Crematogaster Inflata (S3 Support / Shooter)
 
@@ -227,9 +207,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Boxy Frame | Command skill (whole formation with the special ant) | Shooter Ant DEF +64% |
 | Healing Mucus | Combat skill (formation with the special ant, range 2) | All-column HP +21%; each skill trigger, 50% chance for DEF +27% (stacking) plus a heal (rate 105%) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>*
 
 ### Saharan Silver Ant (S3 Ranged / Shooter)
 
@@ -247,9 +225,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Dazzling Silver Armor | Command skill (whole formation with the special ant) | Shooter Ant ATK +64% |
 | Precision Long Shot | Pre-battle skill (formation with the special ant) | Every turn, 52% chance: own position +1; damage +5.5% per unit of distance to target |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>*
 
 ### Golden Crystal (S1 Ranged / Carrier)
 
@@ -267,9 +243,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Hunter Master | Command skill (whole formation with the special ant) | Carrier Ant ATK +46% |
 | Surprise Strike | Combat skill (3 enemy columns, range 5) | 50% chance: 141% (+special ant Lv*1%) damage to all enemy columns; an extra +50% against Venom-afflicted enemies |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code> and <code>batch7_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code> and <code>batch7_260719.md</code>*
 
 ### Rainbow Chaser (S5 Ranged / Shooter)
 
@@ -287,9 +261,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Resplendent Cuticle | Command skill (whole formation with the special ant) | Shooter Ant ATK +135% |
 | Tail Spine Piercer | Pre-battle skill (formation with the special ant) | Armor penetration +30.5% (ignores target's total DEF), CC resistance +10.5% per turn (stacking) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>*
 
 ### Bison Ant (S4 Melee / Guardian)
 
@@ -307,9 +279,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Golden Limbs | Command skill (whole formation with the special ant) | Guardian Ant HP +34.2% |
 | Original Remedy | Combat skill (whole formation with the special ant, range 5) | On turns 2/4/6: Guardian formation skill damage rate +21%, 51% chance for a heal on dealing damage (heal rate 120%, up to 3 triggers per turn) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>*
 
 ### Rainbow Wings (S4 Melee / Carrier)
 
@@ -327,9 +297,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Winged Reinforcement | Command skill (whole formation with the special ant) | Carrier Ant HP +34.2% |
 | Enchanting Form | Combat skill (formation with the special ant, range 5) | Each hit taken: all-column HP/DEF +5.5% (stacking, cap 10). Taking 5+ hits in one turn applies Weaken (dmg dealt -30%) and Bleed to 2 random enemy columns (exact bleed % unclear in source, needs re-verification) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>*
 
 ### Golden Chaser (Kinbane Ant, S5 Melee / Carrier)
 
@@ -344,9 +312,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Golden Frame | Command skill (whole formation with the special ant) | Carrier Ant HP +12.5% → 60% (Max Lv) |
 | Moment of Leap | Pre-battle skill (whole formation, range 5) | All-column debuff damage dealt +2% → 30% (Max Lv), damage taken from debuffed enemies -2% → 30% (Max Lv) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM + direct verification). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code> and <code>batch8_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM + direct verification). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code> and <code>batch8_260719.md</code>*
 
 ### Spotted Hunter (Azure Striped Mosquito Ant, S6 Support / Shooter)
 
@@ -364,9 +330,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, transcribe
 | Blue-Spotted Camouflage | Command skill (whole formation with the special ant) | Shooter Ant DEF +55% → 150% (Max Lv) |
 | Plundering Raid | Combat skill (1 enemy column, range 5) | 70% → 80% (Max Lv) chance: 180% → 300% (+special ant Lv*1%) damage to a random enemy column, steals 4.4% → 10% of its skill trigger chance and grants it to your back row (1 turn), also clears back row CC/debuffs |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08-01, confirmed directly via Read tool / transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch8_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08-01, confirmed directly via Read tool / transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch8_260719.md</code>*
 
 ### Brute Ant (S6 Melee / Guardian)
 
@@ -384,9 +348,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08
 | Solid Behemoth | Command skill (whole formation with the special ant) | Guardian Ant HP +14.7% → 66% (Max Lv) |
 | Nature's Remedy | Combat skill (whole formation, range 5) | 56% → 70% (Max Lv) chance: all Guardian columns' healing received +5% → 7% (stacking), heals all allied columns (heal rate 67% → 180% Max Lv). If a healed column's troops are at or above their starting count, it deals 210% → 380% (Max Lv) damage to a random enemy column |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08-01, confirmed directly via Read tool / transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch8_260719.md</code>
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08-01, confirmed directly via Read tool / transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch8_260719.md</code>*
 
 ### Spotted Velvet (S6 Support / Carrier)
 
@@ -404,9 +366,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08
 | Colorful Fuzz | Command skill (whole formation with the special ant) | Carrier Ant DEF +55%. Max Lv: +150% |
 | Greedy Absorption | Combat skill (all columns in battle, range 5) | At the end of turns 2, 4, and 6, total damage dealt by all columns on both sides is tallied. The enemy column with the lowest troop count takes 27% of that total as damage; the allied column with the lowest troop count is healed for 0.5% of that total. Max Lv: 55% damage, 10% healing |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, verified directly via image review)*
 
 ### Honey Pot Ant (S5 Ranged / Carrier)
 
@@ -425,9 +385,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, verified d
 | Colony Charisma | Command skill (formation with the special ant) | Carrier Ant ATK/DEF +1.8%, combat speed +15, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, combat speed +60, HP +18%, deployment cap +170%, normal attack damage +75% |
 | Crystal Venom Gland | Command skill (whole formation with the special ant) | Carrier Ant ATK +40%. Max Lv: +135% |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-19, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-19, verified directly via image review)*
 
 ### Red-Jaw Trap-Jaw Ant (S6 Melee / Guardian)
 
@@ -445,9 +403,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-19, verified d
 | Sharp Red Jaws | Command skill (whole formation with the special ant) | Guardian Ant HP +14.7%. Max Lv: +66% |
 | Reckless Onslaught | Combat skill (all enemy columns, range 5) | On turns 3 and 6, 90% chance: massive 150% (+special ant Lv×1%) damage to a surviving enemy column. Each time it attacks an enemy column, its own column takes 10% of that damage. Max Lv: 100% chance, 700% (+special ant Lv×1%) damage |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)*
 
 ### Fungus Farmer Ant (S6 Support / Guardian)
 
@@ -465,9 +421,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-20, verified d
 | Brown-Patterned Carapace | Command skill (whole formation with the special ant) | Guardian Ant DEF +55%. Max Lv: +150% |
 | Leader's Protection | Pre-battle skill (all enemy columns, range 5) | On turns 2, 4, 6, and 8, consumes all stored damage and deals 25% of that stored value to all enemy columns, healing all allied columns for 6% of the damage dealt. Max Lv: 90% of stored value, 25% healing |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)*
 
 ### Striped Velvet Ant (S6 Support / Shooter)
 
@@ -485,9 +439,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-20, verified d
 | Flexible Wingtips | Command skill (whole formation with the special ant) | Shooter Ant DEF +55%. Max Lv: +150% |
 | Indomitable Heart | Combat skill (1 random allied column, range 5) | 65% chance: heals a random allied column (heal rate 105%), 35% chance to clear its debuffs, after which the healed column deals 90% damage to all enemy columns. Max Lv: 70% chance, heal rate 230%, 180% damage |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)*
 
 ### Twin-Spine Ant (S6 Ranged / Shooter)
 
@@ -505,9 +457,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-20, verified d
 | Slender Legs | Command skill (whole formation with the special ant) | Shooter Ant ATK +55%. Max Lv: +150% |
 | Brutal Power | Pre-battle skill (formation with the special ant) | During battle, own column's normal-attack and skill crit rate +16%, crit damage +26%. Every 10% of troops lost adds an additional +3% crit rate (stacking, lasts until battle end). Max Lv: crit rate +30%, crit damage +40%, +5% per 10% troops lost |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)*
 
 ### Amber Flower Ant (S6 Melee / Carrier)
 
@@ -525,9 +475,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-20, verified d
 | Amber Tail | Command skill (whole formation with the special ant) | Carrier Ant DEF +55%. Max Lv: +150% |
 | Potential Unleashed | Combat skill (whole formation with the special ant, range 5) | After 2 turns of preparation, 80% chance: heals all allied columns (heal rate 210%), reduces the prep time of allied columns' prep-required skills by 1 turn, and prep-free skills' trigger chance +5%. Max Lv: 85% chance, heal rate 360% |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)*
 
 ### Ladybug Ant (S6 Ranged / Carrier)
 
@@ -545,9 +493,7 @@ Source: our own account's skill tooltip screens (measured 2026-07-20, verified d
 | Ladybug Camouflage | Command skill (whole formation with the special ant) | Carrier Ant ATK +55%. Max Lv: +150% |
 | High Ground Dominance | Combat skill (all enemy columns, range 5) | 1 turn of preparation, 52% chance: 165% damage to all enemy columns. If this column's skill-attack stat exceeds the target's, deals an extra 10% as true damage (+4% per 5% it exceeds by, max 50%). Max Lv: 80% chance, 380% damage, extra 15% true damage (max 55%) |
 
-<div class="source-note">
-Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
-</div>
+*Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)*
 
 ## Neutral Creatures
 
@@ -581,9 +527,7 @@ Talent nodes confirmed on this account (partial list, not the full tree):
 | Evolution of Life | 0/3 | All-column HP +4.0% |
 | Unbreakable Will | 0/4 | If any column is CC'd, damage taken -3.0% |
 
-<div class="source-note">
-Source: our own account's stat and talent tree screens (measured 2026-07-20, verified directly via image review)
-</div>
+*Source: our own account's stat and talent tree screens (measured 2026-07-20, verified directly via image review)*
 
 ### Glazed Mantis
 
@@ -624,9 +568,7 @@ Talent nodes confirmed on this account (partial list, not the full tree):
 | Battle Trick | 0/4 | All-column normal attack damage +2.25%, skill damage +2.25% |
 | Evolution of Life | 0/4 | Soldier ant HP +4.0% |
 
-<div class="source-note">
-Source: our own account's talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch9_260719.md</code>
-</div>
+*Source: our own account's talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch9_260719.md</code>*
 
 ### Sapphire Beetle
 
@@ -660,9 +602,7 @@ Talent branch "Insight" (nodes confirmed on this account, not the full tree):
 | Attack Boost | 0/4 | All-column ATK +7.0% |
 | Evolution of Life | 0/4 | All-column HP +5.5% |
 
-<div class="source-note">
-Source: our own account's stat and talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch10_260719.md</code>
-</div>
+*Source: our own account's stat and talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch10_260719.md</code>*
 
 ### Thorny Scorpion
 
@@ -697,6 +637,5 @@ Talent branch "Cruelty" (nodes confirmed on this account, not the full tree):
 | Formic Strike | 0/6 | All-column extra skill damage +1.0% |
 | Hardened Exoskeleton | 0/6 | All-column skill damage taken -1.5% |
 
-<div class="source-note">
-Source: our own account's stat and talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch11_260719.md</code>; full transcript stored in the NotebookLM notebook "The Ants 攻略調査"
-</div>
+*Source: our own account's stat and talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch11_260719.md</code>; full transcript stored in the NotebookLM notebook "The Ants 攻略調査"*
+

@@ -3,7 +3,7 @@ title: アライアンスとPvP
 description: The Ants のアライアンス加入の重要性、掠奪・最強戦域戦などPvPの基礎知識。
 category: 攻略
 order: 21
-updated: 2026-07-19
+updated: 2026-09-06
 ---
 
 ## アライアンスへの加入
@@ -14,10 +14,6 @@ updated: 2026-07-19
 
 アライアンスメンバー30人以上が必要な大型イベント。採取班と戦闘班に分かれ、戦闘班が拠点を制圧すると5分間の採取ボーナスが発生します。個人ポイント20,000ごとに「生命エッセンス」（戦闘速度強化に必須の資源）を1個獲得。遠征に勝利すると3個、敗北しても2個獲得でき、途中退席でも報酬がもらえる設計になっています。
 
-<div class="source-note">
-出典: <a href="https://theants-kokuyo.com/alliance-expedition/">ザ・アンツ攻略Wiki「アライアンス遠征解説」</a>
-</div>
-
 ## 対人戦（PvP）
 
 ### 掠奪（Plunder）
@@ -26,19 +22,27 @@ updated: 2026-07-19
 
 実測値の一例として、掠奪2時間で肉・植物・湿土3,500万〜5,000万、砂500万を獲得できたという中国コミュニティの報告があります。
 
-<div class="source-note">
-出典: <a href="https://theantsforum.allstarunion.com/t/how-to-protect-resources/16071">公式フォーラム「How to protect resources」</a>／<a href="https://www.taptap.cn/moment/363595786300163245">TapTap掠奪攻略投稿</a>
-</div>
-
 ### 最強戦域戦（Strongest Warzone）
 
 国家（サーバー）対国家の得点制イベントです。シーズンは準備1週間＋本戦2週間の合計3週間。建築レベルアップ、兵隊アリ孵化、資源採集などの日替わりタスクで得点を稼ぎます。準備・本戦とも最初の6日は共通タスクで、最終日は「グラウンドホッグ討伐」か「戦域遠征」のいずれかになります。
 
-<div class="source-note">
-出典: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Strongest_Warzone">Fandom Wiki: Strongest Warzone</a>
-</div>
-
 > 一部の日本語攻略情報で「猛毒菌の群れ」「真菌大戦」といった名称のイベントが言及されていますが、今回の調査では公式イベント名との対応関係を確認しきれませんでした。詳細が分かり次第このページに反映します。
+
+## 変異荒野（Mutated Barren）シーズン
+
+サーバーをまたぐ大型のシーズン制PvPコンテンツです。2026年9月5日に大きな仕様変更が発表され、
+9月7日以降に受付が始まるイベントから適用されています。主な変更点は次の通りです。
+
+- 宣戦布告できるのは保護期間前の4時間枠のみ。戦闘時間が終わると進行中の布告は自動でキャンセルされる
+- 宣戦の準備時間が10分に短縮
+- 1アライアンスが宣戦できる要塞は1つ、1キャンプが狙える敵キャンプ要塞も1つまで
+- 要塞は内部に部隊を駐留させても耐久が回復しなくなった
+- キャンプ前哨基地が恒久保護になり、保護範囲も拡大
+- **休戦日（Truce Day）が新設**。チャンピオンポイント第2段階の開始から2週間、毎週水曜と土曜（UTC基準）は要塞攻撃とアライアンスタワー建設ができない
+- 集結への自動参加が最大1分30秒以内に行われるようになった（手動参加を優先する10秒の遅延あり）。これは全シーズン共通の変更
+
+変更前の仕様で書かれた攻略情報がまだ多く残っているので、シーズンに参加する前に
+[最新情報](news.html) で現在の仕様を確認することをおすすめします。
 
 ## 定期タスクのローテーション（曜日別テーマの例）
 
@@ -54,6 +58,11 @@ updated: 2026-07-19
 | 土 | 複合タスク |
 | 日 | 中立生物の孵化・強化 |
 
-<div class="source-note">
-出典: <a href="https://lilygamelife.com/the-ants-event-calendar/">lilygamelife.com イベントカレンダー</a>
-</div>
+## 参考にした情報源
+
+このページを書くのに使った外部の情報源です。自分のアカウントで実測した分は、本文中のその場所に書いています。
+
+- <a href="https://theants-kokuyo.com/alliance-expedition/">ザ・アンツ攻略Wiki「アライアンス遠征解説」</a>
+- <a href="https://theantsforum.allstarunion.com/t/how-to-protect-resources/16071">公式フォーラム「How to protect resources」</a>／<a href="https://www.taptap.cn/moment/363595786300163245">TapTap掠奪攻略投稿</a>
+- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Strongest_Warzone">Fandom Wiki: Strongest Warzone</a>
+- <a href="https://lilygamelife.com/the-ants-event-calendar/">lilygamelife.com イベントカレンダー</a>

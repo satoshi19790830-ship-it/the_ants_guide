@@ -3,7 +3,7 @@ title: 蟻の種類とステータス
 description: The Ants の兵蟻・特化アリの分類、ステータス、進化システムの基礎知識。
 category: 攻略
 order: 20
-updated: 2026-07-19
+updated: 2026-09-06
 ---
 
 ## 兵蟻（通常兵隊アリ）の3タイプ
@@ -13,10 +13,6 @@ updated: 2026-07-19
 - **キャリアーアリ (Carrier Ant)** — 資源運搬特化。防御寄りの強化構成も可能
 
 各タイプは10段階のTier（T1〜T9が基本、上位にT10/T11も存在）に分かれ、対応する兵舎のレベルを上げることで解放されます。
-
-<div class="source-note">
-出典: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>／<a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a>（コミュニティWiki）
-</div>
 
 ## 兵蟻孵化地 全レベルテーブル（実アカウント調査、2026-07-19）
 
@@ -38,9 +34,7 @@ updated: 2026-07-19
 
 Lv25まではダメージ増幅・軽減幅は常に0%で、**昇格1段階ごとに+5%ずつ**乗っていき、昇格10で上限の+50%に達します。この「ダメージ増幅／軽減増幅」は[ダメージ計算を検証する](damage-calculation.html)で扱っている最終ダメージの掛け算レイヤーの一部です。
 
-<div class="source-note">
-出典: 自分のアカウントの孵化地画面（2026-07-19実測、全レベル記録済み）
-</div>
+*自分のアカウントの孵化地画面（2026-07-19実測、全レベル記録済み）*
 
 各兵舎で解放される兵種の例（Lv1／Lv5／Lv10／Lv22時点）:
 
@@ -56,9 +50,7 @@ Lv25まではダメージ増幅・軽減幅は常に0%で、**昇格1段階ご�
 - キャリアーアリ: 防御力+10.0%（上位で+20.0%）
 - ガーディアンアリ: 体力+4.0%（上位で+8.0%）
 
-<div class="source-note">
-出典: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>
-</div>
+2026年8月17日の更新で、迷宮ストアに覚醒パーツが3種追加されました（Cyphomyrmex Rimosus／Saharan Silver Ant／Meranoplus Castaneus。日本語版での名称は未確認のため英語表記のままにしています）。
 
 ## 特化アリ（Special Ants）のレア度・分類
 
@@ -73,10 +65,6 @@ Lv25まではダメージ増幅・軽減幅は常に0%で、**昇格1段階ご�
 
 系統は大きく「戦闘型」「開発型」に分かれ、戦闘型はさらに近衛・射手・支援・軍事・補助・採集に細分されます。橙ランクの戦闘型特化アリのみ、スキル6解放後に「スターアップ」システムでスキルレベル上限（通常10）をさらに超えて強化できます。
 
-<div class="source-note">
-出典: <a href="https://zhuanlan.zhihu.com/p/625725052">Zhihu「小小蚁国-特化蚁养成」</a>（中国語プレイヤー攻略）
-</div>
-
 > 特化アリの強さランキング（Tier表）は中国コミュニティサイトなどで頻繁に更新されており、アップデートのたびに変動するため、このサイトでは固定のランキングとしては掲載しません。最新のTier表は各攻略サイトを都度確認することをおすすめします。
 
 ### スキルダメージは「基礎%（+特化アリLv×係数%）」で決まる
@@ -89,10 +77,17 @@ Lv25まではダメージ増幅・軽減幅は常に0%で、**昇格1段階ご�
 
 21種類以上の「進化ツリー」があり、それぞれコロニーの特定の側面（戦闘・資源・移動速度等）を強化します。資源と時間を消費して研究する形式です。
 
-<div class="source-note">
-出典: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Evolution_Fungi">Fandom Wiki: Evolution Fungi</a>
-</div>
+2026年8月3日の更新で、変異システム・兵隊アリ改造・増幅システム・特化アリ進化の開発に必要な資源コストが引き下げられました。古い攻略記事に書かれている必要量より安く済みます。
 
 ## ステータスと戦闘結果の関係について
 
 攻撃力・防御力が実際のダメージにどう影響するかは公式に説明されていません。[ダメージ計算を検証する](damage-calculation.html) で実データをもとに検証しています。
+
+## 参考にした情報源
+
+このページを書くのに使った外部の情報源です。自分のアカウントで実測した分は、本文中のその場所に書いています。
+
+- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>／<a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a>（コミュニティWiki）
+- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>
+- <a href="https://zhuanlan.zhihu.com/p/625725052">Zhihu「小小蚁国-特化蚁养成」</a>（中国語プレイヤー攻略）
+- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Evolution_Fungi">Fandom Wiki: Evolution Fungi</a>

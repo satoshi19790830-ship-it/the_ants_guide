@@ -249,6 +249,7 @@
 </ul>
 </li>
 <li><a href="#_8">現時点の状況</a></li>
+<li><a href="#_9">参考にした情報源</a></li>
 </ul>
 </div>
 
@@ -316,10 +317,7 @@
 例:「戦闘スピード：952」の内訳 — 進化隕石140 + 進化470 + 中立生物140 + 細胞30 + 遺伝子50 + 細菌50 + 真菌50 + 兵種改造2 + VIP20 = 952</p>
 </blockquote>
 <p>進化・中立生物・建築・細胞・遺伝子・細菌・真菌・兵種改造・宝物・VIP・覚醒など、非常に多くのシステムがそれぞれ同じステータスにボーナスを足しており、<strong>同一ステータス内では単純な足し算で合計されている</strong>ことが分かりました（掛け算ではない）。</p>
-<div class="source-note">
-出典: 自分のアカウントの戦闘詳細画面の内訳ツールチップ（2026-07-19実測）。生データは <code>data/screenshot_extraction_260719-2.md</code> にアーカイブ
-</div>
-
+<p><em>自分のアカウントの戦闘詳細画面の内訳ツールチップ（2026-07-19実測）。生データは <code>data/screenshot_extraction_260719-2.md</code> にアーカイブ</em></p>
 <p>ただしこの周回ログは、同じ部隊構成・同じ相手に対して<strong>スキル発動回数がランダムに変動する</strong>ため（幻彩ハネアリのスキルダメージだけで9〜16回の発動幅があり、同条件でも総ダメージが約34.7億〜66.0億まで変動）、単体では「1回のスキル発動でATKとDEFがどう掛け合わさるか」を分離するには情報が不足しています。</p>
 <h3 id="_3">まだ確定していないこと</h3>
 <p>実際の戦闘ログは確認できましたが、いずれも複数ユニット・複数回のスキル発動を合算した「周回トータル」の数値であり、「1回のスキル発動・自分のATK・相手のDEF・その1発の実ダメージ」という最小単位のデータはまだ揃っていません。そのため「攻撃力と防御力がどう掛け合わさってダメージになるか」という基礎関係式そのものは、まだ確定できていません。ただし発見1・2・4により、集めるべきデータ項目がより明確になりました。<a href="data-collection.html">データ提供フォーム</a>では、スキル名・そのLvと、自分の「ダメージ増幅%」・相手の「ダメージ軽減増幅%」も併せて集めることで、これらの既知の変数を差し引いた上でATK対DEFの純粋な関係を分離して検証できるようにしています。</p>
@@ -330,15 +328,7 @@
 <li>兵力800万でも守れなかった投稿者に対し、「相手が"あなたのキルを0にした"ことで被害が転送された」という運営側の説明（キル数を0にする特殊な戦術・アイテムが存在する可能性を示唆）</li>
 <li>資源は「保護レベル以下」に維持する、駐屯地外へ行軍を配置しない、といった実践的な助言</li>
 </ul>
-<div class="source-note">
-出典: <a href="https://theantsforum.allstarunion.com/t/just-not-understanding-anthill-defense/12780">公式フォーラム "Just not understanding anthill defense"</a>（信頼度: 公式フォーラム上のユーザー体験談。検証データではない）
-</div>
-
 <p>また、公式・準公式クリエイターによる戦闘計算解説動画も存在します（字幕の書き起こしは今後の課題）。</p>
-<div class="source-note">
-参考動画: <a href="https://www.youtube.com/watch?v=3Xh7mjK_XcA">understanding combat math and skill damage</a>／<a href="https://www.youtube.com/watch?v=48bErwFVi04">Tom's Guide To Battle Reports</a>／<a href="https://www.youtube.com/watch?v=u3ZODr0IhPw">how to read a battle report and hill tips</a>
-</div>
-
 <h3 id="_5">日本語コミュニティ: 大量対戦の勝率統計というアプローチ</h3>
 <p>日本語攻略サイト「ザ・アンツ攻略Wiki」(theants-kokuyo.com) は、計算式そのものではなく、<strong>同一条件での対戦を30回以上繰り返して勝率を比較する</strong>という実証的な手法を採っています。このサイトの検証方針は、本プロジェクトの実データ収集アプローチと考え方が近く、参考にしています。</p>
 <ul>
@@ -346,20 +336,12 @@
 <li>ハカホリ・ゴルクリの配置順検証: 配置パターンA 33戦20勝13敗（60%）／パターンB 34戦18勝16敗（52%）</li>
 <li>序盤の特化アリ対決では、スキル発動6回で撃破225,154に達した実測例（スキル発動回数以上に火力インフレの影響が大きいことを示す数値）</li>
 </ul>
-<div class="source-note">
-出典: <a href="https://theants-kokuyo.com/shield-or-silence2/">前列ウォーデンとオオアギトの戦績比較</a>／<a href="https://theants-kokuyo.com/inspection/">ハカホリ・ゴルクリの行動順検証</a>／<a href="https://theants-kokuyo.com/power-speed/">ステータスの低い序盤は短期決戦なのか</a>（信頼度: プレイヤー実測。試行回数が多く再現性のあるデータ）
-</div>
-
 <h3 id="_6">中国語コミュニティ: 具体的な軽減率・倍率の言及</h3>
 <ul>
 <li>「特化アリが所属する小隊は、通常攻撃・スキルダメージが25%軽減される」という具体的な軽減率の言及</li>
 <li>特化アリのスキルダメージ倍率は「120%/240%/480%」のように段階的なパーセンテージで語られることが多い（技能レベルによる倍率上昇と推測）</li>
 <li>野生生物（土拨鼠=グラウンドホッグ）への直接攻撃で約1,400万ダメージ、14回程度で区域戦9档到達、という実測値の報告</li>
 </ul>
-<div class="source-note">
-出典: <a href="https://www.taptap.cn/moment/363595786300163245">TapTap 掠奪・区域戦攻略投稿</a>（信頼度: プレイヤー実測、中国語コミュニティ）
-</div>
-
 <h3 id="_7">共通する定性的な知見</h3>
 <p>対立する数式は見つかりませんでしたが、日中両コミュニティで共通して語られる点があります。</p>
 <ol>
@@ -369,6 +351,14 @@
 </ol>
 <h2 id="_8">現時点の状況</h2>
 <p><strong>データ収集中です。</strong> まだ十分な実測データが集まっていないため、暫定式は未掲載です。戦闘ログをお持ちの方はぜひ <a href="data-collection.html">データ提供フォーム</a> からご協力ください。</p>
+<h2 id="_9">参考にした情報源</h2>
+<p>このページを書くのに使った外部の情報源です。自分のアカウントで実測した分は、本文中のその場所に書いています。</p>
+<ul>
+<li><a href="https://theantsforum.allstarunion.com/t/just-not-understanding-anthill-defense/12780">公式フォーラム "Just not understanding anthill defense"</a>（信頼度: 公式フォーラム上のユーザー体験談。検証データではない）</li>
+<li><a href="https://www.youtube.com/watch?v=3Xh7mjK_XcA">understanding combat math and skill damage</a>／<a href="https://www.youtube.com/watch?v=48bErwFVi04">Tom's Guide To Battle Reports</a>／<a href="https://www.youtube.com/watch?v=u3ZODr0IhPw">how to read a battle report and hill tips</a></li>
+<li><a href="https://theants-kokuyo.com/shield-or-silence2/">前列ウォーデンとオオアギトの戦績比較</a>／<a href="https://theants-kokuyo.com/inspection/">ハカホリ・ゴルクリの行動順検証</a>／<a href="https://theants-kokuyo.com/power-speed/">ステータスの低い序盤は短期決戦なのか</a>（信頼度: プレイヤー実測。試行回数が多く再現性のあるデータ）</li>
+<li><a href="https://www.taptap.cn/moment/363595786300163245">TapTap 掠奪・区域戦攻略投稿</a>（信頼度: プレイヤー実測、中国語コミュニティ）</li>
+</ul>
     </div>
   </main>
 </div>

@@ -3,7 +3,7 @@ title: 序盤攻略ガイド
 description: The Ants 序盤の進め方。チュートリアル攻略と女王アリレベル上げの優先順位。
 category: 攻略
 order: 10
-updated: 2026-07-19
+updated: 2026-09-06
 ---
 
 ## チュートリアルについて
@@ -13,10 +13,6 @@ updated: 2026-07-19
 ## 最優先は女王アリのレベル上げ
 
 The Ants は育成ゲームとしての側面が強く、**女王アリのレベルを最優先で上げる**のがセオリーとされています。「アリ塚レベル＝女王レベル」であり、ほとんどの建物は女王レベルを超えてアップグレードできません（ストアで購入した建物も例外ではありません）。目安としてレベル25まで上げられると、その後の巣の運営がかなり楽になります。
-
-<div class="source-note">
-出典: <a href="https://simplegameguide.com/queen-level-upgrade-requirements/">simplegameguide.com: Queen Level Upgrade Requirements</a>
-</div>
 
 ## 女王アリ 全レベルテーブル（実アカウント調査、2026-07-19）
 
@@ -33,13 +29,13 @@ The Ants は育成ゲームとしての側面が強く、**女王アリのレベ
 | 17 | 8.6K | 550.0K | 細菌システム、女王アリ対決 |
 | 18 | 10.0K | 600.0K | 働きアリ宝物、働きアリ探索 |
 | 19 | 12.0K | 650.0K | 真菌システム、勲章システム |
-| 22 | 23.1K | 800.0K | 兵種改造システム |
+| 22 | 23.1K | 800.0K | 兵種改造システム、部隊編成5・6 |
 | 25 | 49.4K | 1.0M | 中立生物狩場、特化アリ異変 |
 | 勲章1〜10 | 56.8K〜123.5K | 1.0M固定 | （Lv25到達後は応急植物の必要量が頭打ちになり、戦闘力のみ伸びる） |
 
-<div class="source-note">
-出典: 自分のアカウントの女王アリ詳細画面（2026-07-19実測、Lv1〜勲章10まで全レベル記録）
-</div>
+*自分のアカウントの女王アリ詳細画面（2026-07-19実測、Lv1〜勲章10まで全レベル記録）*
+
+Lv22の欄にある部隊編成5・6は、2026年7月20日の更新で追加されたものです。それ以前は編成4つまでしか使えませんでした。
 
 ## その他の重要な節目（マイルストーン）
 
@@ -50,10 +46,6 @@ The Ants は育成ゲームとしての側面が強く、**女王アリのレベ
 | 兵蟻生息地Lv22 | T8兵蟻が解放 |
 | 女王/兵蟻生息地Lv23 | 区域戦で金の卵1個入手可能に |
 | 女王/兵蟻生息地Lv25 | T9兵蟻が解放、区域戦で金の卵3個入手可能に |
-
-<div class="source-note">
-出典: <a href="https://pillarofgaming.com/the-ants-underground-kingdom-queen-upgrade-requirements/">pillarofgaming.com: Queen Upgrade Requirements</a>／中国TapTapコミュニティの掠奪・区域戦攻略投稿
-</div>
 
 女王アリレベル8で自動的にシールドが切れる点は特に重要です。シールド期間中に資源を防衛できる体制（アライアンス加入・資源の使い切り等）を整えておくのがおすすめです。
 
@@ -67,9 +59,7 @@ The Ants は育成ゲームとしての側面が強く、**女王アリのレベ
 | 略奪 | 戦利品貯蔵庫 | 侵入時の兵隊アリ荷重+150%／死亡数の40%を負傷に変換／傷兵治療スピード+100% | 植物・肉・湿土・砂の産出-30%／甘露産出-30%／採取時の兵隊アリ荷重-50% |
 | 牧畜 | 資源輸送通路 | 甘露産出+50%／兵隊アリ食物消耗-30%／旅虫生息地の商品値段-5% | 侵入される時、略奪される資源量+100%／傷兵治療スピード-50%（3つ目の欠点は未確認） |
 
-<div class="source-note">
-出典: 自分のアカウントの習性選択画面（2026-07-19実測、栽培・略奪は当日、牧畜は2026-07-26追加確認）
-</div>
+*自分のアカウントの習性選択画面（2026-07-19実測、栽培・略奪は当日、牧畜は2026-07-26追加確認）*
 
 ## リセマラについて
 
@@ -92,6 +82,10 @@ The Ants は育成ゲームとしての側面が強く、**女王アリのレベ
 - 防衛体制を整えないままシールドが切れてしまう
 - 定期イベントに参加しない（デイリータスク・アライアンス遠征など、コツコツ系の報酬を取りこぼす）
 
-<div class="source-note">
-参考: naoyuki-products.xyz、sutekilifekoko.com、theants-kokuyo.com、milktea-chocolate.com、antsgame.gamewiki.jp、mrguider.org の各攻略記事（2026年7月時点の調査より）
-</div>
+## 参考にした情報源
+
+このページを書くのに使った外部の情報源です。自分のアカウントで実測した分は、本文中のその場所に書いています。
+
+- <a href="https://simplegameguide.com/queen-level-upgrade-requirements/">simplegameguide.com: Queen Level Upgrade Requirements</a>
+- <a href="https://pillarofgaming.com/the-ants-underground-kingdom-queen-upgrade-requirements/">pillarofgaming.com: Queen Upgrade Requirements</a>／中国TapTapコミュニティの掠奪・区域戦攻略投稿
+- naoyuki-products.xyz、sutekilifekoko.com、theants-kokuyo.com、milktea-chocolate.com、antsgame.gamewiki.jp、mrguider.org の各攻略記事（2026年7月時点の調査より）
