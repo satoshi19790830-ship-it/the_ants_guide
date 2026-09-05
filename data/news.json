@@ -1,0 +1,306 @@
+{
+  "source": "https://theantsforum.allstarunion.com",
+  "fetched_at": "2026-09-05T23:36:56+00:00",
+  "items": [
+    {
+      "id": "56398",
+      "date": "2026-09-05",
+      "title_en": "S6 Mutated Barren Season Major Adjustment Announcement",
+      "url": "https://theantsforum.allstarunion.com/t/s6-mutated-barren-season-major-adjustment-announcement/56398",
+      "category": "Information",
+      "title_ja": "S6「変異荒野」シーズンの大型調整",
+      "summary_ja": "9月7日以降に受付が始まるイベントから適用される、シーズンの大きな仕様変更。\n\n**フルーツ争奪（Fruit Scramble）**\n\n- 宣戦布告ができるのは保護期間前の4時間枠のみになり、戦闘時間の終了時に進行中の布告は自動でキャンセルされる\n- 宣戦の準備時間が10分に短縮\n- 1アライアンスが宣戦できる要塞は1つまで、1キャンプが狙える敵キャンプ要塞も1つまで\n- キャンプ前哨基地が恒久保護になり、保護範囲も拡大\n- 要塞は内部に部隊を駐留させても耐久が回復しなくなった\n- 自陣のキャンプ要塞に駐留して戦闘に参加しなかった部隊は、スタミナが戻る\n\n**休戦日（Truce Day）の新設**\n\nチャンピオンポイント第2段階の開始から2週間、毎週水曜と土曜（UTC基準）が休戦日になる。この日は要塞への攻撃とアライアンスタワーの建設ができない。シーズンスタミナ・復活菌・アライアンス粘土は回復しないが、代わりに期間限定のコロニー宝探しが開放される。\n\n**集結の自動参加（全シーズン共通）**\n\n距離条件を満たしていれば、最大1分30秒以内に自動で集結に参加するようになった。手動参加を優先するため10秒の遅延が入る。宣戦布告エリアでの参加も改善。\n\nこのほか、公平性のためマップの地形と要塞配置が再調整されている。",
+      "summary_en": "A large set of season changes, applied to events whose sign-up period starts on or after September 7.\n\n**Fruit Scramble**\n\n- War declarations are limited to a 4-hour window before the Protection Period, and active declarations are cancelled when battle time ends\n- The war declaration preparation period is cut to 10 minutes\n- Each alliance may declare war on only one fortress, and each camp may target only one enemy camp fortress\n- Camp outposts gain permanent protection and a wider protected area\n- Fortresses no longer recover durability while troops are stationed inside\n- Troops stationed in your own camp fortress get their stamina back if they never fought\n\n**New: Truce Day**\n\nFor two weeks after Champion Points Stage II begins, Wednesdays and Saturdays (UTC) are truce days. Attacking fortresses and building alliance towers are both blocked. Season stamina, revival fungi and alliance clay do not recover, but a limited-time Colony Treasure Hunt opens instead.\n\n**Auto-join rallies (all seasons)**\n\nTroops now join a rally within 1 minute 30 seconds at most when the distance requirement is met, with a 10-second delay so manual joiners take priority. Joining inside war declaration areas was also improved.\n\nMap terrain and fortress positions were rebalanced for fairness."
+    },
+    {
+      "id": "56384",
+      "date": "2026-08-31",
+      "title_en": "Join the guardian adventure with The Ants and Gamera!",
+      "url": "https://theantsforum.allstarunion.com/t/join-the-guardian-adventure-with-the-ants-and-gamera/56384",
+      "category": "News and Events",
+      "title_ja": "The Ants × ガメラ コラボ開催のお知らせ",
+      "summary_ja": "ガメラとのコラボ開催を告知する投稿。内容の詳細は同日公開の「Explore the Mysterious Continent」を参照。",
+      "summary_en": "The announcement post for the Gamera collaboration. See the same-day \"Explore the Mysterious Continent\" post for the actual event details."
+    },
+    {
+      "id": "56382",
+      "date": "2026-08-31",
+      "title_en": "The Ants × Gamera | Explore the Mysterious Continent",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-x-gamera-explore-the-mysterious-continent/56382",
+      "category": "News and Events",
+      "title_ja": "The Ants × ガメラ コラボ「Explore the Mysterious Continent」",
+      "summary_ja": "怪獣映画「ガメラ」とのコラボイベント。開催期間は8月31日〜9月6日。\n\n未知の大陸のマスを掘って報酬を掘り当てる形式で、特別に光るマスを掘ると追加の出来事が起きることがある。掘り進める中で石板などのアイテムが手に入る。",
+      "summary_en": "A collaboration event with the Gamera kaiju film series, running August 31 to September 6.\n\nPlayers dig tiles on a mysterious continent to uncover rewards. Special glowing tiles can trigger extra in-game events, and digging turns up items such as stone tablets."
+    },
+    {
+      "id": "56371",
+      "date": "2026-08-28",
+      "title_en": "The Ants × Gamera | 3 Days Until the Collaboration Begins!",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-x-gamera-3-days-until-the-collaboration-begins/56371",
+      "category": "Forum Feedback",
+      "title_ja": "The Ants × ガメラ コラボ開始3日前",
+      "summary_ja": "コラボ開始までのカウントダウン告知。イベント本編は8月31日開始。",
+      "summary_en": "A countdown post ahead of the collaboration. The event itself started on August 31."
+    },
+    {
+      "id": "56335",
+      "date": "2026-08-17",
+      "title_en": "[The Ants] Aug 17 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-aug-17-scheduled-maintenance-notice/56335",
+      "category": "Events",
+      "title_ja": "8月17日 定期メンテナンス",
+      "summary_ja": "**追加**\n\n- 迷宮ストアに覚醒パーツを3種追加（Cyphomyrmex Rimosus／Saharan Silver Ant／Meranoplus Castaneus）\n\n**調整**\n\n- 治療画面で、手持ちの資源で治療できる最大数を自動で選ぶようになった\n- 昆虫バディギャラリーのレベル上限を拡張\n- アリの巣スキンとアライアンス戦画面の演出を改善\n- 各種画面のテキスト説明を改善\n\n**修正**\n\n- 狩場契約の数量が変更できない不具合\n- シーズン中の高速治療ボタンの表示不具合\n- アライアンス遠征の登録通知が異常になる不具合\n- 変異荒野ベータの各種不具合（監視樹の警報、戦闘中の部隊配置、マップ上の要塞の色、巣のテレポート、要塞戦画面の表示、戦闘損失レポートの数値）",
+      "summary_en": "**New**\n\n- Three awakening parts added to the Maze Store (Cyphomyrmex Rimosus, Saharan Silver Ant, Meranoplus Castaneus)\n\n**Adjustments**\n\n- The healing screen now auto-selects the maximum number of soldier ants your resources can heal\n- Insect Buddy Gallery level cap raised\n- Anthill skin and alliance battle screen effects improved\n- Text descriptions improved across several interfaces\n\n**Fixes**\n\n- Hunting Ground contract quantities could not be changed\n- Fast healing button display issues during seasonal wild activities\n- Abnormal alliance expedition registration notifications\n- Several Mutated Barren beta issues (sentinel tree alerts, troop positioning in battle, fortress colours on the map, anthill teleportation, fortress battle page display, battle loss report figures)"
+    },
+    {
+      "id": "56302",
+      "date": "2026-08-03",
+      "title_en": "[The Ants] August 3 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-august-3-scheduled-maintenance-notice/56302",
+      "category": "Game Updates",
+      "title_ja": "8月3日 定期メンテナンス",
+      "summary_ja": "メンテナンス時間は 07:00〜08:00（UTC）。\n\n**追加**\n\n- コロニー宝探しに、略奪ログと保護ログを見るタブを追加\n- 兵隊アリ改造ページに「全兵種」タブを追加\n- 改造チェストの一括開封（最大999個）に対応\n\n**調整**\n\n- 変異システム・兵隊アリ改造・増幅システム・特化アリ進化の開発資源コストを引き下げ\n- 一部エリアで、占領した要塞から Fruitful Point が入らないようにポイント規則を変更\n- 段階報酬に必要な Fruitful Point を引き下げ\n- コロニー宝探しの参加に必要な女王レベルを引き下げ\n- 宣戦布告のキャンセルボタンの位置を変更\n- 改造協力の解放条件を変更\n\n**修正**\n\n- シオマネキに通常攻撃ができない不具合\n- シーズン中にキャンプ保護のカウントダウン表示が異常になる不具合",
+      "summary_en": "Maintenance window 07:00–08:00 UTC.\n\n**New**\n\n- Tabs for viewing plunder and protection logs in the Colony Treasure Hunt\n- An \"All Soldier Types\" tab on the Soldiers Reform page\n- Quick Open for reform chests (up to 999 at once)\n\n**Adjustments**\n\n- Lower development resource costs for the Mutation System, Soldiers Reform, Amp System and Special Ant Evolution\n- Occupied fortresses in certain areas no longer give Fruitful Points\n- Lower Fruitful Point requirements for tier rewards\n- Lower queen level requirement to access the Colony Treasure Hunt\n- The Cancel War Declaration button was moved\n- Reform Cooperation unlock requirements changed\n\n**Fixes**\n\n- Fiddler crabs could not be attacked normally\n- Abnormal camp protection countdown display during the season"
+    },
+    {
+      "id": "56250",
+      "date": "2026-07-20",
+      "title_en": "[The Ants] July 20 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-july-20-scheduled-maintenance-notice/56250",
+      "category": "Game Updates",
+      "title_ja": "7月20日 定期メンテナンス",
+      "summary_ja": "メンテナンス時間は 07:00〜07:30（UTC）。\n\n**追加**\n\n- シーズン交換（Season Redemption）: 特化アリの殻を2個追加で払うと、シーズンファンタジーエッグ1個と交換できる（Umber Knight／Sickle Jaw／Ladybug Ant が対象）\n- 部隊編成5・6を追加（女王レベル22で解放）\n\n**調整**\n\n- R4・R5 のアライアンスタワー建設手順を簡略化\n- シーズン中、一定条件を満たした後の兵隊アリ治療の資源コストを引き下げ\n- シーズン貯蓄の資源返還率を全シーズン80%に統一\n- クリスタル鉱山で、神秘のクリスタルを一括受け取りできるように\n- 地下洞窟のセルチャレンジの進行上限を130まで拡張\n- S2X 変異荒野の実績タスクを変更（耐久系のタスクを削除し、土地と要塞戦のタスクを追加）\n\n**修正**\n\n- デザートフラワーの巣スキンの表示異常\n- 一部スキンで画面遷移がおかしくなる不具合\n- 女王の増幅レベル上昇後にクラスバフの属性が有効にならない不具合",
+      "summary_en": "Maintenance window 07:00–07:30 UTC.\n\n**New**\n\n- Season Redemption: pay two extra special ant shells to exchange for one Season Fantasy Egg (Umber Knight, Sickle Jaw and Ladybug Ant)\n- Troop Formations 5 and 6, unlocked at queen level 22\n\n**Adjustments**\n\n- Streamlined alliance tower building for R4/R5 members\n- Reduced soldier ant healing resource costs after certain in-season thresholds\n- Season Saving resource return unified at 80% across all seasons\n- Claim-all for mystic crystals on the crystal mine screen\n- Underground Cave cell challenge progress cap raised to 130\n- S2X Mutated Barren achievement tasks reworked (durability tasks removed; land and fortress battle tasks added)\n\n**Fixes**\n\n- Desert Flower anthill skin display anomalies\n- Navigation issues with certain skins\n- Class buff attributes not activating after a queen amp level upgrade"
+    },
+    {
+      "id": "56200",
+      "date": "2026-07-06",
+      "title_en": "[The Ants] July 6 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-july-6-scheduled-maintenance-notice/56200",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "56145",
+      "date": "2026-06-21",
+      "title_en": "[The Ants] June 22 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-june-22-scheduled-maintenance-notice/56145",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "56097",
+      "date": "2026-06-07",
+      "title_en": "[The Ants] June 8 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-june-8-scheduled-maintenance-notice/56097",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "55886",
+      "date": "2026-04-20",
+      "title_en": "[The Ants] April 20 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-april-20-scheduled-maintenance-notice/55886",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "55857",
+      "date": "2026-04-07",
+      "title_en": "[The Ants] April 8 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-april-8-scheduled-maintenance-notice/55857",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "55833",
+      "date": "2026-03-30",
+      "title_en": "[The Ants] March 30 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-march-30-scheduled-maintenance-notice/55833",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "55805",
+      "date": "2026-03-16",
+      "title_en": "[The Ants] March 16 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-march-16-scheduled-maintenance-notice/55805",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "55616",
+      "date": "2026-02-02",
+      "title_en": "[The Ants] Feb 2 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-feb-2-scheduled-maintenance-notice/55616",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "55243",
+      "date": "2026-01-04",
+      "title_en": "[The Ants] Jan 5 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-jan-5-scheduled-maintenance-notice/55243",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "55017",
+      "date": "2025-12-21",
+      "title_en": "[The Ants] Dec 22 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-dec-22-scheduled-maintenance-notice/55017",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "54841",
+      "date": "2025-12-08",
+      "title_en": "[The Ants] Dec 8 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-dec-8-scheduled-maintenance-notice/54841",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "52968",
+      "date": "2025-10-13",
+      "title_en": "[The Ants] Oct 13 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-oct-13-scheduled-maintenance-notice/52968",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "52526",
+      "date": "2025-09-22",
+      "title_en": "[The Ants] Sep 22 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-sep-22-scheduled-maintenance-notice/52526",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "52231",
+      "date": "2025-09-08",
+      "title_en": "[The Ants] Sep 8 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-sep-8-scheduled-maintenance-notice/52231",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "51872",
+      "date": "2025-08-25",
+      "title_en": "[The Ants] Aug 25 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-aug-25-scheduled-maintenance-notice/51872",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "51578",
+      "date": "2025-08-11",
+      "title_en": "[The Ants] Aug 11 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-aug-11-scheduled-maintenance-notice/51578",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "51297",
+      "date": "2025-07-28",
+      "title_en": "[The Ants] July 28 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-july-28-scheduled-maintenance-notice/51297",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "50429",
+      "date": "2025-06-16",
+      "title_en": "[The Ants] June 16 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-june-16-scheduled-maintenance-notice/50429",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "50159",
+      "date": "2025-06-02",
+      "title_en": "[The Ants] June 03 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-june-03-scheduled-maintenance-notice/50159",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "49811",
+      "date": "2025-05-19",
+      "title_en": "[The Ants] May 19 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-may-19-scheduled-maintenance-notice/49811",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "49149",
+      "date": "2025-04-20",
+      "title_en": "[The Ants] April 21 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-april-21-scheduled-maintenance-notice/49149",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "48180",
+      "date": "2025-03-10",
+      "title_en": "[The Ants] March 10 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-march-10-scheduled-maintenance-notice/48180",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    },
+    {
+      "id": "47974",
+      "date": "2025-03-02",
+      "title_en": "[The Ants] March 3 Scheduled Maintenance Notice",
+      "url": "https://theantsforum.allstarunion.com/t/the-ants-march-3-scheduled-maintenance-notice/47974",
+      "category": "Game Updates",
+      "title_ja": "",
+      "summary_ja": "",
+      "summary_en": ""
+    }
+  ]
+}
