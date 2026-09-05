@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アリ・中立生物図鑑 | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="The Ants の特化アリ・中立生物のスキル詳細を、実アカウントのスクリーンショットから正確に書き起こして収録。">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/ja/ant-compendium.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/ant-compendium.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/ant-compendium.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/ant-compendium.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="アリ・中立生物図鑑">
+<meta property="og:description" content="The Ants の特化アリ・中立生物のスキル詳細を、実アカウントのスクリーンショットから正確に書き起こして収録。">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/ja/ant-compendium.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../ja/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="記事を検索…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/ant-compendium.html" class="active">日本語</a>
+    <a href="../en/ant-compendium.html" class="">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>人気記事</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">ダメージ計算を検証する</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">序盤攻略ガイド</a></li>
+        
+        <li><span class="rank">3</span><a href="data-collection.html">データ提供のお願い</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">はじめに</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="the ants 攻略サイトへようこそ" class="">The Ants 攻略サイトへようこそ</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">攻略</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="序盤攻略ガイド" class="">序盤攻略ガイド</a>
+        
+        <a href="ant-types.html" data-title="蟻の種類とステータス" class="">蟻の種類とステータス</a>
+        
+        <a href="alliance-pvp.html" data-title="アライアンスとpvp" class="">アライアンスとPvP</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">図鑑</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="アリ・中立生物図鑑" class="active">アリ・中立生物図鑑</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">検証プロジェクト</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="ダメージ計算を検証する" class="">ダメージ計算を検証する</a>
+        
+        <a href="data-collection.html" data-title="データ提供のお願い" class="">データ提供のお願い</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../ja/index.html">TOP</a> &raquo; 図鑑 &raquo; アリ・中立生物図鑑</div>
+    
+    <div class="card">
+      <h1>アリ・中立生物図鑑</h1>
+      <div class="updated">最終更新: 2026-08-02</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">目次</div>
+        <div class="toc">
+<ul>
+<li><a href="#_1">特化アリ</a><ul>
+<li><a href="#s6">アオシマカアリ（S6 支援・シューター）</a></li>
+<li><a href="#s6_1">ブルドッグアリ（S6 メレー・ガーディアン）</a></li>
+<li><a href="#s6_2">ヒシマダラビロードアリ（S6 支援・キャリヤー）</a></li>
+<li><a href="#s6_3">アカアゴハリアリ（S6 メレー・ガーディアン）</a></li>
+<li><a href="#s6_4">ツチバタケアリ（S6 支援・ガーディアン）</a></li>
+<li><a href="#s6_5">トラフビロードアリ（S6 支援・シューター）</a></li>
+<li><a href="#s6_6">フタバハリアリ（S6 レンジ・シューター）</a></li>
+<li><a href="#s6_7">コハクハナアリ（S6 メレー・キャリヤー）</a></li>
+<li><a href="#s6_8">テントウアリ（S6 レンジ・キャリヤー）</a></li>
+<li><a href="#s5">オオアゴアリ（S5 レンジ・ガーディアン）</a></li>
+<li><a href="#s5_1">アオケアリ（S5 支援・ガーディアン）</a></li>
+<li><a href="#s5_2">アオクロケアリ（S5 メレー・シューター）</a></li>
+<li><a href="#s5_3">アオスジホソアシアリ（S5 レンジ・シューター）</a></li>
+<li><a href="#s5_4">レインボーアカアシアリ（S5 レンジ・キャリアー）</a></li>
+<li><a href="#s5_5">幻彩ハネアリ（S5 レンジ・シューター）</a></li>
+<li><a href="#s5_6">キンバネアリ（S5 メレー・キャリアー）</a></li>
+<li><a href="#s5_7">シルバーミツツボアリ（S5 レンジ・キャリヤー）</a></li>
+<li><a href="#s4">スペルキリオサスナンベイゾアリ（S4 レンジ・ガーディアン）</a></li>
+<li><a href="#s4_1">ハネナシハンミョウ（S4 メレー・キャリアー）</a></li>
+<li><a href="#s4_2">フェイドール・マイナー（S4 レンジ・ガーディアン）</a></li>
+<li><a href="#s4_3">キアシカマバチアリ（S4 支援・シューター）</a></li>
+<li><a href="#s4_4">アンセレフィラ・ペデストリス（S4 支援・キャリアー）</a></li>
+<li><a href="#s4_5">野牛ハキリアリ（S4 メレー・ガーディアン）</a></li>
+<li><a href="#s4_6">幻彩メダマハネアリ（S4 メレー・キャリアー）</a></li>
+<li><a href="#s3">キオビシリアゲアリ（S3 支援・シューター）</a></li>
+<li><a href="#s3_1">ザサハラ銀アリ（S3 レンジ・シューター）</a></li>
+<li><a href="#s1">ゴールデンクリスタルアリ（S1 レンジ・キャリアー）</a></li>
+</ul>
+</li>
+<li><a href="#_2">中立生物</a><ul>
+<li><a href="#_3">氷晶サソリ</a></li>
+<li><a href="#_4">瑠璃カマキリ</a></li>
+<li><a href="#_5">銀藍クワガタ</a></li>
+<li><a href="#_6">針尾ドクサソリ</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </div>
+      
+      <p>自分のアカウントのスキル説明画面・ステータス画面・タレントツリー画面のスクリーンショットを、NotebookLMで一字一句正確に書き起こして収録しています。ゲーム内テキストをそのまま転記しているため、意訳・要約はしていません。</p>
+<blockquote>
+<p><strong>現在は試験公開中です。</strong> 407枚+115枚+179枚保有しているスクリーンショットのうち、バッチ4〜11相当と260720フォルダの一部（393枚相当、特化アリ25体+中立生物4体分）を収録しています。追加のスクリーンショットを書き起こし次第、随時このページに追記していきます。掲載している画像は、ステータス画面から生物部分のみを切り抜いたものです。一部のアリ（未突破のもの）はスキルが一部しか判明していません。</p>
+</blockquote>
+<h2 id="_1">特化アリ</h2>
+<h3 id="s6">アオシマカアリ（S6 支援・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-aoshimaka.png" alt="アオシマカアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+100（+特化アリLv*100）UP</td>
+</tr>
+<tr>
+<td>降伏の一撃</td>
+<td>戦闘スキル（有効距離内ランダムの敵軍行列2列、有効距離5）</td>
+<td>シューターアリを率いて戦闘する時に発効。65%→80%（MaxLv）の確率でランダムな敵2行列に120%→260%のダメージを与え、70%→80%の確率で目標行列の次のターンの通常攻撃回数を奪って、奪った通常攻撃回数をランダムな味方1行列にシェアする</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+9.55%→191%（MaxLv）</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+9.55%→191%（MaxLv）</td>
+</tr>
+<tr>
+<td>ハンターの直感</td>
+<td>戦前スキル（特化アリがいる行列、有効距離5）</td>
+<td>毎ターン65%→75%（MaxLv）で味方後列のスキル会心率+52%→80%（1ターン）。会心の度に兵力最低の味方行列を治療（治療率105%→180%）、ただし会心の度に上昇分は10%ずつ減少</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防・ダメージ・生命力UP、「支配力III」出征上限UP</td>
+</tr>
+<tr>
+<td>青斑迷彩</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ防御力+55%→150%（MaxLv）</td>
+</tr>
+<tr>
+<td>略奪強襲</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>70%→80%（MaxLv）で敵ランダム1行列に180%→300%（+特化アリLv*1%）ダメージ、目標のスキル発動確率4.4%→10%を奪取して味方後列に付与（1ターン）、同時に味方後列の制御・消極状態を解除</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19・2026-08-01実測、Readツールで直接確認・NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch8_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s6_1">ブルドッグアリ（S6 メレー・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-bulldog.png" alt="ブルドッグアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: 出征上限+18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、スキル8発動率+5%、ガーディアン行列が制御状態の目標に与えるダメージ+6%</td>
+</tr>
+<tr>
+<td>護陣重甲</td>
+<td>戦闘スキル（特化アリがいる編隊全行列、有効距離5）</td>
+<td>ガーディアンアリを率いて戦闘する時に発効。戦闘開始時、自身の行列が受けるダメージ-31%→50%（MaxLv）、この効果は第3、6ターン中は15%減衰し、かつ毎ターン中や後方が受ける最初の2回のスキルダメージの60%を分担する</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+9.55%→191%（MaxLv）</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+9.55%→191%（MaxLv）</td>
+</tr>
+<tr>
+<td>反撃の顎</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>特化アリからダメージを受ける度に31%→40%（MaxLv）で反撃、110%→250%（+特化アリレベル*1%）ダメージ。非制御の敵には60%で混乱付与</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防・ダメージ・生命力UP、「支配力III」出征上限UP</td>
+</tr>
+<tr>
+<td>堅固な巨頭</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ生命力+14.7%→66%（MaxLv）</td>
+</tr>
+<tr>
+<td>自然の癒し</td>
+<td>戦闘スキル（編隊全行列、有効距離5）</td>
+<td>56%→70%（MaxLv）で味方ガーディアン行列の受ける治療効果+5%→7%（加算）、味方全行列を治療率67%→180%（MaxLv）で治療。治療後の兵力が初期兵力値以上の場合、その行列は敵ランダム1行列に210%→380%（MaxLv）ダメージ</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19・2026-08-01実測、Readツールで直接確認・NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch8_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s6_2">ヒシマダラビロードアリ（S6 支援・キャリヤー）</h3>
+<p><img class="screenshot" src="../images/special-ant-hishimadara-birodo.png" alt="ヒシマダラビロードアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: 出征上限+18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻撃力+25%、防御力+25%、生命力+10%、自身の行列のスキル5発動率+5%、感染状態の敵行列が受けるダメージ+10%</td>
+</tr>
+<tr>
+<td>多次元侵攻</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>100%の確率でランダムな敵2行列に110%（+特化アリLv×1%）ダメージ、目標の全スキル発動確率-0.1%（戦闘終了まで持続、加算可）。MaxLv: 250%（+特化アリLv×1%）ダメージ、-1.5%</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ防御力+9.55%。MaxLv: +191%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻撃力+9.55%。MaxLv: +191%</td>
+</tr>
+<tr>
+<td>感染咬傷</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>1ターン準備後、75%の確率でランダムな敵1行列に290%（+特化アリLv×1%）ダメージ、感染状態付与（そのダメージの46%を追加で受ける、2ターン持続）。MaxLv: 430%（+特化アリLv×1%）ダメージ、追加+60%</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻防+1.8%、戦闘スピード+15、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、戦闘スピード+60、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>カラフル綿毛</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリヤーアリ防御力+55%。MaxLv: +150%</td>
+</tr>
+<tr>
+<td>貪欲吸収</td>
+<td>戦闘スキル（戦闘中全ての行列、有効距離5）</td>
+<td>2/4/6ターン終了時、双方の全行列がそのターンに与えた総ダメージ量を集計。敵の兵力が最も低い行列は総ダメージの27%のダメージを受け、味方の最も兵力が低い行列は総ダメージの0.5%の治療を得る。MaxLv: 55%のダメージ、10%の治療</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、Readツールで直接確認）
+</div>
+
+<h3 id="s6_3">アカアゴハリアリ（S6 メレー・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-akaagohari.png" alt="アカアゴハリアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: 出征上限+18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻撃力+25%、防御力+25%、生命力+10%、自身の行列のスキル2の治療発動確率+5%、自身の行列のスキル5の発動確率+5%</td>
+</tr>
+<tr>
+<td>戦闘援護</td>
+<td>戦闘スキル（有効距離内味方行列、有効距離5）</td>
+<td>41%の確率で自身の行列がダメージを受ける前に兵力最も低い味方行列を治療（治療率52%）、対象行列の受けるダメージ-3%。戦闘終了まで有効、10スタックまで加算（1ターン最大7回発動）。MaxLv: 50%の確率、治療率75%、被ダメ-6%</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>野蛮な圧制</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>60%の確率で敵のランダムな2行列に180%（+特化アリLv×1%）ダメージ、55%の確率で対象をランダムな制御状態（沈黙/混乱、1ターン）にする。MaxLv: 65%の確率、320%（+特化アリLv×1%）ダメージ、55%の確率で制御状態</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防+1.8%、ダメージ+1.2%、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、ダメージ+24%、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>鋭利な赤顎</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ生命力+14.7%。MaxLv+66%</td>
+</tr>
+<tr>
+<td>捨身猛撃</td>
+<td>戦闘スキル（敵全行列、有効距離5）</td>
+<td>第3・6ターン、90%の確率で生存している敵行列に150%（+特化アリLv×1%）大ダメージ。敵行列を攻撃するたび自身の行列もそのダメージの10%を受ける。MaxLv: 100%の確率、700%（+特化アリLv×1%）ダメージ</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-20実測、Readツールで直接確認）
+</div>
+
+<h3 id="s6_4">ツチバタケアリ（S6 支援・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-tsuchibatake.png" alt="ツチバタケアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: +18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、ガーディアンアリが制御状態の対象へのスキルダメージ+5%、自身の行列のスキル5の追撃確率+5%</td>
+</tr>
+<tr>
+<td>重甲撲撃</td>
+<td>戦闘スキル（敵ランダム2行列、有効距離5）</td>
+<td>75%の確率で120%（+特化アリLv×1%）ダメージ+1ターンマーク付与。味方行列がマーク対象にダメージを与えるたびダメージ値の50%を蓄積（対象が制御状態なら2倍蓄積）。MaxLv: 80%の確率、260%（+特化アリLv×1%）ダメージ</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>巨顎拘束</td>
+<td>戦闘スキル（友軍2行列、有効距離5）</td>
+<td>76%の確率で味方ランダム2部隊の与えるスキルダメージ+6%（2ターン）。バフ中の部隊が敵行列に制御状態を1回付与成功すると80%の確率で対象部隊に110%ダメージ。MaxLv: 85%の確率、+20%、280%ダメージ</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防+1.8%、ダメージ+1.2%、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、ダメージ+24%、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>褐紋甲殻</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ防御力+55%。MaxLv+150%</td>
+</tr>
+<tr>
+<td>領袖庇護</td>
+<td>戦前スキル（敵全行列、有効距離5）</td>
+<td>第2・4・6・8ターンに蓄積された全ダメージ値を消耗し、敵全行列に蓄積ダメージ値の25%分のダメージを与え、そのダメージの6%分味方全行列を治療。MaxLv: 蓄積ダメージ値の90%分のダメージ、治療25%分</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-20実測、Readツールで直接確認）
+</div>
+
+<h3 id="s6_5">トラフビロードアリ（S6 支援・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-torafubirodo.png" alt="トラフビロードアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: +18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、シューターアリのスキルダメージ+8%、自身の行列のスキル8発動確率+10%</td>
+</tr>
+<tr>
+<td>蟻群共鳴</td>
+<td>戦前スキル（特化アリがいる編隊全行列）</td>
+<td>戦闘中、味方全行列のアクティブスキル発動回数をカウントし、4・8・12回に達するたびスキルダメージ+0.6%、被スキルダメージ-0.6%（6スタック加算可、戦闘終了まで持続）。MaxLv: +11%、-11%</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>蓄力強撃</td>
+<td>戦闘スキル（敵全行列、有効距離5）</td>
+<td>第3・6ターン、敵全行列に325%（+特化アリLv×1%）ダメージ。ダメージ率はスキル2のカウントに応じ1回につき5%上昇（最大75%）、その後リセット。MaxLv: 520%（+特化アリLv×1%）ダメージ、1回につき10%上昇（最大150%）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+1.8%、ダメージ+1.2%、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、ダメージ+24%、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>柔軟な羽先</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ防御力+55%。MaxLv+150%</td>
+</tr>
+<tr>
+<td>不屈の心</td>
+<td>戦闘スキル（友軍ランダム1行列、有効距離5）</td>
+<td>65%の確率で味方ランダム1行列を治療（治療率105%）、35%の確率で対象の消極状態を解除し、治療対象行列が敵全行列に90%ダメージ。MaxLv: 70%の確率、治療率230%、180%ダメージ</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-20実測、Readツールで直接確認）
+</div>
+
+<h3 id="s6_6">フタバハリアリ（S6 レンジ・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-futabahari.png" alt="フタバハリアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: +18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、自身の行列が必中状態獲得（3ターン）、自身の行列の全スキル発動確率+5%</td>
+</tr>
+<tr>
+<td>獲物の刻印</td>
+<td>戦闘スキル（敵行列、有効距離5）</td>
+<td>75%の確率で生命力最も低い敵1行列に120%（+特化アリLv×1%）ダメージ+印付与（次に自身の行列からスキルダメージを受ける際+7%上昇、2ターン持続）。MaxLv: 80%の確率、360%（+特化アリLv×1%）ダメージ、+10%上昇</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>弾射捕獲</td>
+<td>戦闘スキル（敵全行列、有効距離5）</td>
+<td>70%の確率で敵全行列に60%（+特化アリLv×1%）ダメージ、会心になった場合ランダムな敵2行列に再度同ダメージ。MaxLv: 75%の確率、230%（+特化アリLv×1%）ダメージ</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+1.8%、ダメージ+1.2%、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、ダメージ+24%、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>細長い蟻足</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ攻撃力+55%。MaxLv+150%</td>
+</tr>
+<tr>
+<td>残虐の力</td>
+<td>戦前スキル（特化アリがいる行列）</td>
+<td>戦闘中、自身の行列の通常攻撃およびスキル会心率+16%、会心ダメージ+26%。兵力を10%失うごとに会心率が追加で+3%（加算可、戦闘終了まで継続）。MaxLv: 会心率+30%、会心ダメージ+40%、10%失うごとに+5%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-20実測、Readツールで直接確認）
+</div>
+
+<h3 id="s6_7">コハクハナアリ（S6 メレー・キャリヤー）</h3>
+<p><img class="screenshot" src="../images/special-ant-kohakuhana.png" alt="コハクハナアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: +18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、自身の行列のスキル8治療確率+10%、自身の行列のスキル5発動確率+10%</td>
+</tr>
+<tr>
+<td>毒素浸透</td>
+<td>戦前スキル（有効距離内敵全行列、有効距離5）</td>
+<td>キャリヤーアリを率いて戦闘する時に発動。第1ターンに72%の確率で敵全行列を猛毒（毎ターン110%ダメージ）または出血（毎ターン90%ダメージ、兵力が低いほど増加）のいずれかの消極状態にし、2ターン持続。以降のターン開始時に50%の確率で継続。MaxLv: 100%の確率、以降60%の確率で継続</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ防御力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻撃力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>火事場泥棒</td>
+<td>戦闘スキル（敵ランダム2行列、有効距離5）</td>
+<td>60%の確率で敵のランダムな2行列に140%（+特化アリLv×1%）ダメージ、80%の確率で対象行列の全消極状態の持続時間を1ターン延長。MaxLv: 65%の確率、310%（+特化アリLv×1%）ダメージ</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻防+1.8%、戦闘スピード+15、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、戦闘スピード+60、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>琥珀尾腹</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリヤーアリ防御力+55%。MaxLv+150%</td>
+</tr>
+<tr>
+<td>ポテンシャル解放</td>
+<td>戦闘スキル（特化アリがいる編隊全行列、有効距離5）</td>
+<td>2ターン準備後、80%の確率で味方全行列を治療（治療率210%）、味方全行列の準備が必要なスキルの準備ターン-1、準備不要なスキルの発動確率+5%。MaxLv: 85%の確率、治療率360%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-20実測、Readツールで直接確認）
+</div>
+
+<h3 id="s6_8">テントウアリ（S6 レンジ・キャリヤー）</h3>
+<p><img class="screenshot" src="../images/special-ant-tentou.png" alt="テントウアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: +18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、自身の行列のスキル5が吸収するスキル攻撃ステータス+3%、自身の行列の制御抵抗性+15%</td>
+</tr>
+<tr>
+<td>ホームアドバンテージ</td>
+<td>戦前スキル（敵ランダム1行列、有効距離5）</td>
+<td>キャリヤーアリを率いて戦闘する時に発動。第1ターンに攻撃対象にならない虫群れを展開。味方全行列が敵に消極状態を付与する際、虫群れが追加で対象行列に40%ダメージ、骨喰状態にする（治療効果-40%、毎ターン終了時に45×骨喰スタック数のダメージ）。MaxLv: 追加ダメージ180%、120×スタック数</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ防御力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻撃力+9.55%。MaxLv+191%</td>
+</tr>
+<tr>
+<td>養分略奪</td>
+<td>戦闘スキル（敵全行列、有効距離5）</td>
+<td>65%の確率で敵全行列に50%（+特化アリLv×1%）ダメージ。対象行列が消極状態なら行列のスキル攻撃ステータスを6%吸収（2ターン持続）、持続中に対象が戦闘スキルを発動するたび追加吸収。MaxLv: 70%の確率、210%（+特化アリLv×1%）ダメージ、吸収20%</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻防+1.8%、戦闘スピード+15、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、戦闘スピード+60、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>瓢紋擬態</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリヤーアリ攻撃力+55%。MaxLv+150%</td>
+</tr>
+<tr>
+<td>高地圧制</td>
+<td>戦闘スキル（敵全行列、有効距離5）</td>
+<td>1ターン準備、52%の確率で敵全行列に165%ダメージ。自身の行列のスキル攻撃ステータスが対象を上回った場合、追加で10%の真実ダメージ（5%上回るごとに+4%、最大50%）。MaxLv: 80%の確率、380%ダメージ、追加15%の真実ダメージ（最大55%）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-20実測、Readツールで直接確認）
+</div>
+<h3 id="s5">オオアゴアリ（S5 レンジ・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-ooagoari.png" alt="オオアゴアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力641,290）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）。MaxLv: 突破後: 隊列攻撃力+25%、防御力+25%、生命力+10%、ガーディアンの制御効果+5%、行列の全スキルダメージ率+10%</td>
+</tr>
+<tr>
+<td>巨顎噛み</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>65%の確率で敵ランダム2行列に300%（+特化アリLv<em>1%）ダメージ+マーク付与（2ターン）。味方がダメージを与える時40%で治療（治療率50%）。MaxLv: 305%（+特化アリLv</em>1%）ダメージ、治療率52%</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+83%。MaxLv: +91.3%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+83%。MaxLv: +91.3%</td>
+</tr>
+<tr>
+<td>乱暴圧制</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>75%の確率で敵ランダム2行列に260%（+特化アリLv<em>1%）ダメージ。マーク対象は1ターン制圧（行動不可）。MaxLv: 265%（+特化アリLv</em>1%）ダメージ</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防+18%、ダメージ+12%、生命力+12%、「支配力III」出征上限+170%。MaxLv: 攻防+19.8%、ダメージ+13.2%、生命力+12.6%</td>
+</tr>
+<tr>
+<td>血染め躯体</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ攻撃力+85%。MaxLv: +90%</td>
+</tr>
+<tr>
+<td>戦術痛撃</td>
+<td>戦闘スキル（敵行列3列、有効距離5）</td>
+<td>80%の確率で敵全行列に150%（+特化アリLv<em>1%）ダメージ。制御状態の敵にはさらに150%（+特化アリLv</em>1%）追加、非制御なら制御抵抗性-20%（2ターン、非加算）。MaxLv: 154%（+特化アリLv*1%）ダメージ</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch4_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s5_1">アオケアリ（S5 支援・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-aokeari.png" alt="アオケアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力1,113,290）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、突破済）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻撃力+25%、防御力+25%、生命力+10%、ガーディアンのスキルダメージ+5%、スキル2の治療率+10%</td>
+</tr>
+<tr>
+<td>治療オーラ</td>
+<td>戦闘スキル（編隊全行列、有効距離5）</td>
+<td>70%の確率で味方全行列を治療（治療率160%）、次ターンのスキル発動確率と制御確率+8%</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+166%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+166%</td>
+</tr>
+<tr>
+<td>沈黙攻撃</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>70%の確率で敵ランダム2行列に200%（+特化アリLv*1%）ダメージ、55%の確率で1ターン沈黙</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防+18%、ダメージ+12%、生命力+12%、「支配力III」出征上限+170%</td>
+</tr>
+<tr>
+<td>ブルーベルベット表皮</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ防御力+85%</td>
+</tr>
+<tr>
+<td>継続強化</td>
+<td>戦前スキル（編隊全行列、有効距離5）</td>
+<td>毎ターン自分の全行列の攻防+20%（加算、戦闘終了まで持続）。前列はさらにダメージ軽減+3%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch4_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s5_2">アオクロケアリ（S5 メレー・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-aokuroke.png" alt="アオクロケアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力698,490）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>鋭敏感知</td>
+<td>戦前スキル（特化アリがいる行列）</td>
+<td>前列にいる場合、被ダメ-20.5%/与ダメ+20.5%、ダメージ与える毎に+4.1%（上限41%）</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+91.3%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+91.3%</td>
+</tr>
+<tr>
+<td>強勢略奪</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>80%の確率で敵ランダム2行列に225%（+特化アリLv*1%）ダメージ、目標のスキル防御-30%（加算可、2ターン）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+19.8%、ダメージ+13.2%、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>長毛装甲</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ生命力+37.5%</td>
+</tr>
+<tr>
+<td>共同追撃</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>2/4/6/8ターン目、自身のバフ効果82%を後列と共有。後列がダメージを与える時、35%の確率で敵ランダム1行列に203%追加ダメージ</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch4_260719.md</code>・<code>batch5_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s5_3">アオスジホソアシアリ（S5 レンジ・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-aosuji.png" alt="アオスジホソアシアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力1,152,090）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、突破済）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、スキル2の防御貫通+5%、スキル5のダメージ率+10%</td>
+</tr>
+<tr>
+<td>チャージ突き</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>60%の確率で敵ランダム1行列に540%（+特化アリLv*1%）ダメージ、防御貫通25%（目標の総防御を無視）</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+166%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+166%</td>
+</tr>
+<tr>
+<td>狩り天性</td>
+<td>戦闘スキル（敵行列3列、有効距離5）</td>
+<td>2/4/6/8ターンで80%の確率で敵全行列に184%（+特化アリLv*1%）ダメージ、発動毎にダメージ回数+1</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+19.8%、ダメージ+13.2%、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>藍紋腹部</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ攻撃力+90%</td>
+</tr>
+<tr>
+<td>浄化領域</td>
+<td>戦前スキル（特化アリがいる行列）</td>
+<td>4回ダメージを与える毎に自身の消極状態・デバフを解除、次の与えるスキルダメージ+32%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch5_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s5_4">レインボーアカアシアリ（S5 レンジ・キャリアー）</h3>
+<p><img class="screenshot" src="../images/special-ant-rainbow-akaashi.png" alt="レインボーアカアシアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力829,690）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、突破済）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻防+25%、生命力+10%、スキル5発動率+10%、出血ダメージ+7%</td>
+</tr>
+<tr>
+<td>裂傷</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>80%の確率で敵ランダム1行列に335%（+特化アリLv*1%）ダメージ+出血（毎ターン141%、兵力が低いほど増加、2ターン）。兵力50%超なら出血2層</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ防御力+91.3%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻撃力+91.3%</td>
+</tr>
+<tr>
+<td>力量増幅</td>
+<td>戦闘スキル（敵行列3列、有効距離5）</td>
+<td>1ターン準備後、80%の確率で敵全行列に204%（+特化アリLv*1%）ダメージ、消極状態の敵にはさらに+41%</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻防+19.8%、戦闘スピード+60、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>虹色甲殻</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリアーアリ攻撃力+90%</td>
+</tr>
+<tr>
+<td>血渇殺戮</td>
+<td>戦前スキル（敵行列2列、有効距離5）</td>
+<td>自身の与ダメ+21%、その20%を自身の兵力に変換。各ターン開始時に敵ランダム2行列の被ダメ+10.5%/治療効果-22%（1ターン）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch5_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s5_5">幻彩ハネアリ（S5 レンジ・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-gensai-hane.png" alt="幻彩ハネアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力1,613,390）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>狂暴連撃</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>70%の確率で3回240%（+特化アリLv*1%）ダメージ、各対象はランダム、同一対象命中でさらに+20%</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+166%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+166%</td>
+</tr>
+<tr>
+<td>眩しい突撃</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>2/4/6/8ターンで100%の確率で敵ランダム1行列に480%（+特化アリLv*1%）ダメージ、80%で連続発動（発動毎に確率-20%）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+36%、ダメージ+24%、生命力+18%、「支配力III」出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>華麗な外皮</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ攻撃力+135%</td>
+</tr>
+<tr>
+<td>尾棘貫通</td>
+<td>戦前スキル（特化アリがいる行列）</td>
+<td>防御貫通+30.5%（目標の総防御を無視）、毎ターン制御抵抗性+10.5%累積</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch7_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s5_6">キンバネアリ（S5 メレー・キャリアー）</h3>
+<p><img class="screenshot" src="../images/special-ant-kinbane.png" alt="キンバネアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
+
+<blockquote>
+<p>判明しているスキルは3個のみです（未突破のため、残りのスキル画面が撮影されていません）。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列、未突破）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: 出征上限+18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%。突破後: 隊列攻撃力+25%、防御力+25%、生命力+10%、キャリアーの制御抵抗性+20%、キャリアーが与える消極ダメージ+5%</td>
+</tr>
+<tr>
+<td>黄金骨格</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリアーアリ生命力+12.5%→60%（MaxLv）</td>
+</tr>
+<tr>
+<td>飛躍の契機</td>
+<td>戦前スキル（編隊全行列、有効距離5）</td>
+<td>味方全行列が与える消極状態ダメージ+2%→30%（MaxLv）、消極状態の敵から受けるダメージ-2%→30%（MaxLv）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし＋直接確認）。生データ（要約）は <code>data/notebooklm_extraction_batch7_260719.md</code>・<code>batch8_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s5_7">シルバーミツツボアリ（S5 レンジ・キャリヤー）</h3>
+<p><img class="screenshot" src="../images/special-ant-silver-mitsutsubo.png" alt="シルバーミツツボアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
+
+<blockquote>
+<p>判明しているスキルは7個のみです（撮影範囲の都合で8個目のスキル画面が含まれていませんでした）。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: 出征上限+18,100（+特化アリLv</em>100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>噛み付き</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>67%の確率で敵のランダムな1行列に182%（+特化アリLv×1%）ダメージ、猛毒状態を付与して毎ターン146%のダメージを与える（1ターン持続）。目標が猛毒状態の場合、猛毒状態が未感染の敵行列に拡散（50%、目標の消極状態1つにつき+10%）。MaxLv: 85%の確率、330%（+特化アリLv×1%）ダメージ、毎ターン230%、拡散率は同条件</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ防御力+8.3%。MaxLv: +166%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻撃力+8.3%。MaxLv: +166%</td>
+</tr>
+<tr>
+<td>毒の蔓延</td>
+<td>戦闘スキル（敵行列3列、有効距離5）</td>
+<td>1ターン準備、39.5%の確率で敵全行列に114%（+特化アリLv×2%）ダメージ、50%の確率で目標に猛毒状態を付与（毎ターン146%ダメージ、3ターン持続）、15%の確率（目標の消極状態1つにつき確率+5%）で目標の治療効果を60%低下。MaxLv: 80%の確率、260%（+特化アリLv×2%）ダメージ、60%の確率で猛毒付与（毎ターン230%）、治療効果低下は同条件で60%</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリヤーアリ攻防+1.8%、戦闘スピード+15、生命力+6.6%、「支配力III」出征上限+17%、通常攻撃ダメージ+5%。MaxLv: 攻防+36%、戦闘スピード+60、生命力+18%、出征上限+170%、通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>クリスタル毒腺</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリヤーアリ攻撃力+40%。MaxLv: +135%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、Readツールで直接確認）
+</div>
+
+<h3 id="s4">スペルキリオサスナンベイゾアリ（S4 レンジ・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-spelchirio.png" alt="スペルキリオサスナンベイゾアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>特化アリがいる行列の出征上限が100（+特化アリLv<em>100）UP。MaxLv: 出征上限が18,100（+特化アリLv</em>100）UP。特化アリがいる行列では兵隊アリの与えるダメージが25%UP</td>
+</tr>
+<tr>
+<td>無謀衝突</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>43%の確率で発動、自分の行列が20%ダメージを受ける代償に敵ランダム2行列へ80%ダメージ（必定会心、シューターアリへ+12%）。MaxLv: 70%の確率で発動、自分の行列が20%ダメージを受ける代償に敵ランダム2行列へ320%ダメージ（必定会心、シューターアリへ+30%）</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+7.2%。MaxLv: ガーディアンアリ防御力+144%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+7.2%。MaxLv: ガーディアンアリ攻撃力+144%</td>
+</tr>
+<tr>
+<td>凝力強打</td>
+<td>戦闘スキル（敵行列3列、有効距離5）</td>
+<td>2/4/6ターンで53%の確率で敵全行列に150%（+特化アリLv<em>1%）ダメージ、22%の確率で敵を1ターン沈黙。MaxLv: 2/4/6ターンで80%の確率で敵全行列に540%（+特化アリLv</em>1%）ダメージ、50%の確率で敵を1ターン沈黙</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防+1.8%、ダメージ+1.2%、生命力+6.6%、「支配力III」出征上限+17%。MaxLv: 攻防+36%、ダメージ+24%、生命力+18%、出征上限+170%。通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>強化鐵嘴</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ攻撃力+30%。MaxLv: ガーディアンアリ攻撃力+120%</td>
+</tr>
+<tr>
+<td>神勇な姿</td>
+<td>戦前スキル（特化アリがいる行列）</td>
+<td>自分の行列与ダメージ+1.5%。バフ獲得毎にスキルダメージ+0.5%／軽減+0.5%等。MaxLv: 与ダメージ+25%。バフ獲得毎にスキルダメージ+8%／軽減+8%／受ける治療+8%（4スタックまで加算）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データは <code>data/notebooklm_extraction_batch9_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s4_1">ハネナシハンミョウ（S4 メレー・キャリアー）</h3>
+<p><img class="screenshot" src="../images/special-ant-hanenashihanmyo.png" alt="ハネナシハンミョウ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+100（+特化アリLv<em>100）。MaxLv: 出征上限+18,100（+特化アリLv</em>100）。兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>長足利点</td>
+<td>戦闘スキル（有効距離5）</td>
+<td>受けたダメージ7%DOWN。被弾毎にエキストラ回避率+10%（加算）。回避成功後リセットし敵ランダム1行列に160%（+特化アリLv<em>10%）ダメージ。MaxLv: 受けたダメージ35%DOWN。同条件で敵ランダム1行列に300%（+特化アリLv</em>1%）ダメージ</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ防御力+7.2%。MaxLv: キャリアーアリ防御力+144%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻撃力+7.2%。MaxLv: キャリアーアリ攻撃力+144%</td>
+</tr>
+<tr>
+<td>戦時救援</td>
+<td>戦闘スキル（友軍行列2列、有効距離2）</td>
+<td>52%の確率で自分のランダム1〜2行列を治療率60%で治療、攻防+20%（1ターン）。MaxLv: 70%の確率で治療率180%、攻防+50%（1ターン）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>攻防+1.8%、戦闘スピード+15、生命力+6.6%、「支配力III」出征上限+17%。MaxLv: 攻防+36%、戦闘スピード+60、生命力+18%、出征上限+170%。通常攻撃ダメージ+75%</td>
+</tr>
+<tr>
+<td>真紅関節</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリアーアリ生命力+12.2%。MaxLv: キャリアーアリ生命力+54%</td>
+</tr>
+<tr>
+<td>幻影の姿</td>
+<td>戦闘スキル（編隊全行列、有効距離2）</td>
+<td>回避成功毎に42%の確率で自分の全行列のスキルダメージ+1%（要準備スキルは会心+1%、2ターン、加算可）。MaxLv: 70%の確率でスキルダメージ+15%（会心+15%、2ターン、加算可）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）
+</div>
+
+<h3 id="s4_2">フェイドール・マイナー（S4 レンジ・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-feidor-minor.png" alt="フェイドール・マイナー ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>共作包囲</td>
+<td>戦闘スキル（特化アリがいる行列、有効距離5）</td>
+<td>前列の攻撃ステータス10%を共有。前列が8回ダメージを与える毎に、敵全行列に300%（+特化アリLv*1%）ダメージ+50%で1ターン沈黙</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+79.2%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+79.2%</td>
+</tr>
+<tr>
+<td>凶暴噛み</td>
+<td>戦闘スキル（有効距離5）</td>
+<td>75%の確率で兵力最高の敵行列に355%（+特化アリLv*1%）ダメージ、自身の攻撃力+32%（2ターン、加算可）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防+19.8%、ダメージ+13.2%、生命力+12.6%、「支配力III」出征上限+170%</td>
+</tr>
+<tr>
+<td>状顎鋭化</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ攻撃力+79.5%</td>
+</tr>
+<tr>
+<td>精密一撃</td>
+<td>戦闘スキル（有効距離5）</td>
+<td>60%の確率で敵全行列に180%ダメージ、シューター行列命中毎にスキルダメージ率+10%（上限5スタック）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch5_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s4_3">キアシカマバチアリ（S4 支援・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-kiashi-kamabachi.png" alt="キアシカマバチアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>隠秘突撃</td>
+<td>戦闘スキル（味方行列、有効距離5）</td>
+<td>毎ターン60%の確率で前列通常攻撃回数+1・ダメージ+35%、同時に後列が敵ランダム2行列に260%ダメージ</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+79.2%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+79.2%</td>
+</tr>
+<tr>
+<td>野性覚醒</td>
+<td>戦闘スキル（敵行列2列、有効距離4）</td>
+<td>51%の確率で敵ランダム2行列に315%（+特化アリLv*1%）ダメージ、自分と味方1行列の消極状態を解除</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+19.8%、ダメージ+13.2%、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>硬化甲殻</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ防御力+79.5%</td>
+</tr>
+<tr>
+<td>効率的な支援</td>
+<td>戦前スキル（編隊全行列、有効距離4）</td>
+<td>2ターン目から、味方全行列の毎ターン初回ダメージ+41%、ダメージ後に治療発動（治療率124%）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch5_260719.md</code>・<code>batch6_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s4_4">アンセレフィラ・ペデストリス（S4 支援・キャリアー）</h3>
+<p><img class="screenshot" src="../images/special-ant-anselephila.png" alt="アンセレフィラ・ペデストリス ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>闇討ち</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>60%の確率で敵ランダム2行列に消極状態付与（猛毒: 毎ターン150%ダメージ／出血: 毎ターン170%ダメージ／腐食: 毎ターン130%ダメージ+防御-30%／脆弱: 被ダメ+25%／虚弱: 与ダメ-25%のいずれか）</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ防御力+79.2%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻撃力+79.2%</td>
+</tr>
+<tr>
+<td>弱点強攻</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>70%の確率で敵ランダム1行列に365%（+特化アリLv*1%）ダメージ、消極状態の敵へのダメージ+32%（2ターン、加算可）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻防+19.8%、戦闘スピード+60、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>堅実腹甲</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリアーアリ防御力+79.5%</td>
+</tr>
+<tr>
+<td>残虐呑噬</td>
+<td>戦前スキル（敵全行列、有効距離5）</td>
+<td>1ターン準備後、80%の確率で全行列に255%ダメージ、兵力最低の味方行列を治療率455%で治療（敵の消極状態1つごとに治療効果+25%）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch6_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s4_5">野牛ハキリアリ（S4 メレー・ガーディアン）</h3>
+<p><img class="screenshot" src="../images/special-ant-yagyu-hakiri.png" alt="野牛ハキリアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力910,290）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>乱暴対抗</td>
+<td>戦闘スキル（敵行列2列、有効距離5）</td>
+<td>被ダメ時35%の確率で反撃、敵ランダム2行列に130%（+特化アリLv*0.25%）ダメージ</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ防御力+79.2%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻撃力+79.2%</td>
+</tr>
+<tr>
+<td>全力庇護</td>
+<td>戦闘スキル（自分+味方ランダム1行列、有効距離5）</td>
+<td>51%の確率で発動、自分の被ダメ-40%（最初3ターンは-60%）、味方1行列の被スキルダメージ30%を共有（2ターン）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>ガーディアンアリ攻防+19.8%、ダメージ+13.2%、生命力+12.6%、「支配力III」出征上限+170%</td>
+</tr>
+<tr>
+<td>ゴールデン蟻肢</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>ガーディアンアリ生命力+34.2%</td>
+</tr>
+<tr>
+<td>オリジナル治療</td>
+<td>戦闘スキル（特化アリがいる編隊全行列、有効距離5）</td>
+<td>2/4/6ターンでガーディアン行列のスキルダメージ率+21%、ダメージ時51%で治療（治療率120%、1ターン最大3回）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch7_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s4_6">幻彩メダマハネアリ（S4 メレー・キャリアー）</h3>
+<p><img class="screenshot" src="../images/special-ant-gensai-medama.png" alt="幻彩メダマハネアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>自癒の力</td>
+<td>戦前スキル（特化アリがいる行列）</td>
+<td>回避率+20%。消極状態の敵から被ダメ前に60%で追加回避率+25%+治療（治療率130%）</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ防御力+79.2%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻撃力+79.2%</td>
+</tr>
+<tr>
+<td>幻想突撃</td>
+<td>戦闘スキル（敵行列2列、有効距離4）</td>
+<td>70%の確率で敵ランダム2行列に235%（+特化アリLv*1%）ダメージ、全行列のスキル確率+5%（2ターン、加算可）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻防+19.8%、戦闘スピード+60、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>アリ翼強化</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリアーアリ生命力+34.2%</td>
+</tr>
+<tr>
+<td>魅惑な姿</td>
+<td>戦闘スキル（特化アリがいる行列、有効距離5）</td>
+<td>被ダメ毎に全行列の生命力・防御力+5.5%（加算、上限10スタック）。1ターン5回以上被弾で敵ランダム2行列に虚弱（与ダメ-30%）+出血付与（詳細不明瞭、要再確認）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch7_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s3">キオビシリアゲアリ（S3 支援・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-kiobi-shiriage.png" alt="キオビシリアゲアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力910,290）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+25%</td>
+</tr>
+<tr>
+<td>必勝策略</td>
+<td>戦前スキル（編隊全行列、有効距離2）</td>
+<td>先手時: 与ダメ+30%。後手時: 被ダメ-30%</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+66%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+66%</td>
+</tr>
+<tr>
+<td>模倣マスター</td>
+<td>戦闘スキル（特化アリがいる行列、有効距離5）</td>
+<td>70%の確率で後列シューターのダメージスキルをコピー発動、効果+16%</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+19.8%、ダメージ+13.2%、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>箱型体幹</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ防御力+64%</td>
+</tr>
+<tr>
+<td>癒合粘液</td>
+<td>戦闘スキル（特化アリがいる行列、有効距離2）</td>
+<td>全行列生命力+21%、スキル発動毎に50%で防御+27%（加算）+治療率105%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch6_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s3_1">ザサハラ銀アリ（S3 レンジ・シューター）</h3>
+<p><img class="screenshot" src="../images/special-ant-zasahara-gin.png" alt="ザサハラ銀アリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力641,290）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）</td>
+</tr>
+<tr>
+<td>奮迅勢い</td>
+<td>戦闘スキル（敵行列1列、有効距離6）</td>
+<td>80%の確率で敵ランダム1行列に2連撃（各205%ダメージ）+脆弱マーク1スタック付与（マーク毎にスキルダメージ+7.5%、加算可、戦闘終了まで持続）</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ防御力+66%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻撃力+66%</td>
+</tr>
+<tr>
+<td>銀光煌めき</td>
+<td>戦闘スキル（敵行列3列、有効距離6）</td>
+<td>70%の確率で敵全行列に135%（+特化アリレベル*1%）ダメージ</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>シューターアリ攻防+19.8%、ダメージ+13.2%、生命力+12.6%、「支配力III」出征上限+170%、通常攻撃ダメージ+52.5%</td>
+</tr>
+<tr>
+<td>眩い銀甲</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>シューターアリ攻撃力+64%</td>
+</tr>
+<tr>
+<td>精密遠撃</td>
+<td>戦前スキル（特化アリがいる行列）</td>
+<td>毎ターン52%の確率で自分の位置+1、距離1につきダメージ+5.5%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch6_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="s1">ゴールデンクリスタルアリ（S1 レンジ・キャリアー）</h3>
+<p><img class="screenshot" src="../images/special-ant-golden-crystal.png" alt="ゴールデンクリスタルアリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力813,990）</div>
+
+<table>
+<thead>
+<tr>
+<th>スキル名</th>
+<th>分類</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>支配力III</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>出征上限+18,100（+特化アリLv*100）、兵隊アリの与えるダメージ+5%</td>
+</tr>
+<tr>
+<td>熱狂的な戦い</td>
+<td>戦闘スキル（敵行列1列、有効距離5）</td>
+<td>80%の確率で敵ランダム1行列に290%ダメージ、特化アリがいる行列の攻撃力+51.5%（2ターン）</td>
+</tr>
+<tr>
+<td>高級防御</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ防御力+47.3%</td>
+</tr>
+<tr>
+<td>高級攻撃</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻撃力+47.3%</td>
+</tr>
+<tr>
+<td>猛烈劇毒</td>
+<td>戦闘スキル（敵行列3列、有効距離5）</td>
+<td>1ターン準備後、80%の確率で敵全行列に213%（+特化アリLv*1%）ダメージ+猛毒状態（毎ターン157%ダメージ、1ターン）</td>
+</tr>
+<tr>
+<td>コロニーカリスマ</td>
+<td>指揮スキル（特化アリがいる行列）</td>
+<td>キャリアーアリ攻防+16.5%、戦闘スピード+60、生命力+10.5%、「支配力III」出征上限+170%、兵隊アリの与えるダメージ+5%</td>
+</tr>
+<tr>
+<td>ハンターマスター</td>
+<td>指揮スキル（特化アリがいる編隊全行列）</td>
+<td>キャリアーアリ攻撃力+46%</td>
+</tr>
+<tr>
+<td>不意一撃</td>
+<td>戦闘スキル（敵行列3列、有効距離5）</td>
+<td>50%の確率で敵全行列に141%（+特化アリLv*1%）ダメージ、猛毒状態の敵へはさらに+50%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのスキル説明画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch6_260719.md</code>・<code>batch7_260719.md</code> にアーカイブ
+</div>
+
+<h2 id="_2">中立生物</h2>
+<h3 id="_3">氷晶サソリ</h3>
+<p><img class="screenshot" src="../images/neutral-hyosho-sasori-status.png" alt="氷晶サソリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、★X11、戦闘力341,550）</div>
+
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>数値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>戦闘力 / 星ランク</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>攻撃 / 防御 / 生命</td>
+<td>7,280 / 7,280 / 2,910</td>
+</tr>
+<tr>
+<td>この中立生物の星タレントpt</td>
+<td>+4</td>
+</tr>
+<tr>
+<td>二重増幅（ダメージ増幅・軽減増幅）</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリ攻撃力 / 防御力</td>
+<td>+85.0% / +85.0%</td>
+</tr>
+<tr>
+<td>行軍スピード / 戦闘スピード</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>骨喰効果の発動確率</td>
+<td>+100.0%（協戦後も+100.0%）</td>
+</tr>
+<tr>
+<td>全兵隊アリ生命力</td>
+<td>+60.0%</td>
+</tr>
+<tr>
+<td>特化アリスキル攻撃力 / 防御力</td>
+<td>+115.0% / +115.0%</td>
+</tr>
+<tr>
+<td>侵入攻撃力 / 侵入防御力</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリダメージ</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>固有スキル: 戦闘開始後、敵全行列が毎ターン行動する前に40%の確率で反噬状態になる（毎ターン120%のダメージを受け、ターゲットの兵力が高いほどダメージが増加、2ターン持続）。敵行列が反噬によりダメージを受けるたび、30%の確率でランダムな消極状態1つを敵の別の1行列にコピーする。また、敵全行列の消極状態が1つ消えるたび、ターゲットの行列に180%のダメージを与える（毎ターン最大6回発動）。</p>
+<p>このアカウントで確認できたタレントノードの一部（全ノードの網羅ではありません）:</p>
+<table>
+<thead>
+<tr>
+<th>ノード名</th>
+<th>Lv</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>攻撃強化</td>
+<td>0/4</td>
+<td>全行列の攻撃力+7.5%</td>
+</tr>
+<tr>
+<td>攻撃強化</td>
+<td>0/2</td>
+<td>全行列の攻撃力+10.0%</td>
+</tr>
+<tr>
+<td>生命体の進化</td>
+<td>0/3</td>
+<td>全行列の生命力+4.0%</td>
+</tr>
+<tr>
+<td>砕けぬ意志</td>
+<td>0/4</td>
+<td>任意の行列が制御されている場合、受けるダメージ-3.0%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのステータス・タレントツリー画面（2026-07-20実測、Readツールで直接確認）
+</div>
+
+<h3 id="_4">瑠璃カマキリ</h3>
+<p><img class="screenshot" src="../images/neutral-ruri-kamakiri-status.png" alt="瑠璃カマキリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、★X11、戦闘力341,550）</div>
+
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>数値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>戦闘力 / 星ランク</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>攻撃 / 防御 / 生命</td>
+<td>7,280 / 7,280 / 2,910</td>
+</tr>
+<tr>
+<td>二重増幅（ダメージ増幅・軽減増幅）</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリ攻撃力 / 防御力</td>
+<td>+85.0% / +85.0%</td>
+</tr>
+<tr>
+<td>行軍スピード / 戦闘スピード</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>猛攻効果の発動確率</td>
+<td>+100.0%（協戦後も+100.0%）</td>
+</tr>
+<tr>
+<td>全兵隊アリ生命力</td>
+<td>+60.0%</td>
+</tr>
+<tr>
+<td>特化アリスキル攻撃力 / 防御力</td>
+<td>+125.0% / +105.0%</td>
+</tr>
+<tr>
+<td>侵入攻撃力 / 侵入防御力</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリダメージ</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>固有スキル: 戦闘中、各ターン開始時に100%の確率で味方のランダムな2行列の通常攻撃回数+1（1ターン持続）。第1ターンは味方全行列が通常攻撃後、60%の確率でそのターン中に発動済みのダメージスキルを1回追加発動（複数ある場合はランダムで1つ）。この確率は毎ターン10%ずつ減少する。</p>
+<p><img class="screenshot" src="../images/neutral-talent-tree-overview.png" alt="中立生物タレントツリー全体図"></p>
+<div class="screenshot-caption">タレントツリー全体図（基礎／狂熱／全能の3ルート）</div>
+
+<p>このアカウントで確認できたタレントノードの一部（全ノードの網羅ではありません）:</p>
+<table>
+<thead>
+<tr>
+<th>ノード名</th>
+<th>Lv</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>軽装</td>
+<td>0/2</td>
+<td>行軍スピード+5.0%、全体行列攻撃力+3.0%</td>
+</tr>
+<tr>
+<td>生命体の進化</td>
+<td>0/2</td>
+<td>兵隊アリ生命力+3.0%</td>
+</tr>
+<tr>
+<td>戦場の支配者</td>
+<td>0/10</td>
+<td>スキルダメージを与える毎に自分の行列のスキルダメージ+0.8%（加算可、ターン終了時に解除）</td>
+</tr>
+<tr>
+<td>防御強化</td>
+<td>0/4</td>
+<td>兵隊アリ防御力+6.5%</td>
+</tr>
+<tr>
+<td>攻撃強化</td>
+<td>0/4</td>
+<td>兵隊アリ攻撃力+12.0%</td>
+</tr>
+<tr>
+<td>虚を突く</td>
+<td>0/10</td>
+<td>敵ランダム1行列の被スキルダメージ+1.5%（1ターン）</td>
+</tr>
+<tr>
+<td>攻撃強化</td>
+<td>0/2</td>
+<td>兵隊アリ攻撃力+6.0%</td>
+</tr>
+<tr>
+<td>攻撃強化</td>
+<td>0/2</td>
+<td>兵隊アリ攻撃力+8.0%</td>
+</tr>
+<tr>
+<td>威圧</td>
+<td>0/4</td>
+<td>味方の全兵種相克効果+1.5%、敵からの全兵種相克効果-1.5%</td>
+</tr>
+<tr>
+<td>戦いの裏技</td>
+<td>0/4</td>
+<td>全行列の通常攻撃ダメージ+2.25%、スキルダメージ+2.25%</td>
+</tr>
+<tr>
+<td>生命体の進化</td>
+<td>0/4</td>
+<td>兵隊アリ生命力+4.0%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのタレントツリー画面（2026-07-19実測、NotebookLMで書き起こし）。生データは <code>data/notebooklm_extraction_batch9_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="_5">銀藍クワガタ</h3>
+<p><img class="screenshot" src="../images/neutral-ginran-kuwagata-status.png" alt="銀藍クワガタ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、★X11、戦闘力341,550）</div>
+
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>数値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>戦闘力 / 星ランク</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>攻撃 / 防御 / 生命</td>
+<td>7,280 / 7,280 / 2,910</td>
+</tr>
+<tr>
+<td>二重増幅（ダメージ増幅・軽減増幅）</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリ攻撃力 / 防御力</td>
+<td>+85.0% / +85.0%</td>
+</tr>
+<tr>
+<td>行軍スピード / 戦闘スピード</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>堅守効果の発動確率</td>
+<td>+100.0%（協戦後も+100.0%）</td>
+</tr>
+<tr>
+<td>全兵隊アリ生命力</td>
+<td>+60.0%</td>
+</tr>
+<tr>
+<td>特化アリスキル攻撃力 / 防御力</td>
+<td>+120.0% / +110.0%</td>
+</tr>
+<tr>
+<td>侵入攻撃力 / 侵入防御力</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリダメージ</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>固有スキル: 戦闘中、味方全行列がダメージを受けるたびに「堅守」を1スタック獲得（最大5スタック）。各ターン終了時、堅守スタックを全て消耗し、味方の中で兵力が最も低い行列を治療率50%×スタック数で治療。さらに敵全体に80%×スタック数のダメージを与え、30%の確率で1ターンの沈黙を付与する。</p>
+<p>タレント系統「洞察」（このアカウントで確認できたノード、全ノードの網羅ではありません）:</p>
+<table>
+<thead>
+<tr>
+<th>ノード名</th>
+<th>Lv</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>防御強化</td>
+<td>0/2</td>
+<td>全行列の防御力+7.0%</td>
+</tr>
+<tr>
+<td>生命体の進化</td>
+<td>0/2</td>
+<td>全行列の生命力+4.0%</td>
+</tr>
+<tr>
+<td>均衡の勢い</td>
+<td>0/10</td>
+<td>兵力50%以上の行列はスキル防御1.5%分のスキル攻撃バフを、50%未満の行列はスキル攻撃1.5%分のスキル防御バフを獲得（毎ターン開始時に判定）</td>
+</tr>
+<tr>
+<td>攻撃強化</td>
+<td>0/2</td>
+<td>全行列の攻撃力+7.0%</td>
+</tr>
+<tr>
+<td>威圧</td>
+<td>0/4</td>
+<td>味方の全兵種相克効果+1.5%、敵からの全兵種相克効果-1.5%</td>
+</tr>
+<tr>
+<td>攻撃強化</td>
+<td>0/4</td>
+<td>全行列の攻撃力+7.0%</td>
+</tr>
+<tr>
+<td>生命体の進化</td>
+<td>0/4</td>
+<td>全行列の生命力+5.5%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのステータス・タレントツリー画面（2026-07-19実測、NotebookLMで書き起こし）。生データは <code>data/notebooklm_extraction_batch10_260719.md</code> にアーカイブ
+</div>
+
+<h3 id="_6">針尾ドクサソリ</h3>
+<p><img class="screenshot" src="../images/neutral-hario-dokusasori-status.png" alt="針尾ドクサソリ ステータス画面"></p>
+<div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、★X11、戦闘力341,550）</div>
+
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>数値</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>戦闘力 / 星ランク</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>攻撃 / 防御 / 生命</td>
+<td>6,700 / 6,700 / 2,690</td>
+</tr>
+<tr>
+<td>二重増幅（ダメージ増幅・軽減増幅）</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>タレント専精（初期タレントpt）</td>
+<td>+20</td>
+</tr>
+<tr>
+<td>編成にキャリアーが存在する場合、与える消極状態ダメージ</td>
+<td>+6.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリ攻撃力 / 防御力</td>
+<td>+80.0% / +80.0%</td>
+</tr>
+<tr>
+<td>行軍スピード / 戦闘スピード</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>凶悪効果の発動確率</td>
+<td>+100.0%（協戦後も+100.0%）</td>
+</tr>
+<tr>
+<td>全兵隊アリ生命力</td>
+<td>+55.0%</td>
+</tr>
+<tr>
+<td>特化アリスキル攻撃力 / 防御力</td>
+<td>+105.0% / +105.0%</td>
+</tr>
+<tr>
+<td>侵入攻撃力 / 侵入防御力</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>全兵隊アリダメージ</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>固有スキル: 戦闘中、2ターンおきに50%の確率で敵全行列に400%ダメージ。ターン中に味方全行列がスキルダメージを1回与えるごとにダメージ率+50%（上限1000%）、消極状態を1回与えるごとに発動確率+5%。</p>
+<p>タレント系統「残酷」（このアカウントで確認できたノードの一部、全ノードの網羅ではありません）:</p>
+<table>
+<thead>
+<tr>
+<th>ノード名</th>
+<th>Lv</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>異変蠍毒</td>
+<td>0/10</td>
+<td>毎ターン3.5%の確率で敵2行列にランダムで虚弱（与ダメ-4.0%）／脆弱（被ダメ+3.0%）／猛毒（毎ターン被ダメ8.0%）／出血（毎ターン被ダメ6.0%、兵力が低いほど増加）のいずれかを1ターン付与</td>
+</tr>
+<tr>
+<td>荊棘甲殻</td>
+<td>0/8</td>
+<td>全行列がスキルダメージを受けると60.0%の確率で今回のダメージ-3.0%</td>
+</tr>
+<tr>
+<td>残虐天性</td>
+<td>0/8</td>
+<td>全特化アリのスキル2発動確率+0.8%、与えるスキルのエキストラダメージ+1.25%</td>
+</tr>
+<tr>
+<td>貫体毒棘</td>
+<td>0/8</td>
+<td>特化アリがアクティブスキル発動後、次の与えるスキルダメージ+3.0%</td>
+</tr>
+<tr>
+<td>蟻酸攻撃</td>
+<td>0/6</td>
+<td>全行列のスキルのエキストラダメージ+1.0%</td>
+</tr>
+<tr>
+<td>硬質外骨格</td>
+<td>0/6</td>
+<td>全行列の受けるスキルダメージ-1.5%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントのステータス・タレントツリー画面（2026-07-19実測、NotebookLMで書き起こし）。生データ（要約）は <code>data/notebooklm_extraction_batch11_260719.md</code> にアーカイブ、全文書き起こしはNotebookLMノート「The Ants 攻略調査」に保存
+</div>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

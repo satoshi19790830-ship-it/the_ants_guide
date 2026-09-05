@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ant Types & Stats | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="Soldier ant categories, special ants, stats, and the evolution system in The Ants.">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/en/ant-types.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/ant-types.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/ant-types.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/ant-types.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="Ant Types & Stats">
+<meta property="og:description" content="Soldier ant categories, special ants, stats, and the evolution system in The Ants.">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/en/ant-types.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../en/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/ant-types.html" class="">日本語</a>
+    <a href="../en/ant-types.html" class="active">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>Popular</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">Verifying the Damage Formula</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">Beginner Guide</a></li>
+        
+        <li><span class="rank">3</span><a href="data-collection.html">Contribute Your Data</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">Getting Started</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="welcome to the ants guide" class="">Welcome to The Ants Guide</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Guides</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="beginner guide" class="">Beginner Guide</a>
+        
+        <a href="ant-types.html" data-title="ant types & stats" class="active">Ant Types & Stats</a>
+        
+        <a href="alliance-pvp.html" data-title="alliance & pvp" class="">Alliance & PvP</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Compendium</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="ant & neutral creature compendium" class="">Ant & Neutral Creature Compendium</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Research Project</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="verifying the damage formula" class="">Verifying the Damage Formula</a>
+        
+        <a href="data-collection.html" data-title="contribute your data" class="">Contribute Your Data</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../en/index.html">TOP</a> &raquo; Guides &raquo; Ant Types & Stats</div>
+    
+    <div class="card">
+      <h1>Ant Types & Stats</h1>
+      <div class="updated">Last updated: 2026-07-19</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">On this page</div>
+        <div class="toc">
+<ul>
+<li><a href="#the-3-soldier-ant-types">The 3 soldier ant types</a></li>
+<li><a href="#full-hatchery-level-table-own-account-audit-2026-07-19">Full hatchery level table (own-account audit, 2026-07-19)</a></li>
+<li><a href="#awakening-bonus-examples">Awakening bonus examples</a></li>
+<li><a href="#special-ants-rarity-and-roles">Special Ants: rarity and roles</a><ul>
+<li><a href="#skill-damage-follows-basespecial-ant-lv-coefficient">Skill damage follows "base%(+special ant Lv × coefficient%)"</a></li>
+</ul>
+</li>
+<li><a href="#evolution-system-evolution-fungi">Evolution system (Evolution Fungi)</a></li>
+<li><a href="#how-stats-affect-combat">How stats affect combat</a></li>
+</ul>
+</div>
+
+      </div>
+      
+      <h2 id="the-3-soldier-ant-types">The 3 soldier ant types</h2>
+<ul>
+<li><strong>Guardian Ant</strong> — front row, tanky/defense-focused</li>
+<li><strong>Shooter Ant</strong> — back row, high attack but low defense</li>
+<li><strong>Carrier Ant</strong> — resource-hauling specialist, can also be built defensively</li>
+</ul>
+<p>Each type has 10 tiers (T1-T9 as the core range, with T10/T11 above that), unlocked by leveling the matching barracks.</p>
+<div class="source-note">
+Sources: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>, <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a> (community wiki)
+</div>
+
+<h2 id="full-hatchery-level-table-own-account-audit-2026-07-19">Full hatchery level table (own-account audit, 2026-07-19)</h2>
+<p>We recorded our own account's hatchery screens from level 1 through 25, plus promotion tiers 1-10. <strong>The combat power, hatch-count, damage-amplification, and damage-reduction-amplification columns are identical across all three hatcheries</strong> (Guardian / Shooter / Carrier) — only the named ant unlocked at each level differs.</p>
+<table>
+<thead>
+<tr>
+<th>Lv</th>
+<th>Combat Power</th>
+<th>Hatch Count</th>
+<th>Dmg Amp</th>
+<th>Dmg Reduction Amp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>56</td>
+<td>0</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>81</td>
+<td>100</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>426</td>
+<td>300</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>2.0K</td>
+<td>500</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>9.9K</td>
+<td>650</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>22</td>
+<td>18.1K</td>
+<td>700</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>25</td>
+<td>44.8K</td>
+<td>850</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Promo 1</td>
+<td>51.5K</td>
+<td>865</td>
+<td>5.0%</td>
+<td>5.0%</td>
+</tr>
+<tr>
+<td>Promo 5</td>
+<td>78.4K</td>
+<td>915</td>
+<td>25.0%</td>
+<td>25.0%</td>
+</tr>
+<tr>
+<td>Promo 8</td>
+<td>98.6K</td>
+<td>950</td>
+<td>40.0%</td>
+<td>40.0%</td>
+</tr>
+<tr>
+<td>Promo 10</td>
+<td>112.0K</td>
+<td>975</td>
+<td>50.0%</td>
+<td>50.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Damage amp/reduction stays at 0% all the way through level 25, then climbs <strong>+5% per promotion tier</strong>, capping at +50% at promotion 10. This "damage amp / reduction amp" pair is part of the multiplicative layer discussed in <a href="damage-calculation.html">Verifying the Damage Formula</a>.</p>
+<div class="source-note">
+Source: our own account's hatchery screens (measured 2026-07-19, all levels recorded)
+</div>
+
+<p>Example unlocks per hatchery (at Lv1 / Lv5 / Lv10 / Lv22) — our account is set to Japanese, so these names are our own tentative translations, not confirmed against the official English client:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Lv1</th>
+<th>Lv5</th>
+<th>Lv10</th>
+<th>Lv22</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shooter hatchery</td>
+<td>"Ceratia" ant</td>
+<td>"Camponotus sp." ant</td>
+<td>"Textor" carpenter ant</td>
+<td>"Omoserus" big-head ant</td>
+</tr>
+<tr>
+<td>Guardian hatchery</td>
+<td>Rare big-head ant</td>
+<td>"Belgio" big-head ant</td>
+<td>"Versicolor" leafcutter ant</td>
+<td>"Zeraflora" big-head ant</td>
+</tr>
+<tr>
+<td>Carrier hatchery</td>
+<td>"Sebbabus" ant</td>
+<td>"Melanogaster" honeypot ant</td>
+<td>"Yshi" honeypot ant</td>
+<td>"Mimicus" honeypot ant</td>
+</tr>
+</tbody>
+</table>
+<h2 id="awakening-bonus-examples">Awakening bonus examples</h2>
+<ul>
+<li>Shooter Ant: ATK +10.0% (up to +20.0% at higher rank)</li>
+<li>Carrier Ant: DEF +10.0% (up to +20.0%)</li>
+<li>Guardian Ant: HP +4.0% (up to +8.0%)</li>
+</ul>
+<div class="source-note">
+Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>
+</div>
+
+<h2 id="special-ants-rarity-and-roles">Special Ants: rarity and roles</h2>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Color</th>
+<th>Skill count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Highest</td>
+<td>Orange</td>
+<td>8</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Purple</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>Blue</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Green</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Special ants split into "war type" and "develop type," with war type further divided into melee, ranged, support, military, auxiliary, and gathering roles. Only orange-rank war-type special ants can use the "Star Up" system after unlocking skill 6, pushing skill level past the normal cap of 10.</p>
+<div class="source-note">
+Source: <a href="https://zhuanlan.zhihu.com/p/625725052">Zhihu: Special Ant progression guide</a> (Chinese-language player guide)
+</div>
+
+<blockquote>
+<p>Tier lists ranking special ants by strength are common on Chinese community sites, but they change frequently with balance updates, so we don't publish a fixed ranking here — check current guide sites for the latest.</p>
+</blockquote>
+<h3 id="skill-damage-follows-basespecial-ant-lv-coefficient">Skill damage follows "base%(+special ant Lv × coefficient%)"</h3>
+<p>Auditing dozens of special-ant skill tooltips on our own account, nearly every active skill states its damage using the same pattern: "base damage% (+special ant level × a per-skill coefficient%)" — coefficients vary by skill (1%, 2%, 0.25%, and others). In other words, leveling up a special ant continuously increases the skill's own damage %. See <a href="damage-calculation.html">Verifying the Damage Formula</a> for details.</p>
+<p>Stat screens for special ants leading troops also show a "Special Ant Skill ATK / Skill DEF (while leading)" stat — meaning the stats of the soldier ants you deploy also feed back into the special ant's own skill power.</p>
+<h2 id="evolution-system-evolution-fungi">Evolution system (Evolution Fungi)</h2>
+<p>There are 21+ "evolution trees," each boosting a specific aspect of your colony (combat, resources, movement speed, etc.). Researching them consumes resources and time.</p>
+<div class="source-note">
+Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Evolution_Fungi">Fandom Wiki: Evolution Fungi</a>
+</div>
+
+<h2 id="how-stats-affect-combat">How stats affect combat</h2>
+<p>How ATK and DEF actually translate into damage is not officially documented. We're verifying this with real data — see <a href="damage-calculation.html">Verifying the Damage Formula</a>.</p>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants Guide Project (unofficial, community-run)
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

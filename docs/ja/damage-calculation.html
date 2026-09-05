@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ダメージ計算を検証する | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="The Ants の非公開ダメージ計算式を、プレイヤーの実測データから検証するプロジェクト。">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/ja/damage-calculation.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/damage-calculation.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/damage-calculation.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/damage-calculation.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="ダメージ計算を検証する">
+<meta property="og:description" content="The Ants の非公開ダメージ計算式を、プレイヤーの実測データから検証するプロジェクト。">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/ja/damage-calculation.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../ja/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="記事を検索…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/damage-calculation.html" class="active">日本語</a>
+    <a href="../en/damage-calculation.html" class="">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>人気記事</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">ダメージ計算を検証する</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">序盤攻略ガイド</a></li>
+        
+        <li><span class="rank">3</span><a href="data-collection.html">データ提供のお願い</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">はじめに</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="the ants 攻略サイトへようこそ" class="">The Ants 攻略サイトへようこそ</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">攻略</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="序盤攻略ガイド" class="">序盤攻略ガイド</a>
+        
+        <a href="ant-types.html" data-title="蟻の種類とステータス" class="">蟻の種類とステータス</a>
+        
+        <a href="alliance-pvp.html" data-title="アライアンスとpvp" class="">アライアンスとPvP</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">図鑑</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="アリ・中立生物図鑑" class="">アリ・中立生物図鑑</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">検証プロジェクト</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="ダメージ計算を検証する" class="active">ダメージ計算を検証する</a>
+        
+        <a href="data-collection.html" data-title="データ提供のお願い" class="">データ提供のお願い</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../ja/index.html">TOP</a> &raquo; 検証プロジェクト &raquo; ダメージ計算を検証する</div>
+    
+    <div class="card">
+      <h1>ダメージ計算を検証する</h1>
+      <div class="updated">最終更新: 2026-07-19</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">目次</div>
+        <div class="toc">
+<ul>
+<li><a href="#_1">検証の考え方</a></li>
+<li><a href="#_2">候補にしている計算式</a></li>
+<li><a href="#2026719">自分のアカウントを実地調査してわかったこと（2026年7月19日、一次情報）</a><ul>
+<li><a href="#1-lv">発見1: スキルダメージは「基礎%（+特化アリLv×係数%）」という式で明記されている</a></li>
+<li><a href="#2">発見2: 「ダメージ増幅」「ダメージ軽減増幅」という別レイヤーが存在する</a></li>
+<li><a href="#3-900">発見3: 戦闘スピード（行動順）は数百〜900超のレンジで大きく差がつく</a></li>
+<li><a href="#4">発見4: バフは「同一カテゴリ内では加算」で積み上がる（実戦ログより）</a></li>
+<li><a href="#_3">まだ確定していないこと</a></li>
+</ul>
+</li>
+<li><a href="#20267">既存コミュニティの手がかり（2026年7月時点調査）</a><ul>
+<li><a href="#_4">公式フォーラムでの言及</a></li>
+<li><a href="#_5">日本語コミュニティ: 大量対戦の勝率統計というアプローチ</a></li>
+<li><a href="#_6">中国語コミュニティ: 具体的な軽減率・倍率の言及</a></li>
+<li><a href="#_7">共通する定性的な知見</a></li>
+</ul>
+</li>
+<li><a href="#_8">現時点の状況</a></li>
+</ul>
+</div>
+
+      </div>
+      
+      <p><strong>結論から言うと、The Ants は公式にダメージ計算式を一切公開していません。</strong> これは日本語・英語・中国語のどのコミュニティでも共通した前提です。このページでは、既存コミュニティが積み上げてきた手がかりを整理した上で、実測データを集めて式を逆算する検証プロジェクトを進めます。</p>
+<h2 id="_1">検証の考え方</h2>
+<ol>
+<li>プレイヤーの皆さんから「自分の攻撃力・相手の防御力・実際に与えたダメージ」の組み合わせを集める（<a href="data-collection.html">データ提供のお願い</a>）</li>
+<li>よくあるダメージ計算式の候補（下記）を、集まったデータに当てはめて、どの式が最も実測値に近いかを統計的に比較する</li>
+<li>一番当てはまりの良い式を「暫定の計算式」としてこのページに掲載し、データが増えるたびに更新する</li>
+</ol>
+<p>分析パイプライン（<code>scripts/analyze_damage.py</code>）は合成データでの動作確認済みです。データが集まり次第、結果をここに反映します。</p>
+<h2 id="_2">候補にしている計算式</h2>
+<p>多くのソーシャルゲームで採用されている代表的なパターンを候補にしています。後述の実地調査により、最終ダメージは「ここでの基礎式」×「スキル%（+特化アリLv×係数%）」×「(1+ダメージ増幅%−ダメージ軽減増幅%)」の掛け算構造になっている可能性が高いとわかっています。ここで検証したいのは、その最も基礎になるATK対DEFの関係式の部分です。</p>
+<table>
+<thead>
+<tr>
+<th>モデル</th>
+<th>式のイメージ</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>攻防比モデル</td>
+<td>damage = k × ATK² / (ATK + DEF)</td>
+<td>攻撃力と防御力の比率でダメージが決まる。多くのソシャゲで採用される形</td>
+</tr>
+<tr>
+<td>べき乗モデル</td>
+<td>damage = k × ATK^p / DEF^q</td>
+<td>攻撃力・防御力それぞれに異なる重みがかかる場合に対応</td>
+</tr>
+<tr>
+<td>差分モデル</td>
+<td>damage = k × (ATK − DEF)</td>
+<td>シンプルな引き算型。防御力がダメージを直接減らす</td>
+</tr>
+<tr>
+<td>線形モデル</td>
+<td>damage = a×ATK + b×DEF + c</td>
+<td>比較のベースラインとして使用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2026719">自分のアカウントを実地調査してわかったこと（2026年7月19日、一次情報）</h2>
+<p>コミュニティの推測より一段確度の高い情報として、自分のアカウント内のスキル説明文・ステータス画面を407枚のスクリーンショットで網羅的に記録し、書き起こしました。ここから、公式が実はゲーム内テキストとして明言している計算要素が見えてきました。</p>
+<h3 id="1-lv">発見1: スキルダメージは「基礎%（+特化アリLv×係数%）」という式で明記されている</h3>
+<p>特化アリの戦闘スキルのほぼ全てで、ダメージ量が次の形式でゲーム内に明記されていました（一字一句そのまま）。</p>
+<blockquote>
+<p>例: 「毒の蔓延」（シルバーミツツボアリ）— 現Lv: 敵全行列に<strong>114%（+特化アリLv*2%）</strong>のダメージ／MaxLv: <strong>260%（+特化アリLv*2%）</strong>
+例: 「巨顎噛み」（オオアゴアリ）— <strong>300%（+特化アリLv*1%）</strong>
+例: 「乱暴対抗」（野牛ハキリアリ）— <strong>130%（+特化アリLv*0.25%）</strong></p>
+</blockquote>
+<p>つまり、スキル1回あたりのダメージ倍率は「そのスキル固有の基礎%」＋「特化アリのレベル × スキルごとに決まった係数（1%・2%・0.25%・0.1%など様々）」で決まることが、公式テキストとして確認できました。これはコミュニティが推測していた「120%/240%/480%のような段階的な倍率」の正体が、実際にはレベル依存の連続的な式だったことを裏付けます。</p>
+<h3 id="2">発見2: 「ダメージ増幅」「ダメージ軽減増幅」という別レイヤーが存在する</h3>
+<p>スキル%とは別に、装備・孵化地の昇格・宝物・進化増幅などから積み上がる「ダメージ増幅」（攻撃側）と「ダメージ軽減増幅」（防御側）というパーセンテージがステータス画面に明記されていました。兵蟻孵化地は昇格1段階につき+5%、最大の昇格10で+50%まで増幅／軽減幅が乗ることを孵化テーブルの全レベルで確認しています。つまり最終ダメージは「スキル%」×「(1 + 攻撃側ダメージ増幅% − 防御側ダメージ軽減増幅%)」のような、少なくとも2階層の掛け算構造を持つと考えられます。</p>
+<h3 id="3-900">発見3: 戦闘スピード（行動順）は数百〜900超のレンジで大きく差がつく</h3>
+<p>自分のアカウントの侵入戦闘用隊列では、戦闘スピードの値が772〜952の範囲で確認できました。コミュニティが「先に行動できるかどうかで結果が大きく変わる」と体感で語っていた内容が、実際に大きな差がつきうる数値レンジを持つステータスであることを確認できました。</p>
+<h3 id="4">発見4: バフは「同一カテゴリ内では加算」で積み上がる（実戦ログより）</h3>
+<p>追加で記録した115枚のスクリーンショットには、実際の「中立生物レポート」戦闘ログが含まれていました。同一の中立生物（マーモット Lv.1、防御側バフ0%固定）に対して、同一の自分の部隊で17回分の周回ログを確認したところ、各ステータス（特化アリスキル攻撃力・生命力UP・戦闘スピード・ダメージ増幅など）の内訳ツールチップから、次のことが確認できました。</p>
+<blockquote>
+<p>例:「ダメージ増幅：66.00%」の内訳 — 進化 20.00% + 中立生物 5.00% + 建築 41.00% = 66.00%
+例:「戦闘スピード：952」の内訳 — 進化隕石140 + 進化470 + 中立生物140 + 細胞30 + 遺伝子50 + 細菌50 + 真菌50 + 兵種改造2 + VIP20 = 952</p>
+</blockquote>
+<p>進化・中立生物・建築・細胞・遺伝子・細菌・真菌・兵種改造・宝物・VIP・覚醒など、非常に多くのシステムがそれぞれ同じステータスにボーナスを足しており、<strong>同一ステータス内では単純な足し算で合計されている</strong>ことが分かりました（掛け算ではない）。</p>
+<div class="source-note">
+出典: 自分のアカウントの戦闘詳細画面の内訳ツールチップ（2026-07-19実測）。生データは <code>data/screenshot_extraction_260719-2.md</code> にアーカイブ
+</div>
+
+<p>ただしこの周回ログは、同じ部隊構成・同じ相手に対して<strong>スキル発動回数がランダムに変動する</strong>ため（幻彩ハネアリのスキルダメージだけで9〜16回の発動幅があり、同条件でも総ダメージが約34.7億〜66.0億まで変動）、単体では「1回のスキル発動でATKとDEFがどう掛け合わさるか」を分離するには情報が不足しています。</p>
+<h3 id="_3">まだ確定していないこと</h3>
+<p>実際の戦闘ログは確認できましたが、いずれも複数ユニット・複数回のスキル発動を合算した「周回トータル」の数値であり、「1回のスキル発動・自分のATK・相手のDEF・その1発の実ダメージ」という最小単位のデータはまだ揃っていません。そのため「攻撃力と防御力がどう掛け合わさってダメージになるか」という基礎関係式そのものは、まだ確定できていません。ただし発見1・2・4により、集めるべきデータ項目がより明確になりました。<a href="data-collection.html">データ提供フォーム</a>では、スキル名・そのLvと、自分の「ダメージ増幅%」・相手の「ダメージ軽減増幅%」も併せて集めることで、これらの既知の変数を差し引いた上でATK対DEFの純粋な関係を分離して検証できるようにしています。</p>
+<h2 id="20267">既存コミュニティの手がかり（2026年7月時点調査）</h2>
+<h3 id="_4">公式フォーラムでの言及</h3>
+<p>公式フォーラム上に計算式そのもののスレッドはありませんが、「巣の防衛がなぜ機能しないか」という2022年10月のスレッドで、運営スタッフ・熟練プレイヤーから次のような回答がありました。</p>
+<ul>
+<li>兵力800万でも守れなかった投稿者に対し、「相手が"あなたのキルを0にした"ことで被害が転送された」という運営側の説明（キル数を0にする特殊な戦術・アイテムが存在する可能性を示唆）</li>
+<li>資源は「保護レベル以下」に維持する、駐屯地外へ行軍を配置しない、といった実践的な助言</li>
+</ul>
+<div class="source-note">
+出典: <a href="https://theantsforum.allstarunion.com/t/just-not-understanding-anthill-defense/12780">公式フォーラム "Just not understanding anthill defense"</a>（信頼度: 公式フォーラム上のユーザー体験談。検証データではない）
+</div>
+
+<p>また、公式・準公式クリエイターによる戦闘計算解説動画も存在します（字幕の書き起こしは今後の課題）。</p>
+<div class="source-note">
+参考動画: <a href="https://www.youtube.com/watch?v=3Xh7mjK_XcA">understanding combat math and skill damage</a>／<a href="https://www.youtube.com/watch?v=48bErwFVi04">Tom's Guide To Battle Reports</a>／<a href="https://www.youtube.com/watch?v=u3ZODr0IhPw">how to read a battle report and hill tips</a>
+</div>
+
+<h3 id="_5">日本語コミュニティ: 大量対戦の勝率統計というアプローチ</h3>
+<p>日本語攻略サイト「ザ・アンツ攻略Wiki」(theants-kokuyo.com) は、計算式そのものではなく、<strong>同一条件での対戦を30回以上繰り返して勝率を比較する</strong>という実証的な手法を採っています。このサイトの検証方針は、本プロジェクトの実データ収集アプローチと考え方が近く、参考にしています。</p>
+<ul>
+<li>前列ウォーデン編成: 35戦21勝14敗（勝率60%）／前列オオアギト編成: 34戦18勝16敗（勝率52%）。敵編成別の内訳（SSS戦・CCC戦・GGG戦など）まで公開</li>
+<li>ハカホリ・ゴルクリの配置順検証: 配置パターンA 33戦20勝13敗（60%）／パターンB 34戦18勝16敗（52%）</li>
+<li>序盤の特化アリ対決では、スキル発動6回で撃破225,154に達した実測例（スキル発動回数以上に火力インフレの影響が大きいことを示す数値）</li>
+</ul>
+<div class="source-note">
+出典: <a href="https://theants-kokuyo.com/shield-or-silence2/">前列ウォーデンとオオアギトの戦績比較</a>／<a href="https://theants-kokuyo.com/inspection/">ハカホリ・ゴルクリの行動順検証</a>／<a href="https://theants-kokuyo.com/power-speed/">ステータスの低い序盤は短期決戦なのか</a>（信頼度: プレイヤー実測。試行回数が多く再現性のあるデータ）
+</div>
+
+<h3 id="_6">中国語コミュニティ: 具体的な軽減率・倍率の言及</h3>
+<ul>
+<li>「特化アリが所属する小隊は、通常攻撃・スキルダメージが25%軽減される」という具体的な軽減率の言及</li>
+<li>特化アリのスキルダメージ倍率は「120%/240%/480%」のように段階的なパーセンテージで語られることが多い（技能レベルによる倍率上昇と推測）</li>
+<li>野生生物（土拨鼠=グラウンドホッグ）への直接攻撃で約1,400万ダメージ、14回程度で区域戦9档到達、という実測値の報告</li>
+</ul>
+<div class="source-note">
+出典: <a href="https://www.taptap.cn/moment/363595786300163245">TapTap 掠奪・区域戦攻略投稿</a>（信頼度: プレイヤー実測、中国語コミュニティ）
+</div>
+
+<h3 id="_7">共通する定性的な知見</h3>
+<p>対立する数式は見つかりませんでしたが、日中両コミュニティで共通して語られる点があります。</p>
+<ol>
+<li><strong>「表示戦闘力(Power)」と「実際の強さ」は乖離する</strong> — 戦闘力が高くても負けることがあると繰り返し言及される</li>
+<li><strong>戦闘スピード（行動順）の影響が非常に大きい</strong> — 先に行動できるかどうかで結果が大きく変わるという体感が共通</li>
+<li><strong>兵種の配置（前列・中列・後列）とスキル発動率・倍率の組み合わせ</strong>が実質的なダメージを左右する</li>
+</ol>
+<h2 id="_8">現時点の状況</h2>
+<p><strong>データ収集中です。</strong> まだ十分な実測データが集まっていないため、暫定式は未掲載です。戦闘ログをお持ちの方はぜひ <a href="data-collection.html">データ提供フォーム</a> からご協力ください。</p>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

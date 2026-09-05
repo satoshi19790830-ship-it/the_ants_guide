@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifying the Damage Formula | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="The Ants doesn't publish its damage formula. We're reverse-engineering it from player-submitted data.">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/en/damage-calculation.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/damage-calculation.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/damage-calculation.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/damage-calculation.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="Verifying the Damage Formula">
+<meta property="og:description" content="The Ants doesn't publish its damage formula. We're reverse-engineering it from player-submitted data.">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/en/damage-calculation.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../en/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/damage-calculation.html" class="">日本語</a>
+    <a href="../en/damage-calculation.html" class="active">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>Popular</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">Verifying the Damage Formula</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">Beginner Guide</a></li>
+        
+        <li><span class="rank">3</span><a href="data-collection.html">Contribute Your Data</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">Getting Started</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="welcome to the ants guide" class="">Welcome to The Ants Guide</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Guides</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="beginner guide" class="">Beginner Guide</a>
+        
+        <a href="ant-types.html" data-title="ant types & stats" class="">Ant Types & Stats</a>
+        
+        <a href="alliance-pvp.html" data-title="alliance & pvp" class="">Alliance & PvP</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Compendium</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="ant & neutral creature compendium" class="">Ant & Neutral Creature Compendium</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Research Project</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="verifying the damage formula" class="active">Verifying the Damage Formula</a>
+        
+        <a href="data-collection.html" data-title="contribute your data" class="">Contribute Your Data</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../en/index.html">TOP</a> &raquo; Research Project &raquo; Verifying the Damage Formula</div>
+    
+    <div class="card">
+      <h1>Verifying the Damage Formula</h1>
+      <div class="updated">Last updated: 2026-07-19</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">On this page</div>
+        <div class="toc">
+<ul>
+<li><a href="#approach">Approach</a></li>
+<li><a href="#candidate-formulas">Candidate formulas</a></li>
+<li><a href="#what-auditing-our-own-account-revealed-2026-07-19-first-party-data">What auditing our own account revealed (2026-07-19, first-party data)</a><ul>
+<li><a href="#finding-1-skill-damage-is-literally-written-as-basespecial-ant-lv-coefficient">Finding 1: skill damage is literally written as "base%(+special ant Lv × coefficient%)"</a></li>
+<li><a href="#finding-2-a-separate-damage-amplification-reduction-amplification-layer-exists">Finding 2: a separate "damage amplification / reduction amplification" layer exists</a></li>
+<li><a href="#finding-3-combat-speed-turn-order-varies-hugely-in-the-hundreds-up-to-900">Finding 3: combat speed (turn order) varies hugely — in the hundreds up to 900+</a></li>
+<li><a href="#finding-4-buffs-stack-additively-within-the-same-stat-category-confirmed-from-real-combat-logs">Finding 4: buffs stack additively within the same stat category (confirmed from real combat logs)</a></li>
+<li><a href="#whats-still-unconfirmed">What's still unconfirmed</a></li>
+</ul>
+</li>
+<li><a href="#what-the-existing-community-has-found-as-of-july-2026">What the existing community has found (as of July 2026)</a><ul>
+<li><a href="#official-forum">Official forum</a></li>
+<li><a href="#japanese-community-win-rate-statistics-as-a-research-method">Japanese community: win-rate statistics as a research method</a></li>
+<li><a href="#chinese-community-concrete-percentages">Chinese community: concrete percentages</a></li>
+<li><a href="#common-qualitative-findings">Common qualitative findings</a></li>
+</ul>
+</li>
+<li><a href="#current-status">Current status</a></li>
+</ul>
+</div>
+
+      </div>
+      
+      <p><strong>Bottom line: The Ants has never published an official damage formula.</strong> This is a shared premise across the Japanese, English, and Chinese-speaking communities. This page summarizes what's already been pieced together, and runs a data-driven project to reverse-engineer the formula from real combat data.</p>
+<h2 id="approach">Approach</h2>
+<ol>
+<li>Collect (ATK, DEF, actual damage dealt) triples from players — see <a href="data-collection.html">Contribute Your Data</a></li>
+<li>Fit several common damage-formula candidates (below) against the collected data and compare statistical fit</li>
+<li>Publish whichever formula fits best as a "current best guess," updating as more data comes in</li>
+</ol>
+<p>Our analysis pipeline (<code>scripts/analyze_damage.py</code>) has been tested against synthetic data. Results will be posted here once enough real submissions come in.</p>
+<h2 id="candidate-formulas">Candidate formulas</h2>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Formula shape</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attack/defense ratio</td>
+<td>damage = k × ATK² / (ATK + DEF)</td>
+<td>Very common pattern in mobile RPGs</td>
+</tr>
+<tr>
+<td>Power-law</td>
+<td>damage = k × ATK^p / DEF^q</td>
+<td>Allows ATK and DEF to have different weights</td>
+</tr>
+<tr>
+<td>Difference</td>
+<td>damage = k × (ATK − DEF)</td>
+<td>Simple subtractive model</td>
+</tr>
+<tr>
+<td>Linear</td>
+<td>damage = a×ATK + b×DEF + c</td>
+<td>Baseline for comparison</td>
+</tr>
+</tbody>
+</table>
+<p>As the account audit below shows, final damage is very likely a product of three layers: this base ATK-vs-DEF formula × skill% (+special ant Lv × coefficient%) × (1 + attacker's damage-amplification% − defender's damage-reduction-amplification%). What we're trying to isolate here is that innermost ATK-vs-DEF layer.</p>
+<h2 id="what-auditing-our-own-account-revealed-2026-07-19-first-party-data">What auditing our own account revealed (2026-07-19, first-party data)</h2>
+<p>As a step above community speculation, we systematically screenshotted our own account's skill tooltips and stat screens — 407 screenshots — and transcribed all of them. This surfaced quantitative mechanics the game actually states in its own text.</p>
+<h3 id="finding-1-skill-damage-is-literally-written-as-basespecial-ant-lv-coefficient">Finding 1: skill damage is literally written as "base%(+special ant Lv × coefficient%)"</h3>
+<p>Nearly every special ant combat skill states its damage in this exact form:</p>
+<blockquote>
+<p>Example: "Poison Spread" (Silver Honeypot Ant) — current: <strong>114%(+special ant Lv × 2%)</strong> to all enemy rows; Max Lv: <strong>260%(+special ant Lv × 2%)</strong>
+Example: "Mandible Bite" (Giant Jaw) — <strong>300%(+special ant Lv × 1%)</strong>
+Example: "Brutal Counter" (Bison Ant) — <strong>130%(+special ant Lv × 0.25%)</strong></p>
+</blockquote>
+<p>So each skill's damage multiplier is "that skill's base %" plus "special ant level × a per-skill coefficient" (1%, 2%, 0.25%, 0.1%, and more, depending on the skill). This confirms that the "120% / 240% / 480%"-style stepped percentages the Chinese community had noticed were actually a continuous, level-dependent formula in disguise.</p>
+<h3 id="finding-2-a-separate-damage-amplification-reduction-amplification-layer-exists">Finding 2: a separate "damage amplification / reduction amplification" layer exists</h3>
+<p>Beyond the skill %, stat screens explicitly show "Damage Amplification" (attacker-side) and "Damage Reduction Amplification" (defender-side) percentages, which stack from hatchery promotion levels, treasures, and evolution amplifiers. Across the full hatchery level table, each promotion tier adds +5% to both, up to +50% at promotion tier 10. Final damage therefore likely has at least a two-layer multiplicative structure: skill% × (1 + attacker's amp% − defender's reduction%).</p>
+<h3 id="finding-3-combat-speed-turn-order-varies-hugely-in-the-hundreds-up-to-900">Finding 3: combat speed (turn order) varies hugely — in the hundreds up to 900+</h3>
+<p>Our own account's invasion squads showed combat speed values ranging from 772 to 952. This confirms, with concrete numbers, the community's qualitative sense that going first swings outcomes significantly.</p>
+<h3 id="finding-4-buffs-stack-additively-within-the-same-stat-category-confirmed-from-real-combat-logs">Finding 4: buffs stack additively within the same stat category (confirmed from real combat logs)</h3>
+<p>A second batch of 115 screenshots included actual "Neutral Creature Report" combat logs. Against the same fixed target (a level 1 Marmot with 0% buffs) using the same squad, we captured 17 farming runs, and the breakdown tooltips on each stat revealed exactly how each stat is assembled:</p>
+<blockquote>
+<p>Example: "Damage Amplification: 66.00%" breaks down as Evolution 20.00% + Neutral Creature 5.00% + Building 41.00% = 66.00%
+Example: "Combat Speed: 952" breaks down as Evolution Meteorite 140 + Evolution 470 + Neutral Creature 140 + Cell 30 + Gene 50 + Bacteria 50 + Fungus 50 + Troop Modification 2 + VIP 20 = 952</p>
+</blockquote>
+<p>A striking number of systems (evolution, neutral creatures, buildings, cells, genes, bacteria, fungi, troop modification, treasures, VIP, awakening, and more) each add their own bonus to the same stat, and <strong>within a single stat category, they simply sum</strong> — not multiply.</p>
+<div class="source-note">
+Source: breakdown tooltips on our own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code>
+</div>
+
+<p>However, this farming log isn't clean enough on its own to isolate the ATK-vs-DEF relationship: against the identical opponent with an identical squad, skill activation counts vary randomly (one special ant's damage alone ranged from 9 to 16 activations), so total damage across runs swung from about 3.47B to 6.6B purely from RNG, not from stat differences.</p>
+<h3 id="whats-still-unconfirmed">What's still unconfirmed</h3>
+<p>We did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — we still don't have the minimal unit of data we need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what we need to collect: the <a href="data-collection.html">data submission form</a> now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so we can control for these known variables and isolate the pure ATK-vs-DEF relationship.</p>
+<h2 id="what-the-existing-community-has-found-as-of-july-2026">What the existing community has found (as of July 2026)</h2>
+<h3 id="official-forum">Official forum</h3>
+<p>There's no thread with an explicit formula, but an October 2022 thread titled "Just not understanding anthill defense" has useful staff/veteran responses:</p>
+<ul>
+<li>A player reported losing a defense with 8M troop power against a raid of 130,000 vs their 100-120 defenders. A reply explained that damage can be "transferred" when the attacker reduces your kill count to zero, hinting at a specific mechanic/item.</li>
+<li>Practical advice: keep resources below the protected threshold, don't station marches outside garrisons.</li>
+</ul>
+<div class="source-note">
+Source: <a href="https://theantsforum.allstarunion.com/t/just-not-understanding-anthill-defense/12780">Official forum thread</a> (official forum, user experience report — not verified data)
+</div>
+
+<p>There are also official/semi-official creator videos specifically about combat math (transcripts still to be done):</p>
+<div class="source-note">
+See: <a href="https://www.youtube.com/watch?v=3Xh7mjK_XcA">understanding combat math and skill damage</a>, <a href="https://www.youtube.com/watch?v=48bErwFVi04">Tom's Guide To Battle Reports</a>, <a href="https://www.youtube.com/watch?v=u3ZODr0IhPw">how to read a battle report and hill tips</a>
+</div>
+
+<h3 id="japanese-community-win-rate-statistics-as-a-research-method">Japanese community: win-rate statistics as a research method</h3>
+<p>The Japanese guide site theants-kokuyo.com uses a method close to ours: instead of guessing a formula, they run 30+ identical matchups and compare win rates.</p>
+<ul>
+<li>Front-row Warden lineup: 35 battles, 21W-14L (60%). Front-row Ohagito lineup: 34 battles, 18W-16L (52%). Breakdowns by opponent formation (SSS, CCC, GGG, etc.) are also published.</li>
+<li>Ordering test between two special ants: Formation A 33 battles 20W-13L (60%) vs Formation B 34 battles 18W-16L (52%).</li>
+<li>Early-game special-ant duels: one recorded example dealt 225,154 total damage across only 6 skill activations, showing damage inflation matters more than activation count early on.</li>
+</ul>
+<div class="source-note">
+Sources: <a href="https://theants-kokuyo.com/shield-or-silence2/">Warden vs Ohagito win-rate comparison</a>, <a href="https://theants-kokuyo.com/inspection/">turn-order test</a>, <a href="https://theants-kokuyo.com/power-speed/">early-game duel data</a> (player-measured, high sample size)
+</div>
+
+<h3 id="chinese-community-concrete-percentages">Chinese community: concrete percentages</h3>
+<ul>
+<li>A squad containing a special ant reportedly takes 25% less damage from both normal attacks and skills.</li>
+<li>Special ant skill damage multipliers are commonly described in stepped percentages like "120% / 240% / 480%", likely scaling with skill level.</li>
+<li>One report: ~14M damage dealt to a wild "groundhog" boss in a single hit, reaching zone-war tier 9 after about 14 hits.</li>
+</ul>
+<div class="source-note">
+Source: <a href="https://www.taptap.cn/moment/363595786300163245">TapTap plunder/zone-war guide post</a> (player-measured, Chinese community)
+</div>
+
+<h3 id="common-qualitative-findings">Common qualitative findings</h3>
+<p>No directly contradicting formulas were found — instead, both communities converge on the same qualitative points:</p>
+<ol>
+<li><strong>Displayed "Power" and actual combat strength diverge</strong> — high power doesn't guarantee a win, repeatedly noted in both communities</li>
+<li><strong>Combat speed (turn order) matters a lot</strong> — going first is widely felt to swing outcomes significantly</li>
+<li><strong>Formation (front/mid/back row) combined with skill trigger rate and multiplier</strong> is what actually determines effective damage</li>
+</ol>
+<h2 id="current-status">Current status</h2>
+<p><strong>Data collection is in progress.</strong> No formula is published yet — please contribute via the <a href="data-collection.html">data submission form</a> if you have combat logs.</p>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants Guide Project (unofficial, community-run)
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

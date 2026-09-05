@@ -1,0 +1,8 @@
+# 元のスクリーンショット素材（1GB超。ローカルにのみ置く）
+画像/
+assets/images_src/
+
+# ビルド環境
+.venv/
+__pycache__/
+*.pyc

@@ -1,0 +1,195 @@
+"""The Ants 攻略サイト ビルドスクリプト。
+
+content/ja/*.md, content/en/*.md (YAML frontmatter + Markdown本文) を読み込み、
+output/ja/, output/en/ に静的HTMLを書き出す。
+
+使い方:
+    python build_site.py
+"""
+import os
+import re
+import shutil
+from datetime import date
+from pathlib import Path
+
+import markdown
+import yaml
+from jinja2 import Environment, FileSystemLoader
+
+ROOT = Path(__file__).resolve().parent.parent
+CONTENT_DIR = ROOT / "content"
+OUTPUT_DIR = ROOT / "docs"  # GitHub Pages の公開元（/docs）
+TEMPLATE_DIR = Path(__file__).resolve().parent / "templates"
+ASSETS_IMAGES_DIR = ROOT / "assets" / "images"
+
+# 公開先のURL（末尾スラッシュなし）。GitHub Pages のリポジトリ名が決まったら書き換える。
+# 環境変数 ANTS_SITE_URL があればそちらを優先する。
+SITE_URL = os.environ.get("ANTS_SITE_URL", "https://example.github.io/the-ants-guide").rstrip("/")
+
+LANGS = ["ja", "en"]
+FOOTER = {
+    "ja": "© The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）",
+    "en": "© The Ants Guide Project (unofficial, community-run)",
+}
+UPDATED_LABEL = {"ja": "最終更新", "en": "Last updated"}
+SEARCH_PLACEHOLDER = {"ja": "記事を検索…", "en": "Search articles…"}
+TOC_LABEL = {"ja": "目次", "en": "On this page"}
+POPULAR_LABEL = {"ja": "人気記事", "en": "Popular"}
+BREADCRUMB_HOME = {"ja": "TOP", "en": "TOP"}
+
+# サイト全体で固定表示する人気記事ランキング（スラッグ順）
+POPULAR_SLUGS = ["damage-calculation", "beginner-guide", "data-collection"]
+
+FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
+
+
+def parse_page(path: Path):
+    raw = path.read_text(encoding="utf-8")
+    m = FRONTMATTER_RE.match(raw)
+    if not m:
+        raise ValueError(f"frontmatter missing: {path}")
+    meta = yaml.safe_load(m.group(1)) or {}
+    body_md = m.group(2)
+
+    md = markdown.Markdown(extensions=["tables", "fenced_code", "toc"])
+    html_body = md.convert(body_md)
+    # toc拡張が生成する目次には最上位の<div class="toc">ラッパーが付くので中身だけ使う
+    toc_html = md.toc
+    heading_count = len(re.findall(r"<h[23]", html_body))
+
+    meta["slug"] = path.stem
+    meta["html"] = html_body
+    meta["toc"] = toc_html if heading_count >= 2 else None
+    return meta
+
+
+def load_lang_pages(lang: str):
+    pages = []
+    lang_dir = CONTENT_DIR / lang
+    if not lang_dir.exists():
+        return pages
+    for path in sorted(lang_dir.glob("*.md")):
+        pages.append(parse_page(path))
+    pages.sort(key=lambda p: (p.get("order", 999), p["slug"]))
+    return pages
+
+
+def build_nav(pages):
+    nav = {}
+    order_of_category = []
+    for p in pages:
+        cat = p.get("category", "General")
+        if cat not in nav:
+            nav[cat] = []
+            order_of_category.append(cat)
+        nav[cat].append(
+            {"title": p["title"], "slug": p["slug"], "href": f"{p['slug']}.html"}
+        )
+    return [(cat, nav[cat]) for cat in order_of_category]
+
+
+def build_popular(pages):
+    by_slug = {p["slug"]: p for p in pages}
+    items = []
+    for slug in POPULAR_SLUGS:
+        p = by_slug.get(slug)
+        if p:
+            items.append({"title": p["title"], "slug": slug, "href": f"{slug}.html"})
+    return items
+
+
+def write_sitemap(pages_by_lang):
+    """検索エンジンに全ページを伝える sitemap.xml を出力する。"""
+    urls = []
+    for lang, pages in pages_by_lang.items():
+        for page in pages:
+            lastmod = page.get("updated") or date.today().isoformat()
+            urls.append(
+                f"  <url>\n"
+                f"    <loc>{SITE_URL}/{lang}/{page['slug']}.html</loc>\n"
+                f"    <lastmod>{lastmod}</lastmod>\n"
+                f"  </url>"
+            )
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(urls)
+        + "\n</urlset>\n"
+    )
+    (OUTPUT_DIR / "sitemap.xml").write_text(xml, encoding="utf-8")
+
+
+def main():
+    env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
+    template = env.get_template("base.html")
+
+    pages_by_lang = {lang: load_lang_pages(lang) for lang in LANGS}
+
+    for lang in LANGS:
+        pages = pages_by_lang[lang]
+        if not pages:
+            continue
+        nav = build_nav(pages)
+        popular = build_popular(pages)
+        out_dir = OUTPUT_DIR / lang
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        for page in pages:
+            is_home = page["slug"] == "index"
+            html = template.render(
+                lang=lang,
+                title=page["title"],
+                description=page.get("description", ""),
+                content=page["html"],
+                toc=page["toc"],
+                toc_label=TOC_LABEL[lang],
+                updated=page.get("updated"),
+                updated_label=UPDATED_LABEL[lang],
+                nav=nav,
+                popular=popular,
+                popular_label=POPULAR_LABEL[lang],
+                category=page.get("category", ""),
+                is_home=is_home,
+                breadcrumb_home=BREADCRUMB_HOME[lang],
+                search_placeholder=SEARCH_PLACEHOLDER[lang],
+                slug=page["slug"],
+                home_href=f"../{lang}/index.html" if not is_home else "index.html",
+                ja_href=f"../ja/{page['slug']}.html",
+                en_href=f"../en/{page['slug']}.html",
+                footer_text=FOOTER[lang],
+                canonical_url=f"{SITE_URL}/{lang}/{page['slug']}.html",
+                ja_url=f"{SITE_URL}/ja/{page['slug']}.html",
+                en_url=f"{SITE_URL}/en/{page['slug']}.html",
+            )
+            (out_dir / f"{page['slug']}.html").write_text(html, encoding="utf-8")
+        print(f"[build] {lang}: {len(pages)} pages -> {out_dir}")
+
+    # ルート直下からja/index.htmlへリダイレクト
+    redirect_html = (
+        "<!DOCTYPE html><meta charset='utf-8'>"
+        "<meta http-equiv='refresh' content='0; url=ja/index.html'>"
+        "<a href='ja/index.html'>The Ants 攻略サイトへ</a>"
+    )
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    (OUTPUT_DIR / "index.html").write_text(redirect_html, encoding="utf-8")
+
+    if ASSETS_IMAGES_DIR.exists():
+        out_images_dir = OUTPUT_DIR / "images"
+        if out_images_dir.exists():
+            shutil.rmtree(out_images_dir)
+        shutil.copytree(ASSETS_IMAGES_DIR, out_images_dir)
+        print(f"[build] images: {len(list(out_images_dir.glob('*')))} files -> {out_images_dir}")
+
+    write_sitemap(pages_by_lang)
+    (OUTPUT_DIR / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8"
+    )
+    # GitHub Pages の Jekyll 処理を無効化する
+    (OUTPUT_DIR / ".nojekyll").write_text("", encoding="utf-8")
+    print("[build] sitemap.xml / robots.txt / .nojekyll を出力")
+
+    print("[build] done.")
+
+
+if __name__ == "__main__":
+    main()

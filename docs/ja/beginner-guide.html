@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>序盤攻略ガイド | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="The Ants 序盤の進め方。チュートリアル攻略と女王アリレベル上げの優先順位。">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/ja/beginner-guide.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/beginner-guide.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/beginner-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/beginner-guide.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="序盤攻略ガイド">
+<meta property="og:description" content="The Ants 序盤の進め方。チュートリアル攻略と女王アリレベル上げの優先順位。">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/ja/beginner-guide.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../ja/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="記事を検索…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/beginner-guide.html" class="active">日本語</a>
+    <a href="../en/beginner-guide.html" class="">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>人気記事</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">ダメージ計算を検証する</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">序盤攻略ガイド</a></li>
+        
+        <li><span class="rank">3</span><a href="data-collection.html">データ提供のお願い</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">はじめに</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="the ants 攻略サイトへようこそ" class="">The Ants 攻略サイトへようこそ</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">攻略</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="序盤攻略ガイド" class="active">序盤攻略ガイド</a>
+        
+        <a href="ant-types.html" data-title="蟻の種類とステータス" class="">蟻の種類とステータス</a>
+        
+        <a href="alliance-pvp.html" data-title="アライアンスとpvp" class="">アライアンスとPvP</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">図鑑</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="アリ・中立生物図鑑" class="">アリ・中立生物図鑑</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">検証プロジェクト</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="ダメージ計算を検証する" class="">ダメージ計算を検証する</a>
+        
+        <a href="data-collection.html" data-title="データ提供のお願い" class="">データ提供のお願い</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../ja/index.html">TOP</a> &raquo; 攻略 &raquo; 序盤攻略ガイド</div>
+    
+    <div class="card">
+      <h1>序盤攻略ガイド</h1>
+      <div class="updated">最終更新: 2026-07-19</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">目次</div>
+        <div class="toc">
+<ul>
+<li><a href="#_1">チュートリアルについて</a></li>
+<li><a href="#_2">最優先は女王アリのレベル上げ</a></li>
+<li><a href="#2026-07-19">女王アリ 全レベルテーブル（実アカウント調査、2026-07-19）</a></li>
+<li><a href="#_3">その他の重要な節目（マイルストーン）</a></li>
+<li><a href="#_4">習性（コロニー特性）システム</a></li>
+<li><a href="#_5">リセマラについて</a></li>
+<li><a href="#_6">アライアンス（ギルド）への加入</a></li>
+<li><a href="#_7">無課金プレイについて</a></li>
+<li><a href="#_8">序盤で避けたいこと</a></li>
+</ul>
+</div>
+
+      </div>
+      
+      <h2 id="_1">チュートリアルについて</h2>
+<p>チュートリアルは第4章まで用意されており、基本的に案内に沿って進めれば大きくつまずくことはありません。チュートリアル終了時点で女王アリはレベル8前後まで上がっています。</p>
+<h2 id="_2">最優先は女王アリのレベル上げ</h2>
+<p>The Ants は育成ゲームとしての側面が強く、<strong>女王アリのレベルを最優先で上げる</strong>のがセオリーとされています。「アリ塚レベル＝女王レベル」であり、ほとんどの建物は女王レベルを超えてアップグレードできません（ストアで購入した建物も例外ではありません）。目安としてレベル25まで上げられると、その後の巣の運営がかなり楽になります。</p>
+<div class="source-note">
+出典: <a href="https://simplegameguide.com/queen-level-upgrade-requirements/">simplegameguide.com: Queen Level Upgrade Requirements</a>
+</div>
+
+<h2 id="2026-07-19">女王アリ 全レベルテーブル（実アカウント調査、2026-07-19）</h2>
+<p>自分のアカウントで女王アリのLv1〜25、勲章1〜10まで全レベルの戦闘力・必要な応急植物・機能アンロックを記録しました。抜粋すると次の通りです。</p>
+<table>
+<thead>
+<tr>
+<th>Lv</th>
+<th>戦闘力</th>
+<th>応急植物必要量</th>
+<th>この段階でアンロックされる機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>2.8K</td>
+<td>70.0K</td>
+<td>進化システム</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3.0K</td>
+<td>90.0K</td>
+<td>特化アリシステム</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3.2K</td>
+<td>110.0K</td>
+<td>旅虫生息地、アライアンス機能</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3.6K</td>
+<td>150.0K</td>
+<td>特化アリ異変池、習性選択</td>
+</tr>
+<tr>
+<td>10</td>
+<td>4.4K</td>
+<td>210.0K</td>
+<td>地下洞窟挑戦、細胞システム、中立生物システム</td>
+</tr>
+<tr>
+<td>13</td>
+<td>5.5K</td>
+<td>350.0K</td>
+<td>水晶鉱坑、遺伝子システム</td>
+</tr>
+<tr>
+<td>17</td>
+<td>8.6K</td>
+<td>550.0K</td>
+<td>細菌システム、女王アリ対決</td>
+</tr>
+<tr>
+<td>18</td>
+<td>10.0K</td>
+<td>600.0K</td>
+<td>働きアリ宝物、働きアリ探索</td>
+</tr>
+<tr>
+<td>19</td>
+<td>12.0K</td>
+<td>650.0K</td>
+<td>真菌システム、勲章システム</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23.1K</td>
+<td>800.0K</td>
+<td>兵種改造システム</td>
+</tr>
+<tr>
+<td>25</td>
+<td>49.4K</td>
+<td>1.0M</td>
+<td>中立生物狩場、特化アリ異変</td>
+</tr>
+<tr>
+<td>勲章1〜10</td>
+<td>56.8K〜123.5K</td>
+<td>1.0M固定</td>
+<td>（Lv25到達後は応急植物の必要量が頭打ちになり、戦闘力のみ伸びる）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントの女王アリ詳細画面（2026-07-19実測、Lv1〜勲章10まで全レベル記録）
+</div>
+
+<h2 id="_3">その他の重要な節目（マイルストーン）</h2>
+<table>
+<thead>
+<tr>
+<th>レベル</th>
+<th>何が起こるか</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>女王Lv8</td>
+<td>新規プレイヤー用の巣シールドが自動解除される（以後、他プレイヤーの侵略対象になる）</td>
+</tr>
+<tr>
+<td>女王Lv16</td>
+<td>中立生物（野良モンスター）強化が解放</td>
+</tr>
+<tr>
+<td>兵蟻生息地Lv22</td>
+<td>T8兵蟻が解放</td>
+</tr>
+<tr>
+<td>女王/兵蟻生息地Lv23</td>
+<td>区域戦で金の卵1個入手可能に</td>
+</tr>
+<tr>
+<td>女王/兵蟻生息地Lv25</td>
+<td>T9兵蟻が解放、区域戦で金の卵3個入手可能に</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: <a href="https://pillarofgaming.com/the-ants-underground-kingdom-queen-upgrade-requirements/">pillarofgaming.com: Queen Upgrade Requirements</a>／中国TapTapコミュニティの掠奪・区域戦攻略投稿
+</div>
+
+<p>女王アリレベル8で自動的にシールドが切れる点は特に重要です。シールド期間中に資源を防衛できる体制（アライアンス加入・資源の使い切り等）を整えておくのがおすすめです。</p>
+<h2 id="_4">習性（コロニー特性）システム</h2>
+<p>女王アリLv7で選択できるようになる「習性」は、栽培・略奪・牧畜の3系統から選ぶコロニー特性です。それぞれ専属建築と、明確な利点3つ・欠点3つを持ちます（現在は無料で変更可能）。</p>
+<table>
+<thead>
+<tr>
+<th>系統</th>
+<th>専属建築</th>
+<th>利点</th>
+<th>欠点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>栽培</td>
+<td>資源加工地</td>
+<td>資源保護（略奪されにくい）／採取スピード+50%／兵隊アリ荷重+100%（採取時）</td>
+<td>侵入時の攻撃力-30%／侵入時の防御力-30%／行軍スピード-30%</td>
+</tr>
+<tr>
+<td>略奪</td>
+<td>戦利品貯蔵庫</td>
+<td>侵入時の兵隊アリ荷重+150%／死亡数の40%を負傷に変換／傷兵治療スピード+100%</td>
+<td>植物・肉・湿土・砂の産出-30%／甘露産出-30%／採取時の兵隊アリ荷重-50%</td>
+</tr>
+<tr>
+<td>牧畜</td>
+<td>資源輸送通路</td>
+<td>甘露産出+50%／兵隊アリ食物消耗-30%／旅虫生息地の商品値段-5%</td>
+<td>侵入される時、略奪される資源量+100%／傷兵治療スピード-50%（3つ目の欠点は未確認）</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+出典: 自分のアカウントの習性選択画面（2026-07-19実測、栽培・略奪は当日、牧畜は2026-07-26追加確認）
+</div>
+
+<h2 id="_5">リセマラについて</h2>
+<p>リセマラの必要性は低いとされています。理由は次の2点です。</p>
+<ul>
+<li>リセマラ自体の難易度が高い（手順が煩雑）</li>
+<li>通常プレイを進めるだけでも優秀な蟻を入手しやすい</li>
+</ul>
+<h2 id="_6">アライアンス（ギルド）への加入</h2>
+<p>アライアンスに加入すると巣の発展速度が明確に上がるため、序盤から加入しておくのがおすすめです。詳しくは <a href="alliance-pvp.html">アライアンスとPvP</a> を参照してください。</p>
+<h2 id="_7">無課金プレイについて</h2>
+<p>ログインボーナスやデイリータスクが充実しているため、無課金でも十分に強くなれます。毎日のタスク消化を欠かさないことが上達の近道です。</p>
+<h2 id="_8">序盤で避けたいこと</h2>
+<ul>
+<li>資源を「保護レベル」以上に貯め込みすぎて掠奪の標的になる</li>
+<li>防衛体制を整えないままシールドが切れてしまう</li>
+<li>定期イベントに参加しない（デイリータスク・アライアンス遠征など、コツコツ系の報酬を取りこぼす）</li>
+</ul>
+<div class="source-note">
+参考: naoyuki-products.xyz、sutekilifekoko.com、theants-kokuyo.com、milktea-chocolate.com、antsgame.gamewiki.jp、mrguider.org の各攻略記事（2026年7月時点の調査より）
+</div>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

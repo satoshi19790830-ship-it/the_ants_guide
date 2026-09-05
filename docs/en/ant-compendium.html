@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ant & Neutral Creature Compendium | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="Verbatim skill data for The Ants special ants and neutral creatures, transcribed from real account screenshots.">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/en/ant-compendium.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/ant-compendium.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/ant-compendium.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/ant-compendium.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="Ant & Neutral Creature Compendium">
+<meta property="og:description" content="Verbatim skill data for The Ants special ants and neutral creatures, transcribed from real account screenshots.">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/en/ant-compendium.html">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../en/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="Search articles…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/ant-compendium.html" class="">日本語</a>
+    <a href="../en/ant-compendium.html" class="active">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>Popular</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">Verifying the Damage Formula</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">Beginner Guide</a></li>
+        
+        <li><span class="rank">3</span><a href="data-collection.html">Contribute Your Data</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">Getting Started</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="welcome to the ants guide" class="">Welcome to The Ants Guide</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Guides</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="beginner guide" class="">Beginner Guide</a>
+        
+        <a href="ant-types.html" data-title="ant types & stats" class="">Ant Types & Stats</a>
+        
+        <a href="alliance-pvp.html" data-title="alliance & pvp" class="">Alliance & PvP</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Compendium</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="ant & neutral creature compendium" class="active">Ant & Neutral Creature Compendium</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">Research Project</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="verifying the damage formula" class="">Verifying the Damage Formula</a>
+        
+        <a href="data-collection.html" data-title="contribute your data" class="">Contribute Your Data</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../en/index.html">TOP</a> &raquo; Compendium &raquo; Ant & Neutral Creature Compendium</div>
+    
+    <div class="card">
+      <h1>Ant & Neutral Creature Compendium</h1>
+      <div class="updated">Last updated: 2026-08-02</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">On this page</div>
+        <div class="toc">
+<ul>
+<li><a href="#special-ants">Special Ants</a><ul>
+<li><a href="#spelchirio-ant-s4-ranged-guardian">Spelchirio Ant (S4 Ranged / Guardian)</a></li>
+<li><a href="#wingless-tiger-beetle-s4-melee-carrier">Wingless Tiger Beetle (S4 Melee / Carrier)</a></li>
+<li><a href="#giant-jaw-s5-ranged-guardian">Giant Jaw (S5 Ranged / Guardian)</a></li>
+<li><a href="#blue-velvet-s5-support-guardian">Blue Velvet (S5 Support / Guardian)</a></li>
+<li><a href="#indigo-velvet-s5-melee-shooter">Indigo Velvet (S5 Melee / Shooter)</a></li>
+<li><a href="#azure-crazy-s5-ranged-shooter">Azure Crazy (S5 Ranged / Shooter)</a></li>
+<li><a href="#rainbow-scarlet-s5-ranged-carrier">Rainbow Scarlet (S5 Ranged / Carrier)</a></li>
+<li><a href="#white-crystal-s4-ranged-guardian">White Crystal (S4 Ranged / Guardian)</a></li>
+<li><a href="#sly-hunter-s4-support-shooter">Sly Hunter (S4 Support / Shooter)</a></li>
+<li><a href="#unnamed-anselephila-pedestris-s4-support-carrier">(unnamed — Anselephila pedestris, S4 Support / Carrier)</a></li>
+<li><a href="#crematogaster-inflata-s3-support-shooter">Crematogaster Inflata (S3 Support / Shooter)</a></li>
+<li><a href="#saharan-silver-ant-s3-ranged-shooter">Saharan Silver Ant (S3 Ranged / Shooter)</a></li>
+<li><a href="#golden-crystal-s1-ranged-carrier">Golden Crystal (S1 Ranged / Carrier)</a></li>
+<li><a href="#rainbow-chaser-s5-ranged-shooter">Rainbow Chaser (S5 Ranged / Shooter)</a></li>
+<li><a href="#bison-ant-s4-melee-guardian">Bison Ant (S4 Melee / Guardian)</a></li>
+<li><a href="#rainbow-wings-s4-melee-carrier">Rainbow Wings (S4 Melee / Carrier)</a></li>
+<li><a href="#golden-chaser-kinbane-ant-s5-melee-carrier">Golden Chaser (Kinbane Ant, S5 Melee / Carrier)</a></li>
+<li><a href="#spotted-hunter-azure-striped-mosquito-ant-s6-support-shooter">Spotted Hunter (Azure Striped Mosquito Ant, S6 Support / Shooter)</a></li>
+<li><a href="#brute-ant-s6-melee-guardian">Brute Ant (S6 Melee / Guardian)</a></li>
+<li><a href="#spotted-velvet-s6-support-carrier">Spotted Velvet (S6 Support / Carrier)</a></li>
+<li><a href="#honey-pot-ant-s5-ranged-carrier">Honey Pot Ant (S5 Ranged / Carrier)</a></li>
+<li><a href="#red-jaw-trap-jaw-ant-s6-melee-guardian">Red-Jaw Trap-Jaw Ant (S6 Melee / Guardian)</a></li>
+<li><a href="#fungus-farmer-ant-s6-support-guardian">Fungus Farmer Ant (S6 Support / Guardian)</a></li>
+<li><a href="#striped-velvet-ant-s6-support-shooter">Striped Velvet Ant (S6 Support / Shooter)</a></li>
+<li><a href="#twin-spine-ant-s6-ranged-shooter">Twin-Spine Ant (S6 Ranged / Shooter)</a></li>
+<li><a href="#amber-flower-ant-s6-melee-carrier">Amber Flower Ant (S6 Melee / Carrier)</a></li>
+<li><a href="#ladybug-ant-s6-ranged-carrier">Ladybug Ant (S6 Ranged / Carrier)</a></li>
+</ul>
+</li>
+<li><a href="#neutral-creatures">Neutral Creatures</a><ul>
+<li><a href="#ice-crystal-scorpion">Ice Crystal Scorpion</a></li>
+<li><a href="#glazed-mantis">Glazed Mantis</a></li>
+<li><a href="#sapphire-beetle">Sapphire Beetle</a></li>
+<li><a href="#thorny-scorpion">Thorny Scorpion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </div>
+      
+      <p>Transcribed word-for-word (via NotebookLM) from screenshots of our own account's skill tooltips, stat screens, and talent tree screens. This is verbatim in-game text, not a summary or paraphrase.</p>
+<blockquote>
+<p><strong>This page is a work in progress.</strong> Out of 407+115+179 screenshots on hand, batches 4-11 and part of the 260720 folder (roughly 393 screenshots — 25 special ants + 4 neutral creatures) are covered so far. More will be added as additional screenshots are transcribed. Images shown here are cropped from the stat screen to show just the creature. A few ants (not yet broken through in our account) only have some of their skills documented.</p>
+</blockquote>
+<h2 id="special-ants">Special Ants</h2>
+<h3 id="spelchirio-ant-s4-ranged-guardian">Spelchirio Ant (S4 Ranged / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-spelchirio.png" alt="Spelchirio Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Current Lv effect</th>
+<th>Max Lv effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +100 (+special ant Lv*100)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100). Damage dealt by soldier ants in the formation +25%</td>
+</tr>
+<tr>
+<td>Reckless Charge</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>43% chance to trigger: your formation takes 20% damage in exchange for 80% damage to 2 random enemy columns (guaranteed crit, +12% dmg to Shooter Ants)</td>
+<td>70% chance to trigger: same trade-off, 320% damage to 2 random enemy columns (guaranteed crit, +30% dmg to Shooter Ants)</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +7.2%</td>
+<td>Guardian Ant DEF +144%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +7.2%</td>
+<td>Guardian Ant ATK +144%</td>
+</tr>
+<tr>
+<td>Concentrated Strike</td>
+<td>Combat skill (3 enemy columns, range 5)</td>
+<td>On turns 2/4/6: 53% chance to deal 150% (+special ant Lv*1%) damage to all enemy columns, 22% chance to silence for 1 turn</td>
+<td>On turns 2/4/6: 80% chance to deal 540% (+special ant Lv*1%) damage to all enemy columns, 50% chance to silence for 1 turn</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK/DEF +1.8%, damage +1.2%, HP +6.6%, "Dominance III" deployment cap +17%</td>
+<td>ATK/DEF +36%, damage +24%, HP +18%, deployment cap +170%. Normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Reinforced Beak</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant ATK +30%</td>
+<td>Guardian Ant ATK +120%</td>
+</tr>
+<tr>
+<td>Valiant Stance</td>
+<td>Pre-battle skill (formation with the special ant)</td>
+<td>Formation damage dealt +1.5%. Each time a buff (heal/shield etc.) is gained: skill damage +0.5%, skill damage reduction +0.5%, etc.</td>
+<td>Damage dealt +25%. Each buff gained: skill damage +8%, skill damage reduction +8%, healing received +8% (stacks up to 4)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch9_260719.md</code>
+</div>
+
+<h3 id="wingless-tiger-beetle-s4-melee-carrier">Wingless Tiger Beetle (S4 Melee / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-hanenashihanmyo.png" alt="Wingless Tiger Beetle stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Current Lv effect</th>
+<th>Max Lv effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +100 (+special ant Lv*100)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100). Damage dealt by soldier ants in the formation +25%</td>
+</tr>
+<tr>
+<td>Long-Legged Advantage</td>
+<td>Combat skill (range 5)</td>
+<td>Damage taken -7%. Each hit taken grants +10% extra evasion (stacking). On successful evasion, extra evasion resets and deals 160% (+special ant Lv*10%) damage to a random enemy column</td>
+<td>Damage taken -35%. Same trigger deals 300% (+special ant Lv*1%) damage to a random enemy column</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +7.2%</td>
+<td>Carrier Ant DEF +144%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +7.2%</td>
+<td>Carrier Ant ATK +144%</td>
+</tr>
+<tr>
+<td>Wartime Relief</td>
+<td>Combat skill (2 allied columns, range 2)</td>
+<td>52% chance to heal 1-2 random allied columns for 60% heal rate, ATK/DEF +20% for 1 turn</td>
+<td>70% chance, 180% heal rate, ATK/DEF +50% for 1 turn</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>ATK/DEF +1.8%, combat speed +15, HP +6.6%, "Dominance III" deployment cap +17%</td>
+<td>ATK/DEF +36%, combat speed +60, HP +18%, deployment cap +170%. Normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Crimson Joint</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant HP +12.2%</td>
+<td>Carrier Ant HP +54%</td>
+</tr>
+<tr>
+<td>Phantom Form</td>
+<td>Combat skill (whole formation, range 2)</td>
+<td>On each successful evasion, 42% chance for all your columns' skill damage +1% (skills requiring a wind-up gain +1% crit instead), 2 turns, stacking</td>
+<td>70% chance for skill damage +15% (or +15% crit), 2 turns, stacking</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM)
+</div>
+
+<h3 id="giant-jaw-s5-ranged-guardian">Giant Jaw (S5 Ranged / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-ooagoari.png" alt="Giant Jaw stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 641,290)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Current Lv effect</th>
+<th>Breakthrough/next Lv effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100)</td>
+<td>After breakthrough: formation ATK +25%, DEF +25%, HP +10%, Guardian crowd-control effect +5%, formation's overall skill damage rate +10%</td>
+</tr>
+<tr>
+<td>Giant Jaw Bite</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>65% chance: 300% (+special ant Lv*1%) damage to 2 random enemy columns + Mark for 2 turns. When an allied column deals damage, 40% chance to heal (heal rate 50%)</td>
+<td>305% (+special ant Lv*1%) damage, heal rate 52%</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +83%</td>
+<td>+91.3%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +83%</td>
+<td>+91.3%</td>
+</tr>
+<tr>
+<td>Brutal Suppression</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>75% chance: 260% (+special ant Lv*1%) damage to 2 random enemy columns. Marked targets are Suppressed (unable to act) for 1 turn</td>
+<td>265% (+special ant Lv*1%) damage</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian ATK/DEF +18%, damage +12%, HP +12%, "Dominance III" deployment cap +170%</td>
+<td>ATK/DEF +19.8%, damage +13.2%, HP +12.6%</td>
+</tr>
+<tr>
+<td>Blood-Stained Frame</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant ATK +85%</td>
+<td>+90%</td>
+</tr>
+<tr>
+<td>Tactical Strike</td>
+<td>Combat skill (3 enemy columns, range 5)</td>
+<td>80% chance: 150% (+special ant Lv<em>1%) damage to all enemy columns. CC'd targets take an extra 150% (+special ant Lv</em>1%); non-CC'd targets get CC resistance -20% for 2 turns (non-stacking)</td>
+<td>154% (+special ant Lv*1%) damage</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code>
+</div>
+
+<h3 id="blue-velvet-s5-support-guardian">Blue Velvet (S5 Support / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-aokeari.png" alt="Blue Velvet stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 1,113,290)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, broken through)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage dealt +25%. After breakthrough: formation ATK +25%, DEF +25%, HP +10%, Guardian skill damage +5%, skill 2 heal rate +10%</td>
+</tr>
+<tr>
+<td>Healing Aura</td>
+<td>Combat skill (whole formation, range 5)</td>
+<td>70% chance to heal all allied columns (heal rate 160%), next turn's skill/CC trigger chance +8%</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +166%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +166%</td>
+</tr>
+<tr>
+<td>Silencing Strike</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>70% chance: 200% (+special ant Lv*1%) damage to 2 random enemy columns, 55% chance to silence for 1 turn</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian ATK/DEF +18%, damage +12%, HP +12%, "Dominance III" deployment cap +170%</td>
+</tr>
+<tr>
+<td>Blue Velvet Cuticle</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant DEF +85%</td>
+</tr>
+<tr>
+<td>Sustained Reinforcement</td>
+<td>Pre-battle skill (whole formation, range 5)</td>
+<td>Every turn, all your columns' ATK/DEF +20% (stacking, lasts until battle ends). Front row additionally gets damage reduction +3%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code>
+</div>
+
+<h3 id="indigo-velvet-s5-melee-shooter">Indigo Velvet (S5 Melee / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-aokuroke.png" alt="Indigo Velvet stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 698,490)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keen Sense</td>
+<td>Pre-battle skill (formation with the special ant)</td>
+<td>While in the front row: dmg taken -20.5%, dmg dealt +20.5%, +4.1% per hit dealt (cap 41%)</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +91.3%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +91.3%</td>
+</tr>
+<tr>
+<td>Forceful Plunder</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>80% chance: 225% (+special ant Lv*1%) damage to 2 random enemy columns, target's skill DEF -30% (stacking, 2 turns)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter ATK/DEF +19.8%, damage +13.2%, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Bristled Armor</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant HP +37.5%</td>
+</tr>
+<tr>
+<td>Coordinated Pursuit</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>On turns 2/4/6/8, shares 82% of own buffs with the back row. When the back row deals damage, 35% chance to deal 203% extra damage to a random enemy column</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch4_260719.md</code> and <code>batch5_260719.md</code>
+</div>
+
+<h3 id="azure-crazy-s5-ranged-shooter">Azure Crazy (S5 Ranged / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-aosuji.png" alt="Azure Crazy stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 1,152,090)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, broken through)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, skill-2 armor pen +5%, skill-5 damage rate +10%</td>
+</tr>
+<tr>
+<td>Charging Thrust</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>60% chance: 540% (+special ant Lv*1%) damage to a random enemy column, 25% armor penetration (ignores target's total DEF)</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +166%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +166%</td>
+</tr>
+<tr>
+<td>Born Hunter</td>
+<td>Combat skill (3 enemy columns, range 5)</td>
+<td>On turns 2/4/6/8, 80% chance: 184% (+special ant Lv*1%) damage to all enemy columns, +1 hit count per trigger</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter ATK/DEF +19.8%, damage +13.2%, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Indigo-Patterned Abdomen</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant ATK +90%</td>
+</tr>
+<tr>
+<td>Purifying Field</td>
+<td>Pre-battle skill (formation with the special ant)</td>
+<td>Every 4 hits dealt: clear own debuffs, next skill damage dealt +32%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>
+</div>
+
+<h3 id="rainbow-scarlet-s5-ranged-carrier">Rainbow Scarlet (S5 Ranged / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-rainbow-akaashi.png" alt="Rainbow Scarlet stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 829,690)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, broken through)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, skill-5 trigger chance +10%, bleed damage dealt +7%</td>
+</tr>
+<tr>
+<td>Laceration</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>80% chance: 335% (+special ant Lv*1%) damage to a random enemy column + Bleed (141% dmg/turn, higher at lower troop count, 2 turns). If target's troops &gt;50%, apply a 2nd bleed stack</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +91.3%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +91.3%</td>
+</tr>
+<tr>
+<td>Power Amplification</td>
+<td>Combat skill (3 enemy columns, range 5)</td>
+<td>After 1 turn of setup, 80% chance: 204% (+special ant Lv*1%) damage to all enemy columns; debuffed targets take an extra +41%</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier ATK/DEF +19.8%, combat speed +60, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Iridescent Carapace</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant ATK +90%</td>
+</tr>
+<tr>
+<td>Bloodthirsty Slaughter</td>
+<td>Pre-battle skill (2 enemy columns, range 5)</td>
+<td>Own dmg dealt +21%, converts 20% of it into own troop count. At the start of each turn, 2 random enemy columns get dmg taken +10.5% / healing received -22% (1 turn)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>
+</div>
+
+<h3 id="white-crystal-s4-ranged-guardian">White Crystal (S4 Ranged / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-feidor-minor.png" alt="White Crystal stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 868,090)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Joint Siege</td>
+<td>Combat skill (formation with the special ant, range 5)</td>
+<td>Shares 10% of the front row's ATK stat. Every 8 hits dealt by the front row: 300% (+special ant Lv*1%) damage to all enemy columns + 50% chance to silence for 1 turn</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +79.2%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +79.2%</td>
+</tr>
+<tr>
+<td>Vicious Bite</td>
+<td>Combat skill (range 5)</td>
+<td>75% chance: 355% (+special ant Lv*1%) damage to the enemy column with the highest troop count, own ATK +32% (2 turns, stacking)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian ATK/DEF +19.8%, damage +13.2%, HP +12.6%, "Dominance III" deployment cap +170%</td>
+</tr>
+<tr>
+<td>Sharpened Mandibles</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant ATK +79.5%</td>
+</tr>
+<tr>
+<td>Precision Strike</td>
+<td>Combat skill (range 5)</td>
+<td>60% chance: 180% damage to all enemy columns, +10% skill damage rate per hit on a Shooter column (cap 5 stacks)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code>
+</div>
+
+<h3 id="sly-hunter-s4-support-shooter">Sly Hunter (S4 Support / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-kiashi-kamabachi.png" alt="Sly Hunter stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 868,090)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Covert Assault</td>
+<td>Combat skill (allied column, range 5)</td>
+<td>Every turn, 60% chance: front row +1 normal attack count and +35% damage; simultaneously the back row deals 260% damage to 2 random enemy columns</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +79.2%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +79.2%</td>
+</tr>
+<tr>
+<td>Wild Awakening</td>
+<td>Combat skill (2 enemy columns, range 4)</td>
+<td>51% chance: 315% (+special ant Lv*1%) damage to 2 random enemy columns, clears debuffs on own and one random allied column</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter ATK/DEF +19.8%, damage +13.2%, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Hardened Carapace</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant DEF +79.5%</td>
+</tr>
+<tr>
+<td>Efficient Support</td>
+<td>Pre-battle skill (whole formation, range 4)</td>
+<td>From turn 2 onward, all allied columns' first damage dealt each turn +41%, triggers a heal afterward (heal rate 124%)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch5_260719.md</code> and <code>batch6_260719.md</code>
+</div>
+
+<h3 id="unnamed-anselephila-pedestris-s4-support-carrier">(unnamed — Anselephila pedestris, S4 Support / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-anselephila.png" alt="Anselephila pedestris stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 868,090)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Ambush</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>60% chance to apply a random debuff to 2 random enemy columns: Venom (150% dmg/turn) / Bleed (170% dmg/turn) / Corrosion (130% dmg/turn, DEF -30%) / Fragile (dmg taken +25%) / Weaken (dmg dealt -25%)</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +79.2%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +79.2%</td>
+</tr>
+<tr>
+<td>Weak Point Strike</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>70% chance: 365% (+special ant Lv*1%) damage to a random enemy column, damage to debuffed enemies +32% (2 turns, stacking)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier ATK/DEF +19.8%, combat speed +60, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Solid Underbelly</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant DEF +79.5%</td>
+</tr>
+<tr>
+<td>Savage Devour</td>
+<td>Pre-battle skill (all enemy columns, range 5)</td>
+<td>After 1 turn of setup, 80% chance: 255% damage to all enemy columns, heals the allied column with lowest troop count at 455% rate (+25% per enemy debuff)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>
+</div>
+
+<h3 id="crematogaster-inflata-s3-support-shooter">Crematogaster Inflata (S3 Support / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-kiobi-shiriage.png" alt="Crematogaster Inflata stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 910,290)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Winning Tactics</td>
+<td>Pre-battle skill (whole formation, range 2)</td>
+<td>If acting first: damage dealt +30%. If acting last: damage taken -30%</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +66%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +66%</td>
+</tr>
+<tr>
+<td>Master Mimic</td>
+<td>Combat skill (formation with the special ant, range 5)</td>
+<td>70% chance to copy and trigger a back-row Shooter's damage skill, effect +16%</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter ATK/DEF +19.8%, damage +13.2%, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Boxy Frame</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant DEF +64%</td>
+</tr>
+<tr>
+<td>Healing Mucus</td>
+<td>Combat skill (formation with the special ant, range 2)</td>
+<td>All-column HP +21%; each skill trigger, 50% chance for DEF +27% (stacking) plus a heal (rate 105%)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>
+</div>
+
+<h3 id="saharan-silver-ant-s3-ranged-shooter">Saharan Silver Ant (S3 Ranged / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-zasahara-gin.png" alt="Saharan Silver Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 641,290)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100)</td>
+</tr>
+<tr>
+<td>Furious Momentum</td>
+<td>Combat skill (1 enemy column, range 6)</td>
+<td>80% chance: 2 hits of 205% damage each to a random enemy column + 1 stack of Fragile Mark (each mark +7.5% skill damage taken, stacking, lasts until battle ends)</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +66%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +66%</td>
+</tr>
+<tr>
+<td>Silver Glimmer</td>
+<td>Combat skill (3 enemy columns, range 6)</td>
+<td>70% chance: 135% (+special ant Lv*1%) damage to all enemy columns</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter ATK/DEF +19.8%, damage +13.2%, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Dazzling Silver Armor</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant ATK +64%</td>
+</tr>
+<tr>
+<td>Precision Long Shot</td>
+<td>Pre-battle skill (formation with the special ant)</td>
+<td>Every turn, 52% chance: own position +1; damage +5.5% per unit of distance to target</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code>
+</div>
+
+<h3 id="golden-crystal-s1-ranged-carrier">Golden Crystal (S1 Ranged / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-golden-crystal.png" alt="Golden Crystal stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 813,990)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +5%</td>
+</tr>
+<tr>
+<td>Fervent Battle</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>80% chance: 290% damage to a random enemy column, formation ATK +51.5% (2 turns)</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +47.3%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +47.3%</td>
+</tr>
+<tr>
+<td>Fierce Toxin</td>
+<td>Combat skill (3 enemy columns, range 5)</td>
+<td>After 1 turn of setup, 80% chance: 213% (+special ant Lv*1%) damage to all enemy columns + Venom (157% dmg/turn, 1 turn)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier ATK/DEF +16.5%, combat speed +60, HP +10.5%, "Dominance III" deployment cap +170%, soldier ant damage +5%</td>
+</tr>
+<tr>
+<td>Hunter Master</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant ATK +46%</td>
+</tr>
+<tr>
+<td>Surprise Strike</td>
+<td>Combat skill (3 enemy columns, range 5)</td>
+<td>50% chance: 141% (+special ant Lv*1%) damage to all enemy columns; an extra +50% against Venom-afflicted enemies</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch6_260719.md</code> and <code>batch7_260719.md</code>
+</div>
+
+<h3 id="rainbow-chaser-s5-ranged-shooter">Rainbow Chaser (S5 Ranged / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-gensai-hane.png" alt="Rainbow Chaser stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 1,613,390)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Frenzied Barrage</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>70% chance: 3 hits of 240% (+special ant Lv*1%) damage, each on a random target; an extra +20% if the same target is hit again</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +166%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +166%</td>
+</tr>
+<tr>
+<td>Dazzling Assault</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>On turns 2/4/6/8, 100% chance: 480% (+special ant Lv*1%) damage to a random enemy column; 80% chance to chain again (chance -20% per chain)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter ATK/DEF +36%, damage +24%, HP +18%, "Dominance III" deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Resplendent Cuticle</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant ATK +135%</td>
+</tr>
+<tr>
+<td>Tail Spine Piercer</td>
+<td>Pre-battle skill (formation with the special ant)</td>
+<td>Armor penetration +30.5% (ignores target's total DEF), CC resistance +10.5% per turn (stacking)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>
+</div>
+
+<h3 id="bison-ant-s4-melee-guardian">Bison Ant (S4 Melee / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-yagyu-hakiri.png" alt="Bison Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 910,290)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Brutal Retaliation</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>On taking damage, 35% chance to counter: 130% (+special ant Lv*0.25%) damage to 2 random enemy columns</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +79.2%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +79.2%</td>
+</tr>
+<tr>
+<td>All-Out Shelter</td>
+<td>Combat skill (self + 1 random allied column, range 5)</td>
+<td>51% chance to trigger: own dmg taken -40% (-60% for the first 3 turns), also shares 30% of a random allied column's skill damage taken (2 turns)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian ATK/DEF +19.8%, damage +13.2%, HP +12.6%, "Dominance III" deployment cap +170%</td>
+</tr>
+<tr>
+<td>Golden Limbs</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant HP +34.2%</td>
+</tr>
+<tr>
+<td>Original Remedy</td>
+<td>Combat skill (whole formation with the special ant, range 5)</td>
+<td>On turns 2/4/6: Guardian formation skill damage rate +21%, 51% chance for a heal on dealing damage (heal rate 120%, up to 3 triggers per turn)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>
+</div>
+
+<h3 id="rainbow-wings-s4-melee-carrier">Rainbow Wings (S4 Melee / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-gensai-medama.png" alt="Rainbow Wings stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, Power 868,090)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +18,100 (+special ant Lv*100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Self-Healing Power</td>
+<td>Pre-battle skill (formation with the special ant)</td>
+<td>Evasion +20%. Before taking damage from a debuffed enemy, 60% chance for extra evasion +25% plus a heal (heal rate 130%)</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +79.2%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +79.2%</td>
+</tr>
+<tr>
+<td>Illusory Assault</td>
+<td>Combat skill (2 enemy columns, range 4)</td>
+<td>70% chance: 235% (+special ant Lv*1%) damage to 2 random enemy columns, all-column skill trigger chance +5% (2 turns, stacking)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier ATK/DEF +19.8%, combat speed +60, HP +12.6%, "Dominance III" deployment cap +170%, normal attack damage +52.5%</td>
+</tr>
+<tr>
+<td>Winged Reinforcement</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant HP +34.2%</td>
+</tr>
+<tr>
+<td>Enchanting Form</td>
+<td>Combat skill (formation with the special ant, range 5)</td>
+<td>Each hit taken: all-column HP/DEF +5.5% (stacking, cap 10). Taking 5+ hits in one turn applies Weaken (dmg dealt -30%) and Bleed to 2 random enemy columns (exact bleed % unclear in source, needs re-verification)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code>
+</div>
+
+<h3 id="golden-chaser-kinbane-ant-s5-melee-carrier">Golden Chaser (Kinbane Ant, S5 Melee / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-kinbane.png" alt="Kinbane Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, not yet broken through)</div>
+
+<blockquote>
+<p>Only 3 skills are documented (not yet broken through in our account, so the remaining skill screens weren't captured).</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: cap +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, Carrier CC resistance +20%, debuff damage dealt by Carrier +5%</td>
+</tr>
+<tr>
+<td>Golden Frame</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant HP +12.5% → 60% (Max Lv)</td>
+</tr>
+<tr>
+<td>Moment of Leap</td>
+<td>Pre-battle skill (whole formation, range 5)</td>
+<td>All-column debuff damage dealt +2% → 30% (Max Lv), damage taken from debuffed enemies -2% → 30% (Max Lv)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, transcribed via NotebookLM + direct verification). Raw data (summary) archived at <code>data/notebooklm_extraction_batch7_260719.md</code> and <code>batch8_260719.md</code>
+</div>
+
+<h3 id="spotted-hunter-azure-striped-mosquito-ant-s6-support-shooter">Spotted Hunter (Azure Striped Mosquito Ant, S6 Support / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-aoshimaka.png" alt="Spotted Hunter stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, not yet broken through). English name confirmed via English-UI screenshots in the 260719-2 batch (unique match on tier + type).</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +100 (+special ant Lv*100)</td>
+</tr>
+<tr>
+<td>Strike of Submission</td>
+<td>Combat skill (2 random enemy columns in range, range 5)</td>
+<td>Triggers while leading Shooter Ants in battle. 65% → 80% (Max Lv) chance: deal 120% → 260% damage to 2 random enemy columns, 70% → 80% chance to steal the target column's next-turn normal attack count and share it with a random allied column</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +9.55% → 191% (Max Lv)</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +9.55% → 191% (Max Lv)</td>
+</tr>
+<tr>
+<td>Hunter's Instinct</td>
+<td>Pre-battle skill (formation with the special ant, range 5)</td>
+<td>Every turn, 65% → 75% (Max Lv) chance: back row skill crit rate +52% → 80% (1 turn). Each crit heals the allied column with lowest troop count (heal rate 105% → 180%), though the crit-rate bonus decays 10% per crit</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter ATK/DEF/damage/HP up, "Dominance III" deployment cap up</td>
+</tr>
+<tr>
+<td>Blue-Spotted Camouflage</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant DEF +55% → 150% (Max Lv)</td>
+</tr>
+<tr>
+<td>Plundering Raid</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>70% → 80% (Max Lv) chance: 180% → 300% (+special ant Lv*1%) damage to a random enemy column, steals 4.4% → 10% of its skill trigger chance and grants it to your back row (1 turn), also clears back row CC/debuffs</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08-01, confirmed directly via Read tool / transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch8_260719.md</code>
+</div>
+
+<h3 id="brute-ant-s6-melee-guardian">Brute Ant (S6 Melee / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-bulldog.png" alt="Brute Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, not yet broken through)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: cap +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, skill-8 trigger chance +5%, Guardian formation damage to CC'd targets +6%</td>
+</tr>
+<tr>
+<td>Guarding Bulwark</td>
+<td>Combat skill (whole formation with the special ant, range 5)</td>
+<td>Triggers while leading Guardian Ants in battle. At battle start, damage taken by own column -31% → 50% (Max Lv); this decays 15% on turns 3 and 6, and shares 60% of the first 2 skill-damage instances taken by the back row each turn</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +9.55% → 191% (Max Lv)</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +9.55% → 191% (Max Lv)</td>
+</tr>
+<tr>
+<td>Retaliating Jaws</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>On taking damage from a special ant, 31% → 40% (Max Lv) chance to counter: 110% → 250% (+special ant Lv*1%) damage. 60% chance to Confuse non-CC'd targets</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian ATK/DEF/damage/HP up, "Dominance III" deployment cap up</td>
+</tr>
+<tr>
+<td>Solid Behemoth</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant HP +14.7% → 66% (Max Lv)</td>
+</tr>
+<tr>
+<td>Nature's Remedy</td>
+<td>Combat skill (whole formation, range 5)</td>
+<td>56% → 70% (Max Lv) chance: all Guardian columns' healing received +5% → 7% (stacking), heals all allied columns (heal rate 67% → 180% Max Lv). If a healed column's troops are at or above their starting count, it deals 210% → 380% (Max Lv) damage to a random enemy column</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19 and 2026-08-01, confirmed directly via Read tool / transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch8_260719.md</code>
+</div>
+
+<h3 id="spotted-velvet-s6-support-carrier">Spotted Velvet (S6 Support / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-hishimadara-birodo.png" alt="Spotted Velvet stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, not yet broken through). English name confirmed via English-UI screenshots in the 260719-2 batch (unique match on tier + type).</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: cap +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, own column's skill-5 trigger chance +5%, damage taken by infected enemy columns +10%</td>
+</tr>
+<tr>
+<td>Multidimensional Invasion</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>100% chance: 110% (+special ant Lv×1%) damage to 2 random enemy columns, target's overall skill trigger chance -0.1% (persists until battle end, stacking). Max Lv: 250% (+special ant Lv×1%) damage, -1.5%</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Infectious Bite</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>After 1 turn of preparation, 75% chance: 290% (+special ant Lv×1%) damage to a random enemy column, inflicts Infected (takes an extra 46% of that damage, lasts 2 turns). Max Lv: 430% (+special ant Lv×1%) damage, extra +60%</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK/DEF +1.8%, combat speed +15, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, combat speed +60, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Colorful Fuzz</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant DEF +55%. Max Lv: +150%</td>
+</tr>
+<tr>
+<td>Greedy Absorption</td>
+<td>Combat skill (all columns in battle, range 5)</td>
+<td>At the end of turns 2, 4, and 6, total damage dealt by all columns on both sides is tallied. The enemy column with the lowest troop count takes 27% of that total as damage; the allied column with the lowest troop count is healed for 0.5% of that total. Max Lv: 55% damage, 10% healing</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, verified directly via image review)
+</div>
+
+<h3 id="honey-pot-ant-s5-ranged-carrier">Honey Pot Ant (S5 Ranged / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-silver-mitsutsubo.png" alt="Honey Pot Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, not yet broken through). English name inferred from the 260719-2 batch's English-UI screenshots — tier/type isn't unique (another S5 Ranged/Carrier ant exists), but the honeypot-shaped abdomen in this ant's own art is a strong match.</div>
+
+<blockquote>
+<p>Only 7 skills are documented (the captured screenshot range didn't include the 8th skill screen).</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: cap +18,100 (+special ant Lv</em>100), soldier ant damage +25%</td>
+</tr>
+<tr>
+<td>Bite</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>67% chance: 182% (+special ant Lv×1%) damage to a random enemy column, inflicts Venom (146% damage per turn, lasts 1 turn). If the target is already Venomed, the Venom spreads to an uninfected enemy column (50% chance, +10% per debuff already on the target). Max Lv: 85% chance, 330% (+special ant Lv×1%) damage, 230% per turn, spread conditions unchanged</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +8.3%. Max Lv: +166%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +8.3%. Max Lv: +166%</td>
+</tr>
+<tr>
+<td>Spreading Poison</td>
+<td>Combat skill (3 enemy columns, range 5)</td>
+<td>1 turn of preparation, 39.5% chance: 114% (+special ant Lv×2%) damage to all enemy columns, 50% chance to inflict Venom on the target (146% damage per turn, lasts 3 turns), 15% chance (+5% per debuff on the target) to reduce the target's healing received by 60%. Max Lv: 80% chance, 260% (+special ant Lv×2%) damage, 60% chance to inflict Venom (230% per turn), healing reduction conditions unchanged at 60%</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK/DEF +1.8%, combat speed +15, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, combat speed +60, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Crystal Venom Gland</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant ATK +40%. Max Lv: +135%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-19, verified directly via image review)
+</div>
+
+<h3 id="red-jaw-trap-jaw-ant-s6-melee-guardian">Red-Jaw Trap-Jaw Ant (S6 Melee / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-akaagohari.png" alt="Red-Jaw Trap-Jaw Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-20, not yet broken through)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: cap +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, own column's skill-2 heal-trigger chance +5%, own column's skill-5 trigger chance +5%</td>
+</tr>
+<tr>
+<td>Combat Support</td>
+<td>Combat skill (allied column in range, range 5)</td>
+<td>41% chance, before taking damage: heals the allied column with lowest troop count (heal rate 52%), and that column's damage taken -3%. Lasts until battle end, stacks up to 10 (max 7 triggers per turn). Max Lv: 50% chance, heal rate 75%, damage taken -6%</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Savage Subjugation</td>
+<td>Combat skill (2 enemy columns, range 5)</td>
+<td>60% chance: 180% (+special ant Lv×1%) damage to 2 random enemy columns, 55% chance to inflict a random CC effect (Silence or Confuse, 1 turn). Max Lv: 65% chance, 320% (+special ant Lv×1%) damage, 55% chance CC</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK/DEF +1.8%, damage +1.2%, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, damage +24%, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Sharp Red Jaws</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant HP +14.7%. Max Lv: +66%</td>
+</tr>
+<tr>
+<td>Reckless Onslaught</td>
+<td>Combat skill (all enemy columns, range 5)</td>
+<td>On turns 3 and 6, 90% chance: massive 150% (+special ant Lv×1%) damage to a surviving enemy column. Each time it attacks an enemy column, its own column takes 10% of that damage. Max Lv: 100% chance, 700% (+special ant Lv×1%) damage</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
+</div>
+
+<h3 id="fungus-farmer-ant-s6-support-guardian">Fungus Farmer Ant (S6 Support / Guardian)</h3>
+<p><img class="screenshot" src="../images/special-ant-tsuchibatake.png" alt="Fungus Farmer Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-20, not yet broken through)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, Guardian's skill damage to CC'd targets +5%, own column's skill-5 follow-up trigger chance +5%</td>
+</tr>
+<tr>
+<td>Heavy Armor Strike</td>
+<td>Combat skill (2 random enemy columns, range 5)</td>
+<td>75% chance: 120% (+special ant Lv×1%) damage, inflicts a 1-turn Mark. Each time an allied column damages a Marked target, 50% of that damage is stored (doubled if the target is CC'd). Max Lv: 80% chance, 260% (+special ant Lv×1%) damage</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant DEF +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Giant Jaw Restraint</td>
+<td>Combat skill (2 allied columns, range 5)</td>
+<td>76% chance: 2 random allied units' skill damage dealt +6% (2 turns). If a buffed unit successfully applies CC to an enemy column during that time, 80% chance to deal 110% damage to the target unit. Max Lv: 85% chance, +20%, 280% damage</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Guardian Ant ATK/DEF +1.8%, damage +1.2%, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, damage +24%, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Brown-Patterned Carapace</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Guardian Ant DEF +55%. Max Lv: +150%</td>
+</tr>
+<tr>
+<td>Leader's Protection</td>
+<td>Pre-battle skill (all enemy columns, range 5)</td>
+<td>On turns 2, 4, 6, and 8, consumes all stored damage and deals 25% of that stored value to all enemy columns, healing all allied columns for 6% of the damage dealt. Max Lv: 90% of stored value, 25% healing</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
+</div>
+
+<h3 id="striped-velvet-ant-s6-support-shooter">Striped Velvet Ant (S6 Support / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-torafubirodo.png" alt="Striped Velvet Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-20, not yet broken through)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, Shooter Ant skill damage +8%, own column's skill-8 trigger chance +10%</td>
+</tr>
+<tr>
+<td>Colony Resonance</td>
+<td>Pre-battle skill (whole formation with the special ant)</td>
+<td>Counts allied active-skill triggers during battle; every 4/8/12 triggers, all allied columns' skill damage +0.6% and skill damage taken -0.6% (stacks up to 6, lasts until battle end). Max Lv: +11%, -11%</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Charged Strike</td>
+<td>Combat skill (all enemy columns, range 5)</td>
+<td>On turns 3 and 6: 325% (+special ant Lv×1%) damage to all enemy columns. Damage rate rises with skill-2's counter, +5% per trigger (max +75%), then resets. Max Lv: 520% (+special ant Lv×1%) damage, +10% per trigger (max +150%)</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK/DEF +1.8%, damage +1.2%, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, damage +24%, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Flexible Wingtips</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant DEF +55%. Max Lv: +150%</td>
+</tr>
+<tr>
+<td>Indomitable Heart</td>
+<td>Combat skill (1 random allied column, range 5)</td>
+<td>65% chance: heals a random allied column (heal rate 105%), 35% chance to clear its debuffs, after which the healed column deals 90% damage to all enemy columns. Max Lv: 70% chance, heal rate 230%, 180% damage</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
+</div>
+
+<h3 id="twin-spine-ant-s6-ranged-shooter">Twin-Spine Ant (S6 Ranged / Shooter)</h3>
+<p><img class="screenshot" src="../images/special-ant-futabahari.png" alt="Twin-Spine Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-20, not yet broken through)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, own column gains Guaranteed Hit (3 turns), own column's overall skill trigger chance +5%</td>
+</tr>
+<tr>
+<td>Prey's Mark</td>
+<td>Combat skill (1 enemy column, range 5)</td>
+<td>75% chance: 120% (+special ant Lv×1%) damage to the enemy column with lowest HP, inflicts a Mark (the next skill damage that column takes from this column is increased by 7%, lasts 2 turns). Max Lv: 80% chance, 360% (+special ant Lv×1%) damage, +10%</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant DEF +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Ricochet Capture</td>
+<td>Combat skill (all enemy columns, range 5)</td>
+<td>70% chance: 60% (+special ant Lv×1%) damage to all enemy columns; if any hit crits, deals the same damage again to 2 random enemy columns. Max Lv: 75% chance, 230% (+special ant Lv×1%) damage</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Shooter Ant ATK/DEF +1.8%, damage +1.2%, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, damage +24%, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Slender Legs</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Shooter Ant ATK +55%. Max Lv: +150%</td>
+</tr>
+<tr>
+<td>Brutal Power</td>
+<td>Pre-battle skill (formation with the special ant)</td>
+<td>During battle, own column's normal-attack and skill crit rate +16%, crit damage +26%. Every 10% of troops lost adds an additional +3% crit rate (stacking, lasts until battle end). Max Lv: crit rate +30%, crit damage +40%, +5% per 10% troops lost</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
+</div>
+
+<h3 id="amber-flower-ant-s6-melee-carrier">Amber Flower Ant (S6 Melee / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-kohakuhana.png" alt="Amber Flower Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-20, not yet broken through)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, own column's skill-8 heal-trigger chance +10%, own column's skill-5 trigger chance +10%</td>
+</tr>
+<tr>
+<td>Toxin Infusion</td>
+<td>Pre-battle skill (all enemy columns in range, range 5)</td>
+<td>Triggers when leading Carrier Ants. On turn 1, 72% chance to inflict all enemy columns with either Venom (110% damage per turn) or Bleed (90% damage per turn, more as troops drop) for 2 turns; 50% chance to refresh at the start of each following turn. Max Lv: 100% chance, 60% chance to refresh</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Opportunist's Theft</td>
+<td>Combat skill (2 random enemy columns, range 5)</td>
+<td>60% chance: 140% (+special ant Lv×1%) damage to 2 random enemy columns, 80% chance to extend all of the target column's debuffs by 1 turn. Max Lv: 65% chance, 310% (+special ant Lv×1%) damage</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK/DEF +1.8%, combat speed +15, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, combat speed +60, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Amber Tail</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant DEF +55%. Max Lv: +150%</td>
+</tr>
+<tr>
+<td>Potential Unleashed</td>
+<td>Combat skill (whole formation with the special ant, range 5)</td>
+<td>After 2 turns of preparation, 80% chance: heals all allied columns (heal rate 210%), reduces the prep time of allied columns' prep-required skills by 1 turn, and prep-free skills' trigger chance +5%. Max Lv: 85% chance, heal rate 360%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
+</div>
+
+<h3 id="ladybug-ant-s6-ranged-carrier">Ladybug Ant (S6 Ranged / Carrier)</h3>
+<p><img class="screenshot" src="../images/special-ant-tentou.png" alt="Ladybug Ant stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-20, not yet broken through)</div>
+
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Type</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominance III</td>
+<td>Command skill (formation with the special ant, not broken through)</td>
+<td>Deployment cap +100 (+special ant Lv<em>100). Max Lv: +18,100 (+special ant Lv</em>100), soldier ant damage +25%. After breakthrough: formation ATK/DEF +25%, HP +10%, own column's skill-5 absorbed skill-attack stat +3%, own column's CC resistance +15%</td>
+</tr>
+<tr>
+<td>Home Advantage</td>
+<td>Pre-battle skill (1 random enemy column, range 5)</td>
+<td>Triggers when leading Carrier Ants. Deploys an untargetable swarm on turn 1. Whenever an allied column inflicts a debuff on an enemy, the swarm adds 40% extra damage to that column and inflicts Bone-Gnaw (healing received -40%, takes 45 × Bone-Gnaw stacks damage at end of turn). Max Lv: extra damage 180%, 120 × stacks</td>
+</tr>
+<tr>
+<td>Advanced Defense</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant DEF +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Advanced Attack</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK +9.55%. Max Lv: +191%</td>
+</tr>
+<tr>
+<td>Nutrient Plunder</td>
+<td>Combat skill (all enemy columns, range 5)</td>
+<td>65% chance: 50% (+special ant Lv×1%) damage to all enemy columns. If the target column is debuffed, absorbs 6% of its skill-attack stat (lasts 2 turns); absorbs more each time the target uses a combat skill during that time. Max Lv: 70% chance, 210% (+special ant Lv×1%) damage, 20% absorption</td>
+</tr>
+<tr>
+<td>Colony Charisma</td>
+<td>Command skill (formation with the special ant)</td>
+<td>Carrier Ant ATK/DEF +1.8%, combat speed +15, HP +6.6%, "Dominance III" deployment cap +17%, normal attack damage +5%. Max Lv: ATK/DEF +36%, combat speed +60, HP +18%, deployment cap +170%, normal attack damage +75%</td>
+</tr>
+<tr>
+<td>Ladybug Camouflage</td>
+<td>Command skill (whole formation with the special ant)</td>
+<td>Carrier Ant ATK +55%. Max Lv: +150%</td>
+</tr>
+<tr>
+<td>High Ground Dominance</td>
+<td>Combat skill (all enemy columns, range 5)</td>
+<td>1 turn of preparation, 52% chance: 165% damage to all enemy columns. If this column's skill-attack stat exceeds the target's, deals an extra 10% as true damage (+4% per 5% it exceeds by, max 50%). Max Lv: 80% chance, 380% damage, extra 15% true damage (max 55%)</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's skill tooltip screens (measured 2026-07-20, verified directly via image review)
+</div>
+
+<h2 id="neutral-creatures">Neutral Creatures</h2>
+<h3 id="ice-crystal-scorpion">Ice Crystal Scorpion</h3>
+<p><img class="screenshot" src="../images/neutral-hyosho-sasori-status.png" alt="Ice Crystal Scorpion stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-20, ★X11, combat power 341,550)</div>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Combat power / Star rank</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>ATK / DEF / HP</td>
+<td>7,280 / 7,280 / 2,910</td>
+</tr>
+<tr>
+<td>This creature's star talent points</td>
+<td>+4</td>
+</tr>
+<tr>
+<td>Dual amplification (dmg amp &amp; dmg reduction amp)</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>All soldier ant ATK / DEF</td>
+<td>+85.0% / +85.0%</td>
+</tr>
+<tr>
+<td>March speed / Combat speed</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>Bone-Gnaw trigger chance</td>
+<td>+100.0% (also +100.0% post-synergy)</td>
+</tr>
+<tr>
+<td>All soldier ant HP</td>
+<td>+60.0%</td>
+</tr>
+<tr>
+<td>Special ant skill ATK / DEF</td>
+<td>+115.0% / +115.0%</td>
+</tr>
+<tr>
+<td>Invasion ATK / DEF</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>All soldier ant damage</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Innate skill: After battle starts, before each enemy column acts each turn, 40% chance to inflict Backlash (takes 120% damage per turn, more as the target's troop count is higher; lasts 2 turns). Each time an enemy column takes Backlash damage, 30% chance to copy a random debuff onto another enemy column. Also, each time a debuff on any enemy column expires, deals 180% damage to that column (up to 6 triggers per turn).</p>
+<p>Talent nodes confirmed on this account (partial list, not the full tree):</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Lv</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Attack Boost</td>
+<td>0/4</td>
+<td>All-column ATK +7.5%</td>
+</tr>
+<tr>
+<td>Attack Boost</td>
+<td>0/2</td>
+<td>All-column ATK +10.0%</td>
+</tr>
+<tr>
+<td>Evolution of Life</td>
+<td>0/3</td>
+<td>All-column HP +4.0%</td>
+</tr>
+<tr>
+<td>Unbreakable Will</td>
+<td>0/4</td>
+<td>If any column is CC'd, damage taken -3.0%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's stat and talent tree screens (measured 2026-07-20, verified directly via image review)
+</div>
+
+<h3 id="glazed-mantis">Glazed Mantis</h3>
+<p><img class="screenshot" src="../images/neutral-ruri-kamakiri-status.png" alt="Glazed Mantis stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, ★X11, Power 341,550)</div>
+
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power / Star rank</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>ATK / DEF / HP</td>
+<td>7,280 / 7,280 / 2,910</td>
+</tr>
+<tr>
+<td>Dual amplification (dmg amp &amp; dmg reduction amp)</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>All soldier ant ATK / DEF</td>
+<td>+85.0% / +85.0%</td>
+</tr>
+<tr>
+<td>March speed / Combat speed</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>Fierce Attack trigger chance</td>
+<td>+100.0% (also +100.0% post-synergy)</td>
+</tr>
+<tr>
+<td>All soldier ant HP</td>
+<td>+60.0%</td>
+</tr>
+<tr>
+<td>Special ant skill ATK / DEF</td>
+<td>+125.0% / +105.0%</td>
+</tr>
+<tr>
+<td>Invasion ATK / DEF</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>All soldier ant damage</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Innate skill: At the start of each turn, 100% chance for 2 random allied columns to gain +1 normal attack count (1 turn). On turn 1, after all allied columns' normal attacks, 60% chance to trigger one already-used damage skill an extra time this turn (random pick if multiple). This chance decreases by 10% each subsequent turn.</p>
+<p><img class="screenshot" src="../images/neutral-talent-tree-overview.png" alt="Neutral creature talent tree overview"></p>
+<div class="screenshot-caption">Talent tree overview (three branches: Base / Frenzy / Omnipotent)</div>
+
+<p>Talent nodes confirmed on this account (partial list, not the full tree):</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Lv</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light Gear</td>
+<td>0/2</td>
+<td>March speed +5.0%, all-column ATK +3.0%</td>
+</tr>
+<tr>
+<td>Evolution of Life</td>
+<td>0/2</td>
+<td>Soldier ant HP +3.0%</td>
+</tr>
+<tr>
+<td>Battlefield Dominator</td>
+<td>0/10</td>
+<td>Each turn a column deals skill damage, that column's skill damage +0.8% (stacking, clears at turn end)</td>
+</tr>
+<tr>
+<td>Defense Boost</td>
+<td>0/4</td>
+<td>Soldier ant DEF +6.5%</td>
+</tr>
+<tr>
+<td>Attack Boost</td>
+<td>0/4</td>
+<td>Soldier ant ATK +12.0%</td>
+</tr>
+<tr>
+<td>Catch Off Guard</td>
+<td>0/10</td>
+<td>A random enemy column's skill damage taken +1.5% (1 turn)</td>
+</tr>
+<tr>
+<td>Attack Boost</td>
+<td>0/2</td>
+<td>Soldier ant ATK +6.0%</td>
+</tr>
+<tr>
+<td>Attack Boost</td>
+<td>0/2</td>
+<td>Soldier ant ATK +8.0%</td>
+</tr>
+<tr>
+<td>Intimidation</td>
+<td>0/4</td>
+<td>Allied type-advantage effect +1.5%, enemy type-advantage effect against you -1.5%</td>
+</tr>
+<tr>
+<td>Battle Trick</td>
+<td>0/4</td>
+<td>All-column normal attack damage +2.25%, skill damage +2.25%</td>
+</tr>
+<tr>
+<td>Evolution of Life</td>
+<td>0/4</td>
+<td>Soldier ant HP +4.0%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch9_260719.md</code>
+</div>
+
+<h3 id="sapphire-beetle">Sapphire Beetle</h3>
+<p><img class="screenshot" src="../images/neutral-ginran-kuwagata-status.png" alt="Sapphire Beetle stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, ★X11, Power 341,550)</div>
+
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power / Star rank</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>ATK / DEF / HP</td>
+<td>7,280 / 7,280 / 2,910</td>
+</tr>
+<tr>
+<td>Dual amplification (dmg amp &amp; dmg reduction amp)</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>All soldier ant ATK / DEF</td>
+<td>+85.0% / +85.0%</td>
+</tr>
+<tr>
+<td>March speed / Combat speed</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>Steadfast trigger chance</td>
+<td>+100.0% (also +100.0% post-synergy)</td>
+</tr>
+<tr>
+<td>All soldier ant HP</td>
+<td>+60.0%</td>
+</tr>
+<tr>
+<td>Special ant skill ATK / DEF</td>
+<td>+120.0% / +110.0%</td>
+</tr>
+<tr>
+<td>Invasion ATK / DEF</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>All soldier ant damage</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Innate skill: Each time an allied column takes damage in battle, gain 1 stack of Steadfast (max 5 stacks). At the end of each turn, consume all Steadfast stacks: heal the allied column with the lowest troop count for a 50% heal rate per stack, and deal 80% damage per stack to all enemy columns, with a 30% chance to silence for 1 turn.</p>
+<p>Talent branch "Insight" (nodes confirmed on this account, not the full tree):</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Lv</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Defense Boost</td>
+<td>0/2</td>
+<td>All-column DEF +7.0%</td>
+</tr>
+<tr>
+<td>Evolution of Life</td>
+<td>0/2</td>
+<td>All-column HP +4.0%</td>
+</tr>
+<tr>
+<td>Momentum of Balance</td>
+<td>0/10</td>
+<td>Columns at ≥50% troop strength gain a skill-ATK buff worth 1.5% skill-DEF; columns below 50% gain a skill-DEF buff worth 1.5% skill-ATK (checked at the start of each turn)</td>
+</tr>
+<tr>
+<td>Attack Boost</td>
+<td>0/2</td>
+<td>All-column ATK +7.0%</td>
+</tr>
+<tr>
+<td>Intimidation</td>
+<td>0/4</td>
+<td>Allied type-advantage effect +1.5%, enemy type-advantage effect against you -1.5%</td>
+</tr>
+<tr>
+<td>Attack Boost</td>
+<td>0/4</td>
+<td>All-column ATK +7.0%</td>
+</tr>
+<tr>
+<td>Evolution of Life</td>
+<td>0/4</td>
+<td>All-column HP +5.5%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's stat and talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data archived at <code>data/notebooklm_extraction_batch10_260719.md</code>
+</div>
+
+<h3 id="thorny-scorpion">Thorny Scorpion</h3>
+<p><img class="screenshot" src="../images/neutral-hario-dokusasori-status.png" alt="Thorny Scorpion stat screen"></p>
+<div class="screenshot-caption">Our own account's stat screen (measured 2026-07-19, ★X11, Power 341,550)</div>
+
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power / Star rank</td>
+<td>341,550 / ★X11</td>
+</tr>
+<tr>
+<td>ATK / DEF / HP</td>
+<td>6,700 / 6,700 / 2,690</td>
+</tr>
+<tr>
+<td>Dual amplification (dmg amp &amp; dmg reduction amp)</td>
+<td>+5.0%</td>
+</tr>
+<tr>
+<td>Talent specialization (starting talent pt)</td>
+<td>+20</td>
+</tr>
+<tr>
+<td>Debuff damage dealt when a Carrier Ant is in the formation</td>
+<td>+6.0%</td>
+</tr>
+<tr>
+<td>All soldier ant ATK / DEF</td>
+<td>+80.0% / +80.0%</td>
+</tr>
+<tr>
+<td>March speed / Combat speed</td>
+<td>+70.0% / +140.0</td>
+</tr>
+<tr>
+<td>Vicious trigger chance</td>
+<td>+100.0% (also +100.0% post-synergy)</td>
+</tr>
+<tr>
+<td>All soldier ant HP</td>
+<td>+55.0%</td>
+</tr>
+<tr>
+<td>Special ant skill ATK / DEF</td>
+<td>+105.0% / +105.0%</td>
+</tr>
+<tr>
+<td>Invasion ATK / DEF</td>
+<td>+40.0% / +40.0%</td>
+</tr>
+<tr>
+<td>All soldier ant damage</td>
+<td>+30.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Innate skill: Every 2 turns in battle, 50% chance to deal 400% damage to all enemy columns. Each time an allied column deals skill damage that turn, the damage ratio +50% (cap 1000%); each debuff applied +5% trigger chance.</p>
+<p>Talent branch "Cruelty" (nodes confirmed on this account, not the full tree):</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Lv</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mutant Scorpion Venom</td>
+<td>0/10</td>
+<td>Each turn, 3.5% chance to randomly apply one of Weaken (dmg dealt -4.0%) / Fragile (dmg taken +3.0%) / Venom (8.0% dmg taken per turn) / Bleed (6.0% dmg taken per turn, higher at lower troop count) to 2 random enemy columns for 1 turn</td>
+</tr>
+<tr>
+<td>Thorny Carapace</td>
+<td>0/8</td>
+<td>When any column takes skill damage, 60.0% chance that hit is reduced by 3.0%</td>
+</tr>
+<tr>
+<td>Savage Nature</td>
+<td>0/8</td>
+<td>All special ants' skill-2 trigger chance +0.8%, extra skill damage dealt +1.25%</td>
+</tr>
+<tr>
+<td>Piercing Venom Spike</td>
+<td>0/8</td>
+<td>After a special ant uses an active skill, its next skill damage dealt +3.0%</td>
+</tr>
+<tr>
+<td>Formic Strike</td>
+<td>0/6</td>
+<td>All-column extra skill damage +1.0%</td>
+</tr>
+<tr>
+<td>Hardened Exoskeleton</td>
+<td>0/6</td>
+<td>All-column skill damage taken -1.5%</td>
+</tr>
+</tbody>
+</table>
+<div class="source-note">
+Source: our own account's stat and talent tree screens (measured 2026-07-19, transcribed via NotebookLM). Raw data (summary) archived at <code>data/notebooklm_extraction_batch11_260719.md</code>; full transcript stored in the NotebookLM notebook "The Ants 攻略調査"
+</div>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants Guide Project (unofficial, community-run)
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

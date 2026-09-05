@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蟻の種類とステータス | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="The Ants の兵蟻・特化アリの分類、ステータス、進化システムの基礎知識。">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/ja/ant-types.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/ant-types.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/ant-types.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/ant-types.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="蟻の種類とステータス">
+<meta property="og:description" content="The Ants の兵蟻・特化アリの分類、ステータス、進化システムの基礎知識。">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/ja/ant-types.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../ja/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="記事を検索…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/ant-types.html" class="active">日本語</a>
+    <a href="../en/ant-types.html" class="">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>人気記事</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">ダメージ計算を検証する</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">序盤攻略ガイド</a></li>
+        
+        <li><span class="rank">3</span><a href="data-collection.html">データ提供のお願い</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">はじめに</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="the ants 攻略サイトへようこそ" class="">The Ants 攻略サイトへようこそ</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">攻略</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="序盤攻略ガイド" class="">序盤攻略ガイド</a>
+        
+        <a href="ant-types.html" data-title="蟻の種類とステータス" class="active">蟻の種類とステータス</a>
+        
+        <a href="alliance-pvp.html" data-title="アライアンスとpvp" class="">アライアンスとPvP</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">図鑑</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="アリ・中立生物図鑑" class="">アリ・中立生物図鑑</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">検証プロジェクト</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="ダメージ計算を検証する" class="">ダメージ計算を検証する</a>
+        
+        <a href="data-collection.html" data-title="データ提供のお願い" class="">データ提供のお願い</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../ja/index.html">TOP</a> &raquo; 攻略 &raquo; 蟻の種類とステータス</div>
+    
+    <div class="card">
+      <h1>蟻の種類とステータス</h1>
+      <div class="updated">最終更新: 2026-07-19</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">目次</div>
+        <div class="toc">
+<ul>
+<li><a href="#3">兵蟻（通常兵隊アリ）の3タイプ</a></li>
+<li><a href="#2026-07-19">兵蟻孵化地 全レベルテーブル（実アカウント調査、2026-07-19）</a></li>
+<li><a href="#awakening">Awakening（覚醒）ボーナス例</a></li>
+<li><a href="#special-ants">特化アリ（Special Ants）のレア度・分類</a><ul>
+<li><a href="#lv">スキルダメージは「基礎%（+特化アリLv×係数%）」で決まる</a></li>
+</ul>
+</li>
+<li><a href="#evolution-fungi">進化システム（Evolution Fungi）</a></li>
+<li><a href="#_1">ステータスと戦闘結果の関係について</a></li>
+</ul>
+</div>
+
+      </div>
+      
+      <h2 id="3">兵蟻（通常兵隊アリ）の3タイプ</h2>
+<ul>
+<li><strong>ガーディアンアリ (Guardian Ant)</strong> — 前列配置、耐久・防御重視</li>
+<li><strong>シューターアリ (Shooter Ant)</strong> — 後列配置、攻撃力は高いが防御力は低い</li>
+<li><strong>キャリアーアリ (Carrier Ant)</strong> — 資源運搬特化。防御寄りの強化構成も可能</li>
+</ul>
+<p>各タイプは10段階のTier（T1〜T9が基本、上位にT10/T11も存在）に分かれ、対応する兵舎のレベルを上げることで解放されます。</p>
+<div class="source-note">
+出典: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>／<a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a>（コミュニティWiki）
+</div>
+
+<h2 id="2026-07-19">兵蟻孵化地 全レベルテーブル（実アカウント調査、2026-07-19）</h2>
+<p>自分のアカウントの孵化地画面をLv1〜25＋昇格1〜10まで全て記録しました。<strong>戦闘力・孵化数・ダメージ増幅・ダメージ軽減増幅の数値列は、ガーディアン／シューター／キャリアーの3種とも完全に共通</strong>です（違うのは各レベルでアンロックされる兵種名だけ）。</p>
+<table>
+<thead>
+<tr>
+<th>Lv</th>
+<th>戦闘力</th>
+<th>孵化数</th>
+<th>ダメージ増幅</th>
+<th>ダメージ軽減増幅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>56</td>
+<td>0</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>81</td>
+<td>100</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>426</td>
+<td>300</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>2.0K</td>
+<td>500</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>9.9K</td>
+<td>650</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>22</td>
+<td>18.1K</td>
+<td>700</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>25</td>
+<td>44.8K</td>
+<td>850</td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>昇格1</td>
+<td>51.5K</td>
+<td>865</td>
+<td>5.0%</td>
+<td>5.0%</td>
+</tr>
+<tr>
+<td>昇格5</td>
+<td>78.4K</td>
+<td>915</td>
+<td>25.0%</td>
+<td>25.0%</td>
+</tr>
+<tr>
+<td>昇格8</td>
+<td>98.6K</td>
+<td>950</td>
+<td>40.0%</td>
+<td>40.0%</td>
+</tr>
+<tr>
+<td>昇格10</td>
+<td>112.0K</td>
+<td>975</td>
+<td>50.0%</td>
+<td>50.0%</td>
+</tr>
+</tbody>
+</table>
+<p>Lv25まではダメージ増幅・軽減幅は常に0%で、<strong>昇格1段階ごとに+5%ずつ</strong>乗っていき、昇格10で上限の+50%に達します。この「ダメージ増幅／軽減増幅」は<a href="damage-calculation.html">ダメージ計算を検証する</a>で扱っている最終ダメージの掛け算レイヤーの一部です。</p>
+<div class="source-note">
+出典: 自分のアカウントの孵化地画面（2026-07-19実測、全レベル記録済み）
+</div>
+
+<p>各兵舎で解放される兵種の例（Lv1／Lv5／Lv10／Lv22時点）:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Lv1</th>
+<th>Lv5</th>
+<th>Lv10</th>
+<th>Lv22</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>シューター孵化地</td>
+<td>セラシシリアゲアリ</td>
+<td>オオアリsp.</td>
+<td>テクストルオオアリ</td>
+<td>オムセローセスオオアリ</td>
+</tr>
+<tr>
+<td>ガーディアン孵化地</td>
+<td>レアオオズアリ</td>
+<td>ベルジオオズアリ</td>
+<td>ベルシカラートガリハキリアリ</td>
+<td>ゼラオフラーオオズアリ</td>
+</tr>
+<tr>
+<td>キャリアー孵化地</td>
+<td>セッバーバチュースオオアリ</td>
+<td>メラノガスターウワメアリ</td>
+<td>ワイシーハチヅメアリ</td>
+<td>ミミカッスミツツボアリ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="awakening">Awakening（覚醒）ボーナス例</h2>
+<ul>
+<li>シューターアリ: 攻撃力+10.0%（上位ランクで+20.0%）</li>
+<li>キャリアーアリ: 防御力+10.0%（上位で+20.0%）</li>
+<li>ガーディアンアリ: 体力+4.0%（上位で+8.0%）</li>
+</ul>
+<div class="source-note">
+出典: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>
+</div>
+
+<h2 id="special-ants">特化アリ（Special Ants）のレア度・分類</h2>
+<p>特化アリは色でレア度が分かれています。</p>
+<table>
+<thead>
+<tr>
+<th>ランク</th>
+<th>色</th>
+<th>スキル数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最高</td>
+<td>橙(オレンジ)</td>
+<td>8</td>
+</tr>
+<tr>
+<td>高</td>
+<td>紫</td>
+<td>6</td>
+</tr>
+<tr>
+<td>中</td>
+<td>青</td>
+<td>4</td>
+</tr>
+<tr>
+<td>低</td>
+<td>緑</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>系統は大きく「戦闘型」「開発型」に分かれ、戦闘型はさらに近衛・射手・支援・軍事・補助・採集に細分されます。橙ランクの戦闘型特化アリのみ、スキル6解放後に「スターアップ」システムでスキルレベル上限（通常10）をさらに超えて強化できます。</p>
+<div class="source-note">
+出典: <a href="https://zhuanlan.zhihu.com/p/625725052">Zhihu「小小蚁国-特化蚁养成」</a>（中国語プレイヤー攻略）
+</div>
+
+<blockquote>
+<p>特化アリの強さランキング（Tier表）は中国コミュニティサイトなどで頻繁に更新されており、アップデートのたびに変動するため、このサイトでは固定のランキングとしては掲載しません。最新のTier表は各攻略サイトを都度確認することをおすすめします。</p>
+</blockquote>
+<h3 id="lv">スキルダメージは「基礎%（+特化アリLv×係数%）」で決まる</h3>
+<p>自分のアカウントで特化アリのスキル説明文を数十件確認したところ、ほぼ全てのアクティブスキルが「基礎ダメージ%（+特化アリLv×係数%）」という同一パターンで書かれていました（係数はスキルごとに1%・2%・0.25%など様々）。つまり特化アリのレベルを上げるほど、スキル自体のダメージ%も連続的に伸びていく仕組みです。詳しくは<a href="damage-calculation.html">ダメージ計算を検証する</a>にまとめています。</p>
+<p>また、兵蟻を率いる特化アリのステータス画面には「率いる時の特化アリスキル攻撃力／スキル防御力」という項目があり、出撃させる兵種側のステータスが特化アリ自身のスキル威力にも影響する仕組みになっています。</p>
+<h2 id="evolution-fungi">進化システム（Evolution Fungi）</h2>
+<p>21種類以上の「進化ツリー」があり、それぞれコロニーの特定の側面（戦闘・資源・移動速度等）を強化します。資源と時間を消費して研究する形式です。</p>
+<div class="source-note">
+出典: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Evolution_Fungi">Fandom Wiki: Evolution Fungi</a>
+</div>
+
+<h2 id="_1">ステータスと戦闘結果の関係について</h2>
+<p>攻撃力・防御力が実際のダメージにどう影響するかは公式に説明されていません。<a href="damage-calculation.html">ダメージ計算を検証する</a> で実データをもとに検証しています。</p>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
