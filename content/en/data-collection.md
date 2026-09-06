@@ -18,9 +18,11 @@ After a battle (PvE or PvP), please submit:
 
 Only 5 fields are required, so each submission takes about a minute. Screenshots are only used to double-check numbers — I will never repost them publicly.
 
-## Form details
+## The form is not live yet
 
-The exact questions and column layout are documented in the [form specification](../../data/damage_log_form_spec.md) (form going live soon).
+To be straight about it: **the submission form is not published yet.** The questions are designed (five required fields — battle type, your ant type and level, your ATK, the enemy type, and the damage dealt — plus optional fields such as skill name and damage amplification %, 18 in all), and the analysis script that will process the responses already runs. What is missing is the form itself.
+
+I will put the link here as soon as it is live. Until then, the "numbers you've seen on social media" route below is the most useful way to help.
 
 ## How the data is used
 
@@ -36,7 +38,7 @@ I've identified several large communities where players gather worldwide, and pl
 
 - Official Discord "The Ants Official" — roughly 259,000 members
 - Official forum (theantsforum.allstarunion.com)
-- Official X accounts (global [@theants_global](https://x.com/theants_global), Japan [@theantsjp](https://twitter.com/theantsjp))
+- Official X accounts (global [@theants_global](https://x.com/theants_global), Japan [@theantsjp](https://x.com/theantsjp))
 - Reddit (r/TheAntsGame)
 - Comment sections on combat-math explainer videos on YouTube (e.g. "understanding combat math and skill damage")
 

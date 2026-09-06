@@ -18,9 +18,11 @@ The Ants の非公開のダメージ計算式を検証するため、世界中�
 
 必須項目は5つだけなので、1件あたり1分程度で回答できます。スクリーンショットは数値確認用としてのみ使い、サイト上に転載することはありません。
 
-## フォーム項目の詳細
+## フォームはまだ公開できていません
 
-具体的な質問文・列構成は [フォーム設計仕様](../../data/damage_log_form_spec.md) にまとめています（フォーム公開準備中）。
+正直に書いておくと、**回答フォームはまだ公開できていません。** 質問項目の設計は済んでいて（戦闘の種類・自分の蟻の種類とレベル・攻撃力・相手の種類・与えたダメージを必須の5項目、スキル名やダメージ増幅%などを任意項目とする18項目）、集まったデータを解析するスクリプトも動く状態にしてあります。足りないのはフォームそのものです。
+
+公開でき次第このページにリンクを置きます。それまでは、下の「SNSで見かけた情報も歓迎」の方法でお知らせいただけると助かります。
 
 ## データはどう使われる？
 
@@ -36,7 +38,7 @@ X(Twitter)・Reddit・Discordなどで攻撃力/防御力/ダメージの数値�
 
 - 公式Discord「The Ants Official」— 約25.9万人が参加する大規模コミュニティ
 - 公式フォーラム（theantsforum.allstarunion.com）
-- X公式アカウント（グローバル版 [@theants_global](https://x.com/theants_global)、日本版 [@theantsjp](https://twitter.com/theantsjp)）
+- X公式アカウント（グローバル版 [@theants_global](https://x.com/theants_global)、日本版 [@theantsjp](https://x.com/theantsjp)）
 - Reddit（r/TheAntsGame）
 - 戦闘計算を解説するYouTube動画（例: 「understanding combat math and skill damage」）のコメント欄
 

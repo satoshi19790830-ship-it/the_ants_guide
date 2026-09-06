@@ -21,7 +21,7 @@ Google Forms API のプログラム作成には別途OAuth認証の設定が必�
 | # | 列名(CSV/シート) | 質問文(日/英) | 型 | 必須 |
 |---|---|---|---|---|
 | 1 | timestamp | (自動記録 / auto-recorded) | 日時 | - |
-| 2 | battle_type | 戦闘の種類は？ / Battle type? | 選択式: `PvE-資源採集地`, `PvE-遠征/ボス`, `PvP-侵略`, `PvP-真菌大戦`, `PvP-掠奪`, `その他/Other` | ○ |
+| 2 | battle_type | 戦闘の種類は？ / Battle type? | 選択式: `PvE-資源採集地`, `PvE-遠征/ボス`, `PvP-侵略`, `PvP-シーズン戦(変異荒野等)`, `PvP-掠奪`, `その他/Other` | ○ |
 | 3 | attacker_ant_type | 自分の蟻の種類 / Your ant type | 記述式 | ○ |
 | 4 | attacker_level | 自分の蟻のレベル / Your ant level | 数値 | ○ |
 | 5 | attacker_atk | 自分の攻撃力(ステータス画面の数値) / Your ATK stat | 数値 | ○ |
