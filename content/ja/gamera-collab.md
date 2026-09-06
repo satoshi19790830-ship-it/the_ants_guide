@@ -65,13 +65,13 @@ updated: 2026-09-06
 - ガメラがゲーム内でどう登場するか（中立生物・演出・スキンのいずれか）
 - 昆虫スキンの具体的な見た目と入手条件
 
-**公式の日本語アップデート告知（2026年8月31日付）に詳細が載っている可能性が高い**のですが、公式サイトの記事本文をこちらで確認できませんでした。自分でゲーム内またはコラボを確認できた時点で、このページを埋めていきます。分かる方がいたら教えてください。
+公式の日本語アップデート告知（<a href="https://theants.allstarunion.com/ja/news/5839">【8月31日】アップデートのお知らせ</a>）は確認しましたが、**この告知にコラボの記載はありません**でした。内容は進化・地下洞窟・先駆者まわりの最適化とバグ修正で、コラボはアップデート告知とは別枠で案内されているようです。ゲーム内で確認でき次第このページを埋めます。分かる方がいたら教えてください。
 
 ## 参考にした情報源
 
 このページを書くのに使った情報源です。
 
-- <a href="https://theants.allstarunion.com/ja/news">The Ants 公式サイト（日本語）「【8月31日】アップデートのお知らせ」</a> — コラボ開始日の公式告知。**日本語の公式アップデート告知はここにまとまっている**
+- <a href="https://theants.allstarunion.com/ja/news">The Ants 公式サイト（日本語）のニュース一覧</a> — **日本語の公式アップデート告知はここにまとまっている**。ただし8月31日の告知にコラボの記載は無く、コラボは別枠で案内されている
 - <a href="https://theantsforum.allstarunion.com/t/join-the-guardian-adventure-with-the-ants-and-gamera/56384">公式フォーラム「Join the guardian adventure with The Ants and Gamera!」</a>（2026-08-31）— コラボ開始の告知
 - <a href="https://theantsforum.allstarunion.com/t/the-ants-x-gamera-explore-the-mysterious-continent/56382">公式フォーラム「The Ants × Gamera｜Explore the Mysterious Continent」</a>（2026-08-31）— 未知の大陸探索の内容と期間
 - <a href="https://theantsforum.allstarunion.com/t/the-truth-revealed-the-guardian-monster-awakens/56363">公式フォーラム「The Truth Revealed: The Guardian Monster Awakens」</a>（2026-08-26）— 守護怪獣がガメラだと明かした投稿

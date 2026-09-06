@@ -50,7 +50,7 @@ Example unlocks per hatchery (at Lv1 / Lv5 / Lv10 / Lv22) — my account is set 
 - Carrier Ant: DEF +10.0% (up to +20.0%)
 - Guardian Ant: HP +4.0% (up to +8.0%)
 
-The August 17, 2026 update added three more awakening parts to the Maze Store: Cyphomyrmex Rimosus, Saharan Silver Ant and Meranoplus Castaneus.
+The August 17, 2026 update added three more awakening parts to the Maze Store, for Cyphomyrmex Rimosus, the Saharan Silver Ant and Meranoplus Castaneus (in the Japanese client: シフォミルキンアリ／菌斑頭甲, ザサハラ銀アリ／銀光の背甲, メラノハットアリ／ハート腹部).
 
 ## Special Ants: rarity and roles
 

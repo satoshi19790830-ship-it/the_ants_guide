@@ -4,6 +4,20 @@
 ログイン不要でRSSが公開されているため、Facebook公式ページ（ログイン必須）より
 機械的に扱いやすい。
 
+ただし**アップデート告知については、公式サイトに日本語版の本文がある**ことが
+2026-09-06に判明した（英語フォーラムから訳す必要はない）。
+
+    一覧: https://theants.allstarunion.com/ja/news
+    本文: https://theants.allstarunion.com/ja/news/<記事id>
+
+記事idは一覧ページのSSRペイロード(__NUXT_DATA__)に入っている。ただし本文は
+クライアント側で取得されるため、素のHTTP GETでは本文まで取れない
+（本文APIは platform-sdkgateway.apps.allstarunion.com の
+/sdk-gateway/web/website/notice/detail だが、パラメータ名が未特定）。
+現状は本文だけブラウザで開いて読む運用にしている。
+なお初回アクセスはCookie(valid=1)を立てて再読み込みさせる作りなので、
+HTTPで叩くときはこのCookieを付ける。
+
     python scripts/fetch_news.py            # RSS取得 → data/news.json を更新
     python scripts/fetch_news.py --render   # data/news.json → content/{ja,en}/news.md を生成
     python scripts/fetch_news.py --all      # 取得と生成を続けて行う
@@ -190,8 +204,8 @@ INTRO = {
     "ja": (
         "公式フォーラムで発表された内容を、日付の新しい順にまとめています。"
         "各項目の見出しから公式の原文（英語）に飛べます。\n\n"
-        "固有名詞は英語版公式の表記をそのまま残している箇所があります"
-        "（日本語版での正式名称が確認できていないため）。"
+        "アップデート告知は公式サイトの日本語版（theants.allstarunion.com/ja/news）の"
+        "表記に合わせています。フォーラムでしか発表されていない項目は、英語からの訳が混ざります。"
     ),
     "en": (
         "Announcements from the official forum, newest first. "
