@@ -156,7 +156,9 @@
 
   @media (max-width: 780px) {
     .layout { flex-direction: column; }
-    nav.sidebar { flex: none; position: static; width: 100%; max-height: none; overflow: visible; padding-right: 0; }
+    /* スマホでは記事を先に出す。サイドバーが先頭だと、本文に届くまで1画面以上スクロールが要る */
+    nav.sidebar { flex: none; position: static; width: 100%; max-height: none; overflow: visible; padding-right: 0; order: 2; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 0.5rem; }
+    main { order: 1; }
   }
 </style>
 </head>
