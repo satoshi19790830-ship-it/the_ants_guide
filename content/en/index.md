@@ -1,29 +1,41 @@
 ---
 title: Welcome to The Ants Guide
-description: Unofficial guide for The Ants (Underground Kingdom) - beginner tips, ant stats, and a community damage formula research project.
-category: Getting Started
+description: An unofficial The Ants (Underground Kingdom) guide - official help summarised, own-account measurements, and a damage formula verification project.
+category: Start here
 order: 0
-updated: 2026-07-19
+updated: 2026-09-06
 ---
 
-An unofficial, community-run guide site for **The Ants: Underground Kingdom**.
+An unofficial, hobby-run guide to **The Ants: Underground Kingdom**.
 
-This site has two goals:
+There are three kinds of content here.
 
-1. Aggregate guide content from strategy wikis, Reddit, and forums around the world
-2. Run a **community project to verify the (undocumented) damage formula** using real combat data submitted by players
+1. **Official primary sources, summarised** — the official help centre and the official update notices, condensed into plain write-ups (never reproduced verbatim)
+2. **Figures measured on my own account** — every queen level, every hatchery level, verbatim transcriptions of special ant skill text
+3. **A project to verify the damage formula** — reverse-engineering what the developers do not publish
 
-## Contents
+## News
 
+- [Latest News](news.html) — official updates, season adjustments and events by date
 - [Gamera Collaboration](gamera-collab.html) — The Ants × Gamera: dates, rewards and the teaser story
-- [Beginner Guide](beginner-guide.html) — Tutorial tips and queen leveling priority
-- [Ant Types & Stats](ant-types.html) — Soldier ant and special ant categories and how to read stats
-- [Alliance & PvP](alliance-pvp.html) — Why joining an alliance matters, PvP basics
-- [Ant & Neutral Creature Compendium](ant-compendium.html) — Verbatim skill data from real account screenshots (work in progress)
-- [Verifying the Damage Formula](damage-calculation.html) — What's known so far, and the data-driven verification project
+
+## Guides
+
+- [Beginner Guide](beginner-guide.html) — how many days it actually takes, and where everyone gets stuck
+- [Ant Types & Stats](ant-types.html) — soldier and special ant categories, full hatchery table, awakening
+- [Growth Systems](growth-systems.html) — bacteria, genes, cells, fungi, troop reform, treasures, medals: what feeds what
+- [Alliance & PvP](alliance-pvp.html) — core combat rules, plunder and scouting, the King of Ants event
+- [Events & Duels](events.html) — crystal mine, special ant duel, trials and the other recurring modes
+
+## Compendium & verification
+
+- [Ant & Neutral Creature Compendium](ant-compendium.html) — 27 special ants and 4 neutral creatures, transcribed from my own account (work in progress)
+- [Verifying the Damage Formula](damage-calculation.html) — how battles actually resolve, and the data-driven verification project
 
 ## About this site
 
-- This is an unofficial fan site, run by a hobbyist. It is not affiliated with the developer/publisher of The Ants.
-- I don't repost images from social media; I link to the original source instead.
-- Found an error? Please let us know.
+- A hobby project by one player. Not affiliated with The Ants' developer or publisher
+- **Official text is never reproduced verbatim.** Everything is summarised, with a link to the source
+- Images posted on social media are not reposted either — only linked
+- The screenshots here are cropped from my own account
+- **If you spot an error, please tell me.** Official wording can be read the wrong way, and some of what is here was corrected after a reader pointed it out

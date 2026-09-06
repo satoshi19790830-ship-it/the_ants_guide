@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://example.github.io/the-ants-guide/ja/index.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-09-06</lastmod>
   </url>
   <url>
     <loc>https://example.github.io/the-ants-guide/ja/news.html</loc>
@@ -25,6 +25,14 @@
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
+    <loc>https://example.github.io/the-ants-guide/ja/growth-systems.html</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://example.github.io/the-ants-guide/ja/events.html</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
     <loc>https://example.github.io/the-ants-guide/ja/ant-compendium.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
@@ -34,7 +42,7 @@
   </url>
   <url>
     <loc>https://example.github.io/the-ants-guide/en/index.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-09-06</lastmod>
   </url>
   <url>
     <loc>https://example.github.io/the-ants-guide/en/news.html</loc>
@@ -54,6 +62,14 @@
   </url>
   <url>
     <loc>https://example.github.io/the-ants-guide/en/alliance-pvp.html</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://example.github.io/the-ants-guide/en/growth-systems.html</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://example.github.io/the-ants-guide/en/events.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イベントと対戦モード | The Ants 攻略 / The Ants Guide</title>
+<meta name="description" content="The Ants の水晶鉱坑・特化アリ対決・勇気の試練・トビトカゲバトル・アライアンス試練・遷移の旅など、常設と定期のイベントを一覧で整理。">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/ja/events.html">
+<link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/events.html">
+<link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/events.html">
+<link rel="alternate" hreflang="x-default" href="https://example.github.io/the-ants-guide/ja/events.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:title" content="イベントと対戦モード">
+<meta property="og:description" content="The Ants の水晶鉱坑・特化アリ対決・勇気の試練・トビトカゲバトル・アライアンス試練・遷移の旅など、常設と定期のイベントを一覧で整理。">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/ja/events.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
+  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
+  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="../ja/index.html"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="記事を検索…" autocomplete="off">
+  </div>
+  <div class="lang-switch">
+    <a href="../ja/events.html" class="active">日本語</a>
+    <a href="../en/events.html" class="">English</a>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>人気記事</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">ダメージ計算を検証する</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">序盤攻略ガイド</a></li>
+        
+        <li><span class="rank">3</span><a href="news.html">最新情報</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">はじめに</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="the ants 攻略サイトへようこそ" class="">The Ants 攻略サイトへようこそ</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">最新情報</h3>
+      <div class="cat-group">
+        
+        <a href="news.html" data-title="最新情報" class="">最新情報</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">特集</h3>
+      <div class="cat-group">
+        
+        <a href="gamera-collab.html" data-title="ガメラ コラボ特集" class="">ガメラ コラボ特集</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">攻略</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="序盤攻略ガイド" class="">序盤攻略ガイド</a>
+        
+        <a href="ant-types.html" data-title="蟻の種類とステータス" class="">蟻の種類とステータス</a>
+        
+        <a href="alliance-pvp.html" data-title="アライアンスとpvp" class="">アライアンスとPvP</a>
+        
+        <a href="growth-systems.html" data-title="育成システム早見" class="">育成システム早見</a>
+        
+        <a href="events.html" data-title="イベントと対戦モード" class="active">イベントと対戦モード</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">図鑑</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="アリ・中立生物図鑑" class="">アリ・中立生物図鑑</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">検証プロジェクト</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="ダメージ計算を検証する" class="">ダメージ計算を検証する</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="breadcrumb"><a href="../ja/index.html">TOP</a> &raquo; 攻略 &raquo; イベントと対戦モード</div>
+    
+    <div class="card">
+      <h1>イベントと対戦モード</h1>
+      <div class="updated">最終更新: 2026-09-06</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">目次</div>
+        <div class="toc">
+<ul>
+<li><a href="#一覧">一覧</a></li>
+<li><a href="#水晶鉱坑">水晶鉱坑</a></li>
+<li><a href="#特化アリ対決決闘坑道">特化アリ対決（決闘坑道）</a></li>
+<li><a href="#勇気の試練センザンコウ">勇気の試練（センザンコウ）</a></li>
+<li><a href="#トビトカゲバトルニジトカゲ">トビトカゲバトル（ニジトカゲ）</a></li>
+<li><a href="#アライアンス試練エリマキトカゲ">アライアンス試練（エリマキトカゲ）</a></li>
+<li><a href="#遷移の旅戦域の引っ越し">遷移の旅（戦域の引っ越し）</a></li>
+<li><a href="#戦域召集">戦域召集</a></li>
+<li><a href="#シーズン孵化">シーズン孵化</a></li>
+<li><a href="#参考にした情報源">参考にした情報源</a></li>
+</ul>
+</div>
+
+      </div>
+      
+      <p>常設・定期のイベントと対戦モードを、参加条件と要点だけ拾って並べました。アライアンス単位の大型イベント（アライアンス遠征・最強戦域戦・蟻王争奪戦）は <a href="alliance-pvp.html">アライアンスとPvP</a> にあります。</p>
+<h2 id="一覧">一覧</h2>
+<table>
+<thead>
+<tr>
+<th>モード</th>
+<th>参加条件</th>
+<th>ひとことで</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水晶鉱坑</td>
+<td>水晶鉱坑の解放</td>
+<td>鉱脈を占拠して奇妙水晶を採る。レア以上は略奪もできる</td>
+</tr>
+<tr>
+<td>特化アリ対決</td>
+<td>決闘坑道</td>
+<td>挑戦券を使ったptランキング戦。<strong>育成システムの多くが無効</strong></td>
+</tr>
+<tr>
+<td>勇気の試練</td>
+<td>女王Lv12以上</td>
+<td>アライアンスでセンザンコウを殴り、ダメージがptになる（3日間）</td>
+</tr>
+<tr>
+<td>トビトカゲバトル</td>
+<td>女王Lv14以上</td>
+<td>毎日1匹のニジトカゲを単独で殴る（6日間）</td>
+</tr>
+<tr>
+<td>アライアンス試練</td>
+<td>アライアンス所属</td>
+<td>エリマキトカゲに挑む。<strong>兵は軽傷のみで死なない</strong></td>
+</tr>
+<tr>
+<td>遷移の旅</td>
+<td>戦域遷移アイテム</td>
+<td>他の戦域へ引っ越す</td>
+</tr>
+<tr>
+<td>戦域召集</td>
+<td>盟主・条件あり</td>
+<td>他戦域の無所属プレイヤーを自アライアンスに招く</td>
+</tr>
+<tr>
+<td>シーズン孵化</td>
+<td>シーズン試合段階</td>
+<td>シーズン異変卵で特化アリを引く</td>
+</tr>
+</tbody>
+</table>
+<h2 id="水晶鉱坑">水晶鉱坑</h2>
+<p>鉱脈を隊列で占拠して<strong>奇妙水晶</strong>を集めます。</p>
+<ul>
+<li>鉱脈のマークで状態が分かります。<strong>マーク無し＝空き地</strong>（戦闘不要）、緑＝自分、青＝アライアンスメンバー（略奪不可）、赤＝他人（略奪可）、紫＝自分を略奪した相手（復讐可）</li>
+<li><strong>隊列の中身は採掘速度にも総量にも影響しません。</strong> 隊列は鉱脈を守るためだけに使います</li>
+<li>鉱坑には3種類あり、採集量と速度は 水晶鉱坑 &lt; レア水晶鉱坑 &lt; 卓越水晶鉱坑。<strong>水晶鉱坑は隊列1つのみ・略奪なし</strong>、レアと卓越は最大4隊列・略奪あり</li>
+<li>占拠に成功すると<strong>3時間の保護時間</strong>が付きます</li>
+<li>略奪に成功すると相手の<strong>採集済み奇妙水晶の50%</strong>を得て鉱脈を奪えます。失敗すると同じ鉱脈には5分のクールダウン</li>
+</ul>
+<p><strong>無料占領回数</strong>は毎日UTC0時に回復します。初期は1日6回で、<strong>女王Lv25で+2</strong>、<strong>増幅システムの解放で+2</strong>。ダイヤで1日10回まで補充でき、補充は週10回まで（月曜UTC0時にリセット）。</p>
+<blockquote>
+<p>補充した回数を当日使い切らないと、翌日UTC0時にリセットされて消えます。買ったらその日のうちに使い切ってください。</p>
+</blockquote>
+<h2 id="特化アリ対決決闘坑道">特化アリ対決（決闘坑道）</h2>
+<p><strong>このゲームで最も特殊なルールの対戦モード</strong>です。クラスは無く、順位だけがあります。</p>
+<ul>
+<li>初参加時の基礎ptは<strong>1000</strong>。勝てば相手との差に応じてptを得て、相手は減ります</li>
+<li>挑戦券は<strong>最大10枚所持</strong>、<strong>毎日5回無料</strong>。ダイヤで買えますが、1回買うごとに必要ダイヤが増えます</li>
+<li>挑戦中・挑戦されている最中は、他のプレイヤーから挑戦されません</li>
+<li>戦闘履歴は<strong>最大30件</strong>。自分を破った相手には<strong>1件につき1回だけ</strong>挑戦し返せます（相手が防御成功していた場合は不可）</li>
+<li><strong>防御隊列は空にできません。</strong> 各隊列に最低1体の特化アリが必要です。1隊列だけ相手から見えないよう非表示にできます</li>
+<li>防御隊列の特化アリや中立生物を分解すると、応戦時にその枠は消えます</li>
+</ul>
+<p><strong>ここが重要</strong>：覚醒・勲章・征服者進化・働きアリ宝物のバフは、いずれも特化アリ対決では<strong>無効</strong>です（<a href="growth-systems.html">育成システム早見</a> 参照）。対決で強い編成は、通常戦の強さとは別物になります。</p>
+<h2 id="勇気の試練センザンコウ">勇気の試練（センザンコウ）</h2>
+<p>イベント開催から<strong>3日間</strong>。女王アリ<strong>Lv12以上</strong>が参加条件です。</p>
+<ul>
+<li>R4・R5が餌を使って<strong>センザンコウを召喚</strong>し、アライアンスメンバーだけが攻撃できます（単独侵入または集結）</li>
+<li><strong>1日の攻撃上限は15回</strong></li>
+<li><strong>センザンコウは倒せません。</strong> ptは与えたダメージで計算されます</li>
+<li>毎日ステータスが変わるので、ヒントに従って推奨兵種に隊列を組み替えるとダメージが伸びます</li>
+<li>報酬は個人ptのランク／ランキングと、アライアンスptのランク／ランキングの4種類</li>
+</ul>
+<p>兵種改造の<strong>改造宝箱</strong>がここで手に入ります。</p>
+<h2 id="トビトカゲバトルニジトカゲ">トビトカゲバトル（ニジトカゲ）</h2>
+<p>イベント開催から<strong>6日間</strong>。女王アリ<strong>Lv14以上</strong>、かつサーバーがシーズンを開催済みで現在シーズン中でないことが条件です。</p>
+<ul>
+<li>毎日<strong>10時に1匹</strong>のニジトカゲが出現。<strong>集結攻撃はできません</strong>（単独のみ）</li>
+<li><strong>1日5回まで</strong>、1回につき<strong>スタミナ5</strong>を消費</li>
+<li>行軍時間は最大30秒に短縮されます</li>
+<li>ニジトカゲも倒せず、ptはダメージで決まります</li>
+</ul>
+<p><strong>曜日で推奨兵種が変わります。</strong></p>
+<table>
+<thead>
+<tr>
+<th>曜日</th>
+<th>推奨</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月・木</td>
+<td>ガーディアンアリ</td>
+</tr>
+<tr>
+<td>火・金</td>
+<td>シューターアリ</td>
+</tr>
+<tr>
+<td>水・土</td>
+<td>キャリヤーアリ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="アライアンス試練エリマキトカゲ">アライアンス試練（エリマキトカゲ）</h2>
+<p><strong>準備段階（おとり配置、48時間）→ 攻撃可能段階 → 攻撃段階</strong>を循環します。</p>
+<ul>
+<li>参加できるのは、<strong>直近46時間以内にアライアンス試練に参加していないメンバー</strong></li>
+<li>シーズンマップやアライアンス遠征の雨林マップに入った人、シーズンマップを出て46時間以内の人は参加できません</li>
+<li><strong>戦闘で兵隊アリは重傷にも死亡にもならず、軽傷だけ</strong>。戦闘後に自動回復します</li>
+<li>R4・R5がおとりを野外マップに配置し、アライアンスは試練の自動開始時刻を予約できます</li>
+</ul>
+<h2 id="遷移の旅戦域の引っ越し">遷移の旅（戦域の引っ越し）</h2>
+<ul>
+<li>遷移できるのは<strong>同じグループの戦域</strong>だけ。各戦域の受け入れ上限は<strong>300人</strong></li>
+<li>各戦域の蟻王が、受け入れる蟻塚のレベル上限を設定できます</li>
+<li>自分の戦闘力が移動先の上位に入る場合、<strong>移動先の蟻王の承認</strong>が必要です</li>
+<li>必要な戦域遷移アイテムは蟻塚レベルで変わります</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>蟻塚Lv</th>
+<th>必要数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15〜17</td>
+<td>1</td>
+</tr>
+<tr>
+<td>18〜19</td>
+<td>2</td>
+</tr>
+<tr>
+<td>20</td>
+<td>3</td>
+</tr>
+<tr>
+<td>21</td>
+<td>4</td>
+</tr>
+<tr>
+<td>22</td>
+<td>6</td>
+</tr>
+<tr>
+<td>23</td>
+<td>8</td>
+</tr>
+<tr>
+<td>24</td>
+<td>10</td>
+</tr>
+<tr>
+<td>25</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>戦域を移るとイベントの進度がリセットされることがあります。受け取れる報酬はメールで届きます。</p>
+<h2 id="戦域召集">戦域召集</h2>
+<p>シーズン申込期間中、盟主が他戦域の<strong>アライアンス未所属</strong>のプレイヤーを自分のアライアンスへ招くイベントです。発起には条件があります。</p>
+<ul>
+<li>直近3日のアクティブメンバーが<strong>30人以上</strong></li>
+<li>直近3日に<strong>T8以上の兵隊アリを解放したメンバーが25人以上ログイン</strong></li>
+<li>アライアンス総進化値が<strong>1200以上</strong></li>
+</ul>
+<p>条件を満たさなくなったアライアンスの召集は、毎日UTC23:55〜翌0:05の間にシステムが取り消します。<strong>一度発起すると撤回はできません</strong>（条件の編集は可能）。</p>
+<h2 id="シーズン孵化">シーズン孵化</h2>
+<p>シーズン試合段階が始まる週の<strong>木曜0時（UTC）</strong>から、特化アリの孵化画面に出ます。シーズン異変卵1個で1回引けます。</p>
+<p><strong>幸運値</strong>が肝です。1回引くごとに1pt貯まります。</p>
+<table>
+<thead>
+<tr>
+<th>幸運値</th>
+<th>もらえるもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100pt</td>
+<td>一部のシーズン特化アリからランダムで1体</td>
+</tr>
+<tr>
+<td>300pt</td>
+<td><strong>全シーズン特化アリ</strong>からランダムで1体</td>
+</tr>
+<tr>
+<td>600pt・800pt</td>
+<td>シーズン孵化 幻の異変卵</td>
+</tr>
+</tbody>
+</table>
+<p>幸運値で得た特化アリは「30回で必ずシーズン特化アリ」のカウントには影響しません。シーズン終了で幸運値は0に戻ります。</p>
+<blockquote>
+<p><strong>シーズン異変卵は持ち越せません。</strong> シーズンが終わると未使用分は通常の特級異変卵に変わり、欠片も期限切れになって少量のダイヤにしかなりません。<strong>必ず使い切ってください。</strong></p>
+</blockquote>
+<h2 id="参考にした情報源">参考にした情報源</h2>
+<ul>
+<li><a href="https://faq-help-center.center-public-production.allstarunion.com/SmtQMzNiSFphYToxNjc4NTIzMjQ3Om1hc3Rlcg==">The Ants 公式ヘルプセンター（日本語）</a> — このページの内容はすべてここの記述にもとづく要約です</li>
+</ul>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
