@@ -97,13 +97,17 @@ def build_form_html(cfg):
             "投稿フォームはまだ設置作業中です。設置が終わるまでは、"
             "下に挙げた項目を書き添えてSNS等で教えていただければ同じように扱えます。"
         )
+    # Googleフォームのiframeは、上部にフォーム名と（ログイン中の閲覧者には）本人の
+    # アカウント行を出す。消す設定は無く、別ドメインなのでCSSでも触れないため、
+    # 外側の枠で上端を切り落として隠している。切り取り量は boards.json で調整する。
+    crop = int((cfg or {}).get("google_form_crop_px") or 0)
     return (
-        '<div class="board-embed">'
-        '<iframe src="{url}" width="100%" height="1200" frameborder="0"'
+        '<div class="board-embed form-embed" style="--crop:{crop}px">'
+        '<iframe src="{url}" frameborder="0"'
         ' marginheight="0" marginwidth="0" loading="lazy"'
         ' title="情報提供フォーム">読み込んでいます…</iframe>'
         "</div>"
-    ).format(url=url)
+    ).format(url=url, crop=crop)
 
 
 def slugify_unicode(value: str, separator: str) -> str:
