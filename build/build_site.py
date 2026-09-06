@@ -38,7 +38,7 @@ POPULAR_LABEL = {"ja": "人気記事", "en": "Popular"}
 BREADCRUMB_HOME = {"ja": "TOP", "en": "TOP"}
 
 # サイト全体で固定表示する人気記事ランキング（スラッグ順）
-POPULAR_SLUGS = ["damage-calculation", "beginner-guide", "data-collection"]
+POPULAR_SLUGS = ["damage-calculation", "beginner-guide", "news"]
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
 

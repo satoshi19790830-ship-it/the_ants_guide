@@ -20,7 +20,6 @@ This site has two goals:
 - [Alliance & PvP](alliance-pvp.html) — Why joining an alliance matters, PvP basics
 - [Ant & Neutral Creature Compendium](ant-compendium.html) — Verbatim skill data from real account screenshots (work in progress)
 - [Verifying the Damage Formula](damage-calculation.html) — What's known so far, and the data-driven verification project
-- [Contribute Your Data](data-collection.html) — Your combat logs help make this guide more accurate
 
 ## About this site
 

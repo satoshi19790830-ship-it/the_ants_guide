@@ -169,7 +169,7 @@
         
         <li><span class="rank">2</span><a href="beginner-guide.html">Beginner Guide</a></li>
         
-        <li><span class="rank">3</span><a href="data-collection.html">Contribute Your Data</a></li>
+        <li><span class="rank">3</span><a href="news.html">Latest News</a></li>
         
       </ul>
     </div>
@@ -213,8 +213,6 @@
         
         <a href="damage-calculation.html" data-title="verifying the damage formula" class="active">Verifying the Damage Formula</a>
         
-        <a href="data-collection.html" data-title="contribute your data" class="">Contribute Your Data</a>
-        
       </div>
       
     </div>
@@ -249,6 +247,7 @@
 </ul>
 </li>
 <li><a href="#current-status">Current status</a></li>
+<li><a href="#if-you-want-to-contribute-data">If you want to contribute data</a></li>
 <li><a href="#sources">Sources</a></li>
 </ul>
 </div>
@@ -258,7 +257,7 @@
       <p><strong>Bottom line: The Ants has never published an official damage formula.</strong> This is a shared premise across the Japanese, English, and Chinese-speaking communities. This page summarizes what's already been pieced together, and runs a data-driven project to reverse-engineer the formula from real combat data.</p>
 <h2 id="approach">Approach</h2>
 <ol>
-<li>Collect (ATK, DEF, actual damage dealt) triples from players — see <a href="data-collection.html">Contribute Your Data</a></li>
+<li>Collect (ATK, DEF, actual damage dealt) triples from players — see "If you want to contribute data" at the end of this page</li>
 <li>Fit several common damage-formula candidates (below) against the collected data and compare statistical fit</li>
 <li>Publish whichever formula fits best as a "current best guess," updating as more data comes in</li>
 </ol>
@@ -320,7 +319,7 @@ Example: "Combat Speed: 952" breaks down as Evolution Meteorite 140 + Evolution 
 <p><em>Source: breakdown tooltips on my own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code></em></p>
 <p>However, this farming log isn't clean enough on its own to isolate the ATK-vs-DEF relationship: against the identical opponent with an identical squad, skill activation counts vary randomly (one special ant's damage alone ranged from 9 to 16 activations), so total damage across runs swung from about 3.47B to 6.6B purely from RNG, not from stat differences.</p>
 <h3 id="whats-still-unconfirmed">What's still unconfirmed</h3>
-<p>I did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — I still don't have the minimal unit of data I need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what I need to collect: the <a href="data-collection.html">data submission form</a> now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so I can control for these known variables and isolate the pure ATK-vs-DEF relationship.</p>
+<p>I did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — I still don't have the minimal unit of data I need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what I need to collect: recording the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, lets me control for these known variables and isolate the pure ATK-vs-DEF relationship.</p>
 <h2 id="what-the-existing-community-has-found-as-of-july-2026">What the existing community has found (as of July 2026)</h2>
 <h3 id="official-forum">Official forum</h3>
 <p>There's no thread with an explicit formula, but an October 2022 thread titled "Just not understanding anthill defense" has useful staff/veteran responses:</p>
@@ -350,7 +349,11 @@ Example: "Combat Speed: 952" breaks down as Evolution Meteorite 140 + Evolution 
 <li><strong>Formation (front/mid/back row) combined with skill trigger rate and multiplier</strong> is what actually determines effective damage</li>
 </ol>
 <h2 id="current-status">Current status</h2>
-<p><strong>Data collection is in progress.</strong> No formula is published yet — please contribute via the <a href="data-collection.html">data submission form</a> if you have combat logs.</p>
+<p><strong>No provisional formula yet.</strong> There isn't enough measured data to pin down the base ATK-vs-DEF relationship. What is and isn't known is written above; the shape of the data I need is in the next section.</p>
+<h2 id="if-you-want-to-contribute-data">If you want to contribute data</h2>
+<p><strong>There is no submission form yet.</strong> The fields I want to collect are designed (5 required, 13 optional) and the analysis script runs, but the form itself does not exist. I will link it here once it does.</p>
+<p>What I need is <strong>one skill activation with the attacker's ATK, the defender's DEF, and the damage that single hit dealt.</strong> The skill name and its level, plus the attacker's damage-amplification % and the defender's damage-reduction-amplification %, let me control for the known variables and isolate the ATK-vs-DEF relationship. Farming-run totals cannot be used, because the number of skill activations varies from run to run.</p>
+<p>If you have seen ATK/DEF/damage numbers posted on X, Reddit or Discord, <strong>a link to the source is enough</strong> — I will not repost the images. The likely places for this data are the official Discord (around 260,000 members), the <a href="https://theantsforum.allstarunion.com">official forum</a>, and the official X accounts (<a href="https://x.com/theants_global">global</a> / <a href="https://x.com/theantsjp">Japan</a>).</p>
 <h2 id="sources">Sources</h2>
 <p>External sources used for this page. Figures measured on my own account are noted inline where they appear.</p>
 <ul>

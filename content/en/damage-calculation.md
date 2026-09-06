@@ -10,7 +10,7 @@ updated: 2026-07-19
 
 ## Approach
 
-1. Collect (ATK, DEF, actual damage dealt) triples from players — see [Contribute Your Data](data-collection.html)
+1. Collect (ATK, DEF, actual damage dealt) triples from players — see "If you want to contribute data" at the end of this page
 2. Fit several common damage-formula candidates (below) against the collected data and compare statistical fit
 3. Publish whichever formula fits best as a "current best guess," updating as more data comes in
 
@@ -64,7 +64,7 @@ However, this farming log isn't clean enough on its own to isolate the ATK-vs-DE
 
 ### What's still unconfirmed
 
-I did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — I still don't have the minimal unit of data I need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what I need to collect: the [data submission form](data-collection.html) now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so I can control for these known variables and isolate the pure ATK-vs-DEF relationship.
+I did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — I still don't have the minimal unit of data I need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what I need to collect: recording the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, lets me control for these known variables and isolate the pure ATK-vs-DEF relationship.
 
 ## What the existing community has found (as of July 2026)
 
@@ -101,7 +101,15 @@ No directly contradicting formulas were found — instead, both communities conv
 
 ## Current status
 
-**Data collection is in progress.** No formula is published yet — please contribute via the [data submission form](data-collection.html) if you have combat logs.
+**No provisional formula yet.** There isn't enough measured data to pin down the base ATK-vs-DEF relationship. What is and isn't known is written above; the shape of the data I need is in the next section.
+
+## If you want to contribute data
+
+**There is no submission form yet.** The fields I want to collect are designed (5 required, 13 optional) and the analysis script runs, but the form itself does not exist. I will link it here once it does.
+
+What I need is **one skill activation with the attacker's ATK, the defender's DEF, and the damage that single hit dealt.** The skill name and its level, plus the attacker's damage-amplification % and the defender's damage-reduction-amplification %, let me control for the known variables and isolate the ATK-vs-DEF relationship. Farming-run totals cannot be used, because the number of skill activations varies from run to run.
+
+If you have seen ATK/DEF/damage numbers posted on X, Reddit or Discord, **a link to the source is enough** — I will not repost the images. The likely places for this data are the official Discord (around 260,000 members), the <a href="https://theantsforum.allstarunion.com">official forum</a>, and the official X accounts (<a href="https://x.com/theants_global">global</a> / <a href="https://x.com/theantsjp">Japan</a>).
 
 ## Sources
 
