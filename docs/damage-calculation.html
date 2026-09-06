@@ -73,7 +73,23 @@
   header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
 
   .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
-  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+  /* サイドバーが画面より高いと、下端の項目がページ最下部までスクロールしないと見えない。
+     ビューポート内に収めて、はみ出す分はサイドバー自身をスクロールさせる。 */
+  nav.sidebar {
+    flex: 0 0 230px;
+    position: sticky; top: 4.2rem;
+    max-height: calc(100vh - 5.4rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 0.4rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  nav.sidebar::-webkit-scrollbar { width: 6px; }
+  nav.sidebar::-webkit-scrollbar-track { background: transparent; }
+  nav.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  nav.sidebar:hover::-webkit-scrollbar-thumb { background: var(--fg-muted); }
+  nav.sidebar .side-block:first-child h3 { margin-top: 0; }
 
   .side-block h3 {
     font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
@@ -137,7 +153,7 @@
 
   @media (max-width: 780px) {
     .layout { flex-direction: column; }
-    nav.sidebar { flex: none; position: static; width: 100%; }
+    nav.sidebar { flex: none; position: static; width: 100%; max-height: none; overflow: visible; padding-right: 0; }
   }
 </style>
 </head>
