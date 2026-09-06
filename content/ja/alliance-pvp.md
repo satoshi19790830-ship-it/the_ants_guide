@@ -83,6 +83,8 @@ updated: 2026-09-06
 
 略奪できる量は、**隊列の荷重と相手の資源保護状況**で決まります。相手が保護上限内に資源を収めていれば、勝っても取れるものはほとんどありません。
 
+> ここについて、プレイヤー「ありをそだてるあきとくん」氏の解説動画<a href="https://www.youtube.com/watch?v=ILBTZtsrtw0">「これは知らないと強くなれない知識まとめ」</a>（2021年11月23日公開）では、**取れる量は相手の資源量ではなく自分の部隊の荷重で決まる**と説明されています。相手にいくら資源があっても、荷重を超えては運べないという意味です。加えて、**蟻塚レベルが6以上離れている相手からは30%しか取れない**とも述べられています。**公式の記述ではなく、公開から年数が経っています。**
+
 **偵察**を先に打つと、相手の座標・略奪できる資源・蟻塚耐久値・兵隊アリ数が分かります。偵察アリのレベルが高いほど詳しくなります。ただし相手が「偵察対策」アイテムを使っていると情報は取れず、「蟻塚保護」を使っている相手には攻撃も偵察もできません。
 
 ### 最強戦域戦（Strongest Warzone）
@@ -168,3 +170,4 @@ updated: 2026-09-06
 - <a href="https://theantsforum.allstarunion.com/t/how-to-protect-resources/16071">公式フォーラム「How to protect resources」</a>／<a href="https://www.taptap.cn/moment/363595786300163245">TapTap掠奪攻略投稿</a>
 - <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Strongest_Warzone">Fandom Wiki: Strongest Warzone</a>
 - <a href="https://lilygamelife.com/the-ants-event-calendar/">lilygamelife.com イベントカレンダー</a>
+- <a href="https://www.youtube.com/watch?v=ILBTZtsrtw0">ありをそだてるあきとくん「これは知らないと強くなれない知識まとめ」</a>（2021年11月23日）— 略奪量の決まり方。**プレイヤーによる解説で、公開から年数が経っています**

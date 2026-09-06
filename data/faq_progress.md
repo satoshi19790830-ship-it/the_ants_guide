@@ -108,3 +108,16 @@ YouTubeのtimedtext APIは空を返すようになっているので、ブラウ
 開いてDOMから取得した（ytd-engagement-panel の EXPANDED のものを読む）。
 方針を「公式／自分の実測の2つだけ」から「出典を明示できるものだけ・確度順に3段階」に変更。
 プレイヤー解説は誰の・いつの情報かを必ず添える。
+
+## 2026-09-06 動画2本を追加反映（ユーザー提供）
+
+- https://www.youtube.com/watch?v=ILBTZtsrtw0 （2021-11-23）バトルの仕組みと能力の見方
+- https://www.youtube.com/watch?v=sHvqbnqryeM （2021-11-27）戦闘力を上げる方法
+
+反映先: damage-calculation（射程の読み方／対象の書き分け／属性が合わないと発動しない／
+中立生物戦も3列対3列／蟻塚戦闘力と部隊戦闘力の別／兵1匹の能力×兵数×%バフ）、
+ant-types（8つのスキル枠の役割・解放に橙8体）、alliance-pvp（略奪量は自分の荷重で決まる・
+レベル差6以上で30%）。いずれも2021年の情報なので、節ごとに出典と公開日を明記した。
+
+文字起こしの取り方: YouTubeのtimedtext APIは空を返す。ブラウザで「文字起こしを表示」
+ボタンをJSでclickし、visibility=EXPANDED の ytd-engagement-panel から innerText を読む。
