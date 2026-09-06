@@ -26,7 +26,7 @@ One reported example: about 35-50M meat/plant/wet soil and 5M sand gathered from
 
 A server-vs-server, points-based event. A season runs 3 weeks total (1 week prep + 2 weeks main event). Points come from daily rotating tasks — building upgrades, hatching soldier ants, gathering resources, etc. The first 6 days of both prep and main phases share the same task set; the final day is either a "Groundhog" boss fight or a "Warzone Expedition."
 
-> Some Japanese guide sources mention an event called "Swarm of Toxic Fungi" (猛毒菌の群れ) that may be related to the term the requester originally used. We could not confirm the exact official event this maps to during this research pass — we'll update this once confirmed.
+> Some Japanese guide sources mention an event called "Swarm of Toxic Fungi" (猛毒菌の群れ) that may be related to the term the requester originally used. I could not confirm which official event this maps to during this research pass — I'll update this once confirmed.
 
 ## Mutated Barren season
 

@@ -6,9 +6,9 @@ order: 31
 updated: 2026-07-19
 ---
 
-We're collecting combat data from players worldwide to reverse-engineer The Ants' hidden damage formula.
+I'm collecting combat data from players worldwide to reverse-engineer The Ants' hidden damage formula.
 
-## What we're asking for
+## What I'm asking for
 
 After a battle (PvE or PvP), please submit:
 
@@ -16,7 +16,7 @@ After a battle (PvE or PvP), please submit:
 - The opponent's type and defense stat (if known)
 - The actual damage dealt (shown in the combat log)
 
-Only 5 fields are required, so each submission takes about a minute. Screenshots are only used to double-check numbers — we will never repost them publicly.
+Only 5 fields are required, so each submission takes about a minute. Screenshots are only used to double-check numbers — I will never repost them publicly.
 
 ## Form details
 
@@ -28,11 +28,11 @@ Submissions are aggregated anonymously and published as analysis results on the 
 
 ## Numbers you've seen on social media are welcome too
 
-If you've seen ATK/DEF/damage numbers posted on X (Twitter), Reddit, or Discord, feel free to transcribe them into the form (we won't repost the images themselves — a source link is enough).
+If you've seen ATK/DEF/damage numbers posted on X (Twitter), Reddit, or Discord, feel free to transcribe them into the form (I won't repost the images themselves — a source link is enough).
 
 ## Where data is likely already sitting (planned outreach)
 
-We've identified several large communities where players gather worldwide, and plan to reach out directly to ask for data:
+I've identified several large communities where players gather worldwide, and plan to reach out directly to ask for data:
 
 - Official Discord "The Ants Official" — roughly 259,000 members
 - Official forum (theantsforum.allstarunion.com)
@@ -40,4 +40,4 @@ We've identified several large communities where players gather worldwide, and p
 - Reddit (r/TheAntsGame)
 - Comment sections on combat-math explainer videos on YouTube (e.g. "understanding combat math and skill damage")
 
-As we find concrete numbers already being discussed in these communities, we'll convert them into this form's format and add them to our dataset.
+As I find concrete numbers already being discussed in these communities, I'll convert them into this form's format and add them to the dataset.

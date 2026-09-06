@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verifying the Damage Formula | The Ants 攻略 / The Ants Guide</title>
-<meta name="description" content="The Ants doesn't publish its damage formula. We're reverse-engineering it from player-submitted data.">
+<meta name="description" content="The Ants doesn't publish its damage formula. I'm reverse-engineering it from player-submitted data.">
 <link rel="canonical" href="https://example.github.io/the-ants-guide/en/damage-calculation.html">
 <link rel="alternate" hreflang="ja" href="https://example.github.io/the-ants-guide/ja/damage-calculation.html">
 <link rel="alternate" hreflang="en" href="https://example.github.io/the-ants-guide/en/damage-calculation.html">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
 <meta property="og:title" content="Verifying the Damage Formula">
-<meta property="og:description" content="The Ants doesn't publish its damage formula. We're reverse-engineering it from player-submitted data.">
+<meta property="og:description" content="The Ants doesn't publish its damage formula. I'm reverse-engineering it from player-submitted data.">
 <meta property="og:url" content="https://example.github.io/the-ants-guide/en/damage-calculation.html">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
@@ -233,7 +233,7 @@
 <ul>
 <li><a href="#approach">Approach</a></li>
 <li><a href="#candidate-formulas">Candidate formulas</a></li>
-<li><a href="#what-auditing-our-own-account-revealed-2026-07-19-first-party-data">What auditing our own account revealed (2026-07-19, first-party data)</a><ul>
+<li><a href="#what-auditing-my-own-account-revealed-2026-07-19-first-party-data">What auditing my own account revealed (2026-07-19, first-party data)</a><ul>
 <li><a href="#finding-1-skill-damage-is-literally-written-as-basespecial-ant-lv-coefficient">Finding 1: skill damage is literally written as "base%(+special ant Lv × coefficient%)"</a></li>
 <li><a href="#finding-2-a-separate-damage-amplification-reduction-amplification-layer-exists">Finding 2: a separate "damage amplification / reduction amplification" layer exists</a></li>
 <li><a href="#finding-3-combat-speed-turn-order-varies-hugely-in-the-hundreds-up-to-900">Finding 3: combat speed (turn order) varies hugely — in the hundreds up to 900+</a></li>
@@ -262,7 +262,7 @@
 <li>Fit several common damage-formula candidates (below) against the collected data and compare statistical fit</li>
 <li>Publish whichever formula fits best as a "current best guess," updating as more data comes in</li>
 </ol>
-<p>Our analysis pipeline (<code>scripts/analyze_damage.py</code>) has been tested against synthetic data. Results will be posted here once enough real submissions come in.</p>
+<p>The analysis pipeline (<code>scripts/analyze_damage.py</code>) has been tested against synthetic data. Results will be posted here once enough real submissions come in.</p>
 <h2 id="candidate-formulas">Candidate formulas</h2>
 <table>
 <thead>
@@ -295,9 +295,9 @@
 </tr>
 </tbody>
 </table>
-<p>As the account audit below shows, final damage is very likely a product of three layers: this base ATK-vs-DEF formula × skill% (+special ant Lv × coefficient%) × (1 + attacker's damage-amplification% − defender's damage-reduction-amplification%). What we're trying to isolate here is that innermost ATK-vs-DEF layer.</p>
-<h2 id="what-auditing-our-own-account-revealed-2026-07-19-first-party-data">What auditing our own account revealed (2026-07-19, first-party data)</h2>
-<p>As a step above community speculation, we systematically screenshotted our own account's skill tooltips and stat screens — 407 screenshots — and transcribed all of them. This surfaced quantitative mechanics the game actually states in its own text.</p>
+<p>As the account audit below shows, final damage is very likely a product of three layers: this base ATK-vs-DEF formula × skill% (+special ant Lv × coefficient%) × (1 + attacker's damage-amplification% − defender's damage-reduction-amplification%). What I'm trying to isolate here is that innermost ATK-vs-DEF layer.</p>
+<h2 id="what-auditing-my-own-account-revealed-2026-07-19-first-party-data">What auditing my own account revealed (2026-07-19, first-party data)</h2>
+<p>As a step above community speculation, I systematically screenshotted my own account's skill tooltips and stat screens — 407 screenshots — and transcribed all of them. This surfaced quantitative mechanics the game actually states in its own text.</p>
 <h3 id="finding-1-skill-damage-is-literally-written-as-basespecial-ant-lv-coefficient">Finding 1: skill damage is literally written as "base%(+special ant Lv × coefficient%)"</h3>
 <p>Nearly every special ant combat skill states its damage in this exact form:</p>
 <blockquote>
@@ -309,18 +309,18 @@ Example: "Brutal Counter" (Bison Ant) — <strong>130%(+special ant Lv × 0.25%)
 <h3 id="finding-2-a-separate-damage-amplification-reduction-amplification-layer-exists">Finding 2: a separate "damage amplification / reduction amplification" layer exists</h3>
 <p>Beyond the skill %, stat screens explicitly show "Damage Amplification" (attacker-side) and "Damage Reduction Amplification" (defender-side) percentages, which stack from hatchery promotion levels, treasures, and evolution amplifiers. Across the full hatchery level table, each promotion tier adds +5% to both, up to +50% at promotion tier 10. Final damage therefore likely has at least a two-layer multiplicative structure: skill% × (1 + attacker's amp% − defender's reduction%).</p>
 <h3 id="finding-3-combat-speed-turn-order-varies-hugely-in-the-hundreds-up-to-900">Finding 3: combat speed (turn order) varies hugely — in the hundreds up to 900+</h3>
-<p>Our own account's invasion squads showed combat speed values ranging from 772 to 952. This confirms, with concrete numbers, the community's qualitative sense that going first swings outcomes significantly.</p>
+<p>My own account's invasion squads showed combat speed values ranging from 772 to 952. This confirms, with concrete numbers, the community's qualitative sense that going first swings outcomes significantly.</p>
 <h3 id="finding-4-buffs-stack-additively-within-the-same-stat-category-confirmed-from-real-combat-logs">Finding 4: buffs stack additively within the same stat category (confirmed from real combat logs)</h3>
-<p>A second batch of 115 screenshots included actual "Neutral Creature Report" combat logs. Against the same fixed target (a level 1 Marmot with 0% buffs) using the same squad, we captured 17 farming runs, and the breakdown tooltips on each stat revealed exactly how each stat is assembled:</p>
+<p>A second batch of 115 screenshots included actual "Neutral Creature Report" combat logs. Against the same fixed target (a level 1 Marmot with 0% buffs) using the same squad, I captured 17 farming runs, and the breakdown tooltips on each stat revealed exactly how each stat is assembled:</p>
 <blockquote>
 <p>Example: "Damage Amplification: 66.00%" breaks down as Evolution 20.00% + Neutral Creature 5.00% + Building 41.00% = 66.00%
 Example: "Combat Speed: 952" breaks down as Evolution Meteorite 140 + Evolution 470 + Neutral Creature 140 + Cell 30 + Gene 50 + Bacteria 50 + Fungus 50 + Troop Modification 2 + VIP 20 = 952</p>
 </blockquote>
 <p>A striking number of systems (evolution, neutral creatures, buildings, cells, genes, bacteria, fungi, troop modification, treasures, VIP, awakening, and more) each add their own bonus to the same stat, and <strong>within a single stat category, they simply sum</strong> — not multiply.</p>
-<p><em>Source: breakdown tooltips on our own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code></em></p>
+<p><em>Source: breakdown tooltips on my own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code></em></p>
 <p>However, this farming log isn't clean enough on its own to isolate the ATK-vs-DEF relationship: against the identical opponent with an identical squad, skill activation counts vary randomly (one special ant's damage alone ranged from 9 to 16 activations), so total damage across runs swung from about 3.47B to 6.6B purely from RNG, not from stat differences.</p>
 <h3 id="whats-still-unconfirmed">What's still unconfirmed</h3>
-<p>We did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — we still don't have the minimal unit of data we need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what we need to collect: the <a href="data-collection.html">data submission form</a> now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so we can control for these known variables and isolate the pure ATK-vs-DEF relationship.</p>
+<p>I did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — I still don't have the minimal unit of data I need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what I need to collect: the <a href="data-collection.html">data submission form</a> now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so I can control for these known variables and isolate the pure ATK-vs-DEF relationship.</p>
 <h2 id="what-the-existing-community-has-found-as-of-july-2026">What the existing community has found (as of July 2026)</h2>
 <h3 id="official-forum">Official forum</h3>
 <p>There's no thread with an explicit formula, but an October 2022 thread titled "Just not understanding anthill defense" has useful staff/veteran responses:</p>

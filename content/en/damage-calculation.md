@@ -1,6 +1,6 @@
 ---
 title: Verifying the Damage Formula
-description: The Ants doesn't publish its damage formula. We're reverse-engineering it from player-submitted data.
+description: The Ants doesn't publish its damage formula. I'm reverse-engineering it from player-submitted data.
 category: Research Project
 order: 30
 updated: 2026-07-19
@@ -14,7 +14,7 @@ updated: 2026-07-19
 2. Fit several common damage-formula candidates (below) against the collected data and compare statistical fit
 3. Publish whichever formula fits best as a "current best guess," updating as more data comes in
 
-Our analysis pipeline (`scripts/analyze_damage.py`) has been tested against synthetic data. Results will be posted here once enough real submissions come in.
+The analysis pipeline (`scripts/analyze_damage.py`) has been tested against synthetic data. Results will be posted here once enough real submissions come in.
 
 ## Candidate formulas
 
@@ -25,11 +25,11 @@ Our analysis pipeline (`scripts/analyze_damage.py`) has been tested against synt
 | Difference | damage = k × (ATK − DEF) | Simple subtractive model |
 | Linear | damage = a×ATK + b×DEF + c | Baseline for comparison |
 
-As the account audit below shows, final damage is very likely a product of three layers: this base ATK-vs-DEF formula × skill% (+special ant Lv × coefficient%) × (1 + attacker's damage-amplification% − defender's damage-reduction-amplification%). What we're trying to isolate here is that innermost ATK-vs-DEF layer.
+As the account audit below shows, final damage is very likely a product of three layers: this base ATK-vs-DEF formula × skill% (+special ant Lv × coefficient%) × (1 + attacker's damage-amplification% − defender's damage-reduction-amplification%). What I'm trying to isolate here is that innermost ATK-vs-DEF layer.
 
-## What auditing our own account revealed (2026-07-19, first-party data)
+## What auditing my own account revealed (2026-07-19, first-party data)
 
-As a step above community speculation, we systematically screenshotted our own account's skill tooltips and stat screens — 407 screenshots — and transcribed all of them. This surfaced quantitative mechanics the game actually states in its own text.
+As a step above community speculation, I systematically screenshotted my own account's skill tooltips and stat screens — 407 screenshots — and transcribed all of them. This surfaced quantitative mechanics the game actually states in its own text.
 
 ### Finding 1: skill damage is literally written as "base%(+special ant Lv × coefficient%)"
 
@@ -47,24 +47,24 @@ Beyond the skill %, stat screens explicitly show "Damage Amplification" (attacke
 
 ### Finding 3: combat speed (turn order) varies hugely — in the hundreds up to 900+
 
-Our own account's invasion squads showed combat speed values ranging from 772 to 952. This confirms, with concrete numbers, the community's qualitative sense that going first swings outcomes significantly.
+My own account's invasion squads showed combat speed values ranging from 772 to 952. This confirms, with concrete numbers, the community's qualitative sense that going first swings outcomes significantly.
 
 ### Finding 4: buffs stack additively within the same stat category (confirmed from real combat logs)
 
-A second batch of 115 screenshots included actual "Neutral Creature Report" combat logs. Against the same fixed target (a level 1 Marmot with 0% buffs) using the same squad, we captured 17 farming runs, and the breakdown tooltips on each stat revealed exactly how each stat is assembled:
+A second batch of 115 screenshots included actual "Neutral Creature Report" combat logs. Against the same fixed target (a level 1 Marmot with 0% buffs) using the same squad, I captured 17 farming runs, and the breakdown tooltips on each stat revealed exactly how each stat is assembled:
 
 > Example: "Damage Amplification: 66.00%" breaks down as Evolution 20.00% + Neutral Creature 5.00% + Building 41.00% = 66.00%
 > Example: "Combat Speed: 952" breaks down as Evolution Meteorite 140 + Evolution 470 + Neutral Creature 140 + Cell 30 + Gene 50 + Bacteria 50 + Fungus 50 + Troop Modification 2 + VIP 20 = 952
 
 A striking number of systems (evolution, neutral creatures, buildings, cells, genes, bacteria, fungi, troop modification, treasures, VIP, awakening, and more) each add their own bonus to the same stat, and **within a single stat category, they simply sum** — not multiply.
 
-*Source: breakdown tooltips on our own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code>*
+*Source: breakdown tooltips on my own account's combat detail screen (measured 2026-07-19). Raw data archived in <code>data/screenshot_extraction_260719-2.md</code>*
 
 However, this farming log isn't clean enough on its own to isolate the ATK-vs-DEF relationship: against the identical opponent with an identical squad, skill activation counts vary randomly (one special ant's damage alone ranged from 9 to 16 activations), so total damage across runs swung from about 3.47B to 6.6B purely from RNG, not from stat differences.
 
 ### What's still unconfirmed
 
-We did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — we still don't have the minimal unit of data we need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what we need to collect: the [data submission form](data-collection.html) now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so we can control for these known variables and isolate the pure ATK-vs-DEF relationship.
+I did find real combat logs, but they're all "farming run totals" aggregating multiple units and multiple skill activations — I still don't have the minimal unit of data I need: one skill activation, the attacker's ATK, the defender's DEF, and that single hit's damage. So the core ATK-vs-DEF relationship itself is still unconfirmed. But findings 1, 2, and 4 sharpen what I need to collect: the [data submission form](data-collection.html) now also asks for the skill name and its level, plus the attacker's damage-amplification% and the defender's damage-reduction-amplification%, so I can control for these known variables and isolate the pure ATK-vs-DEF relationship.
 
 ## What the existing community has found (as of July 2026)
 
