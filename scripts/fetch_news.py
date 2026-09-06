@@ -175,9 +175,18 @@ def cmd_fetch() -> int:
         reverse=True,
     )
     data["items"] = items
-    data["fetched_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    NEWS_JSON.parent.mkdir(parents=True, exist_ok=True)
-    NEWS_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # 中身が変わっていないのに fetched_at だけ書き換えると、毎日の定期実行が
+    # 「タイムスタンプだけのコミット」を作り続けてしまう。差分が出たときだけ書く。
+    before = NEWS_JSON.read_text(encoding="utf-8") if NEWS_JSON.exists() else ""
+    after = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+    if after == before:
+        print("[fetch] 変更なし（news.json は書き換えません）")
+    else:
+        data["fetched_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        NEWS_JSON.parent.mkdir(parents=True, exist_ok=True)
+        NEWS_JSON.write_text(
+            json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
 
     pending = [i for i in items if not i["summary_ja"]]
     print(f"[fetch] 新規: {added}件 / 全体: {len(items)}件 / 未要約: {len(pending)}件")
