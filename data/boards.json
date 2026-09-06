@@ -6,7 +6,9 @@
     "category": "Q&A",
     "category_id": "DIC_kwDOUQC1X84DE_ui"
   },
-  "google_form_embed_url": "https://docs.google.com/forms/d/e/1FAIpQLSeapbUfSteVRmA6hX6AYXMOPSXHDgRGCKgm0BZnfX7GTc5Vaw/viewform?embedded=true",
-  "google_form_crop_px": 229,
-  "_google_form_crop_note": "Googleフォームのiframe上部（フォーム名と、ログイン中の閲覧者に出るアカウント行）を隠すために切り取る高さ。未ログイン状態で実測した最初の設問カードの位置が229px。ログイン中はアカウント行のぶん下にずれるので、残って見えるようなら増やす。"
+  "tally": {
+    "_comment": "情報提供フォーム。Googleフォームから移行した（2026-09-06）。理由は、Googleフォームはファイルアップロード項目を入れると回答者にGoogleログインを強制するため、匿名で送れなくなること。Tallyは無料プランで匿名アップロードができる。",
+    "form_id": "81BQEx",
+    "url": "https://tally.so/r/81BQEx"
+  }
 }

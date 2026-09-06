@@ -45,7 +45,7 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
 # 掲示板の差し込み位置。本文に置いたこのトークンを、設定済みなら埋め込みHTMLに、
 # 未設定なら「まだ設置されていない」旨の案内に置き換える。
 GISCUS_TOKEN = "[[GISCUS]]"
-FORM_TOKEN = "[[GOOGLE_FORM]]"
+FORM_TOKEN = "[[FORM]]"
 
 NOT_READY_NOTE = (
     '<p class="source-note">{}</p>'
@@ -91,23 +91,34 @@ def build_giscus_html(cfg):
 
 
 def build_form_html(cfg):
-    url = (cfg or {}).get("google_form_embed_url") or ""
-    if not url:
+    """情報提供フォーム（Tally）。
+
+    以前はGoogleフォームをiframeで貼っていたが、ファイルアップロード項目を入れると
+    回答者にGoogleログインを強制する仕様で、匿名で送れなくなるため移行した。
+    Tallyの埋め込みはタイトル非表示・背景透過ができるので、サイトのデザインに馴染む。
+
+    高さは固定にしている。Tallyの embed.js（data-tally-src を使う公式の読み込み方）は
+    この構成では src を差してくれず、フォームが表示されないままになったため、
+    src を直接指定して、実測した高さ（900px幅で769px、375px幅で783px）に
+    余裕を足した値を置いている。フォームの項目を増やしたらここも見直すこと。
+    """
+    tally = (cfg or {}).get("tally") or {}
+    form_id = tally.get("form_id") or ""
+    if not form_id:
         return NOT_READY_NOTE.format(
             "投稿フォームはまだ設置作業中です。設置が終わるまでは、"
             "下に挙げた項目を書き添えてSNS等で教えていただければ同じように扱えます。"
         )
-    # Googleフォームのiframeは、上部にフォーム名と（ログイン中の閲覧者には）本人の
-    # アカウント行を出す。消す設定は無く、別ドメインなのでCSSでも触れないため、
-    # 外側の枠で上端を切り落として隠している。切り取り量は boards.json で調整する。
-    crop = int((cfg or {}).get("google_form_crop_px") or 0)
+    src = (
+        "https://tally.so/embed/{id}?alignLeft=1&hideTitle=1&transparentBackground=1"
+    ).format(id=form_id)
     return (
-        '<div class="board-embed form-embed" style="--crop:{crop}px">'
-        '<iframe src="{url}" frameborder="0"'
-        ' marginheight="0" marginwidth="0" loading="lazy"'
+        '<div class="board-embed">'
+        '<iframe src="{src}" loading="lazy" width="100%" height="880"'
+        ' frameborder="0" marginheight="0" marginwidth="0"'
         ' title="情報提供フォーム">読み込んでいます…</iframe>'
         "</div>"
-    ).format(url=url, crop=crop)
+    ).format(src=src)
 
 
 def slugify_unicode(value: str, separator: str) -> str:

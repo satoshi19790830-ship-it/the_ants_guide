@@ -144,14 +144,6 @@
   .board-embed { margin: 1.5rem 0; min-height: 4rem; }
   .board-embed iframe { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); }
 
-  /* Googleフォームの上端（フォーム名とアカウント行）を枠で切り落として隠す */
-  .form-embed { --crop: 0px; height: 1060px; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); }
-  .form-embed iframe { display: block; width: 100%; border: 0; margin-top: calc(var(--crop) * -1); height: calc(1060px + var(--crop)); }
-  @media (max-width: 780px) {
-    .form-embed { height: 1500px; }
-    .form-embed iframe { height: calc(1500px + var(--crop)); }
-  }
-
   .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
 
   .screenshot {
@@ -275,7 +267,7 @@
 <ul>
 <li><a href="#カテゴリを選んで送れます">カテゴリを選んで送れます</a></li>
 <li><a href="#戦闘についてはこういう数字を探しています">戦闘については、こういう数字を探しています</a></li>
-<li><a href="#お願い">お願い</a></li>
+<li><a href="#画像を送れます">画像を送れます</a></li>
 <li><a href="#フォーム">フォーム</a></li>
 </ul>
 </div>
@@ -362,20 +354,21 @@
 <li>スキル名とそのレベル</li>
 <li>自分の「ダメージ増幅%」／相手の「ダメージ軽減増幅%」</li>
 </ul>
-<p>全部揃っていなくても構いません。<strong>分かる分だけで送ってください。</strong> 揃っているほど、既知の変数を差し引いて攻撃力対防御力の関係だけを取り出せます。</p>
+<p>全部揃っていなくても構いません。<strong>分かる分だけで送ってください。</strong> 揃っているほど、既知の変数を差し引いて攻撃力対防御力の関係だけを取り出せます。<strong>戦闘レポートの画面を撮って送っていただくのが一番確実です。</strong></p>
 <p>行動順まわりの実測（誰が先に動いたか、射程がどの列に当たったか）も歓迎です。現在サイトに載せている行動順の説明は、2021〜2022年の解説動画にもとづくもので、<strong>現在の仕様と違っている可能性があります</strong>。裏が取れれば書き換えます。</p>
-<h2 id="お願い">お願い</h2>
+<h2 id="画像を送れます">画像を送れます</h2>
+<p><strong>ゲーム画面のスクリーンショットや、携帯で撮った写真をそのまま添付できます。</strong> 数値を書き写す必要はありません。読み取りはこちらでやります。</p>
 <ul>
-<li><strong>画像そのものは載せません。</strong> スクリーンショットは判断のために見せていただくのは構いませんが、サイトには数値だけを書きます</li>
-<li>他サイトや公式のお知らせで見つけた数字は、<strong>出典のURLだけ教えていただければ十分</strong>です。こちらで読んで要約します</li>
-<li>数値が自分の記憶頼りの場合は、「うろ覚え」と添えてください。そのまま載せず、確認の材料として扱います</li>
+<li><strong>画像そのものをサイトに載せることはありません。</strong> 数値を読み取る材料として使うだけです</li>
+<li>数枚に分かれていても構いません。1ファイル10MBまでです</li>
+<li>他サイトや公式のお知らせで見つけた数字は、<strong>出典のURLを本文に貼っていただければ十分</strong>です。こちらで読んで要約します</li>
+<li>記憶頼りの数値は「うろ覚え」と書き添えてください。そのまま載せず、確認の材料として扱います</li>
 </ul>
 <h2 id="フォーム">フォーム</h2>
 <blockquote>
-<p><strong>Googleアカウントは不要です。匿名で送れます。</strong></p>
-<p>フォームの上部にご自身のアカウント名が表示されることがありますが、それはお使いのブラウザがGoogleにログインしているだけです。<strong>誰が送ったかは、こちらには一切分かりません。</strong> 受け取るのは、フォームに書いていただいた内容だけです。</p>
+<p><strong>アカウント登録は不要です。匿名で送れます。</strong> 誰が送ったかは、こちらには一切分かりません。受け取るのは、フォームに書いていただいた内容と画像だけです。</p>
 </blockquote>
-<div class="board-embed form-embed" style="--crop:229px"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeapbUfSteVRmA6hX6AYXMOPSXHDgRGCKgm0BZnfX7GTc5Vaw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" title="情報提供フォーム">読み込んでいます…</iframe></div>
+<div class="board-embed"><iframe src="https://tally.so/embed/81BQEx?alignLeft=1&hideTitle=1&transparentBackground=1" loading="lazy" width="100%" height="880" frameborder="0" marginheight="0" marginwidth="0" title="情報提供フォーム">読み込んでいます…</iframe></div>
     </div>
   </main>
 </div>
