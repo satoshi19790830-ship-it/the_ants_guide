@@ -3,20 +3,99 @@ title: Ant & Neutral Creature Compendium
 description: Verbatim skill data for The Ants special ants and neutral creatures, transcribed from real account screenshots.
 category: Compendium
 order: 25
+toc: false
 updated: 2026-09-06
 ---
 
 Transcribed word-for-word (via NotebookLM) from screenshots of my own account's skill tooltips, stat screens, and talent tree screens. This is verbatim in-game text, not a summary or paraphrase.
 
-> **This page is still being built.** So far it covers 25 special ants and 4 neutral creatures. Each one is transcribed by hand from stat screens captured on my own account, so it grows slowly. Images are cropped from the stat screen to show just the creature. Ants I have not broken through yet do not display all their skills in game, so only the known ones are listed.
+> **This page is still being built.** So far it covers 27 special ants and 4 neutral creatures. Each one is transcribed by hand from stat screens captured on my own account, so it grows slowly. Images are cropped from the stat screen to show just the creature. Ants I have not broken through yet do not display all their skills in game, so only the known ones are listed.
 
 ## Coverage
 
-There are **73 special ants** in the game. This page covers the **25 I have actually confirmed on my own account**, plus 4 neutral creatures. The rest are ones I do not own yet, or have not transcribed.
+There are **73 special ants** in the game. This page covers the **27 I have actually confirmed on my own account**, plus 4 neutral creatures. The rest are ones I do not own yet, or have not transcribed.
 
 For the ones that are missing, **I do not copy other sites' skill tables into this page.** The value here is that every line is transcribed word-for-word from the in-game text; mixing in data I have not seen myself would make it impossible to tell what is verified. If you need data on an ant I do not have, the <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Special_Ants">Fandom community wiki</a> (CC BY-SA) is comprehensive.
 
 The bigger picture — skill counts by rarity, hatching odds, the attribute system, and spore costs for skill upgrades — is on [Ant Types & Stats](ant-types.html).
+
+## Index
+
+27 special ants and 4 neutral creatures are covered. Jump straight to one:
+
+**S6**
+
+| Name | Attributes |
+|---|---|
+| [Brute Ant](#brute-ant-s6-melee-guardian) | Melee / Guardian |
+| [Spotted Velvet](#spotted-velvet-s6-support-carrier) | Support / Carrier |
+| [Red-Jaw Trap-Jaw Ant](#red-jaw-trap-jaw-ant-s6-melee-guardian) | Melee / Guardian |
+| [Fungus Farmer Ant](#fungus-farmer-ant-s6-support-guardian) | Support / Guardian |
+| [Striped Velvet Ant](#striped-velvet-ant-s6-support-shooter) | Support / Shooter |
+| [Twin-Spine Ant](#twin-spine-ant-s6-ranged-shooter) | Ranged / Shooter |
+| [Amber Flower Ant](#amber-flower-ant-s6-melee-carrier) | Melee / Carrier |
+| [Ladybug Ant](#ladybug-ant-s6-ranged-carrier) | Ranged / Carrier |
+
+**S5**
+
+| Name | Attributes |
+|---|---|
+| [Giant Jaw](#giant-jaw-s5-ranged-guardian) | Ranged / Guardian |
+| [Blue Velvet](#blue-velvet-s5-support-guardian) | Support / Guardian |
+| [Indigo Velvet](#indigo-velvet-s5-melee-shooter) | Melee / Shooter |
+| [Azure Crazy](#azure-crazy-s5-ranged-shooter) | Ranged / Shooter |
+| [Rainbow Scarlet](#rainbow-scarlet-s5-ranged-carrier) | Ranged / Carrier |
+| [Rainbow Chaser](#rainbow-chaser-s5-ranged-shooter) | Ranged / Shooter |
+| [Honey Pot Ant](#honey-pot-ant-s5-ranged-carrier) | Ranged / Carrier |
+
+**S4**
+
+| Name | Attributes |
+|---|---|
+| [Spelchirio Ant](#spelchirio-ant-s4-ranged-guardian) | Ranged / Guardian |
+| [Wingless Tiger Beetle](#wingless-tiger-beetle-s4-melee-carrier) | Melee / Carrier |
+| [White Crystal](#white-crystal-s4-ranged-guardian) | Ranged / Guardian |
+| [Sly Hunter](#sly-hunter-s4-support-shooter) | Support / Shooter |
+| [Bison Ant](#bison-ant-s4-melee-guardian) | Melee / Guardian |
+| [Rainbow Wings](#rainbow-wings-s4-melee-carrier) | Melee / Carrier |
+
+**S3**
+
+| Name | Attributes |
+|---|---|
+| [Crematogaster Inflata](#crematogaster-inflata-s3-support-shooter) | Support / Shooter |
+| [Saharan Silver Ant](#saharan-silver-ant-s3-ranged-shooter) | Ranged / Shooter |
+
+**S1**
+
+| Name | Attributes |
+|---|---|
+| [Golden Crystal](#golden-crystal-s1-ranged-carrier) | Ranged / Carrier |
+
+**?**
+
+| Name | Attributes |
+|---|---|
+| [(unnamed — Anselephila pedestris, S4 Support / Carrier)](#unnamed-anselephila-pedestris-s4-support-carrier) |  |
+| [Golden Chaser (Kinbane Ant, S5 Melee / Carrier)](#golden-chaser-kinbane-ant-s5-melee-carrier) |  |
+| [Spotted Hunter (Azure Striped Mosquito Ant, S6 Support / Shooter)](#spotted-hunter-azure-striped-mosquito-ant-s6-support-shooter) |  |
+
+**Neutral creatures**
+
+| Name |
+|---|
+| [Ice Crystal Scorpion](#ice-crystal-scorpion) |
+| [Glazed Mantis](#glazed-mantis) |
+| [Sapphire Beetle](#sapphire-beetle) |
+| [Thorny Scorpion](#thorny-scorpion) |
+
+### Not covered yet
+
+These appear on the official site's material pages but are not on my account, so I have no verbatim data for them. Names are as they appear in the Japanese client.
+
+**Special ants**: カバノキアリ, シフォミルキンアリ, メラノハットアリ, メラノバイカラーアリ, マサエダアリ, セダカウロコアリ, ウィーバーアント, ヒメピノサスアリ, スパイキーナベブタアリ, ヘアリーパンサーアント, ダスキーラッカーアリ, ルビースレンダーアリ
+
+**Neutral creatures**: 格闘家カマキリ, ケイコウサソリ, ボクサーカマキリ, オキピタリスノコギリクワガタ, 赤サソリモドキ, ニセハナマオウカマキリ, ダイオウサソリ, クワガタムシ
 
 ## Special Ants
 

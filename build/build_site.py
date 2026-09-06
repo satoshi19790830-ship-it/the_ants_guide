@@ -9,6 +9,7 @@ output/ja/, output/en/ に静的HTMLを書き出す。
 import os
 import re
 import shutil
+import unicodedata
 from datetime import date
 from pathlib import Path
 
@@ -43,6 +44,17 @@ POPULAR_SLUGS = ["damage-calculation", "beginner-guide", "news"]
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
 
 
+def slugify_unicode(value: str, separator: str) -> str:
+    """日本語をそのまま残す見出しID。
+
+    markdownのtoc拡張の既定のslugifyはASCII以外を捨てるため、日本語見出しが
+    s6 / s6_1 のような連番IDになり、項目を並べ替えるとアンカーが壊れる。
+    """
+    value = unicodedata.normalize("NFKC", value)
+    value = re.sub(r"[^\w\s-]", "", value).strip().lower()
+    return re.sub(r"[%s\s]+" % re.escape(separator), separator, value)
+
+
 def parse_page(path: Path):
     raw = path.read_text(encoding="utf-8")
     m = FRONTMATTER_RE.match(raw)
@@ -51,7 +63,10 @@ def parse_page(path: Path):
     meta = yaml.safe_load(m.group(1)) or {}
     body_md = m.group(2)
 
-    md = markdown.Markdown(extensions=["tables", "fenced_code", "toc"])
+    md = markdown.Markdown(
+        extensions=["tables", "fenced_code", "toc"],
+        extension_configs={"toc": {"slugify": slugify_unicode}},
+    )
     html_body = md.convert(body_md)
     # toc拡張が生成する目次には最上位の<div class="toc">ラッパーが付くので中身だけ使う
     toc_html = md.toc
@@ -59,7 +74,8 @@ def parse_page(path: Path):
 
     meta["slug"] = path.stem
     meta["html"] = html_body
-    meta["toc"] = toc_html if heading_count >= 2 else None
+    want_toc = meta.get("toc", True) is not False
+    meta["toc"] = toc_html if (want_toc and heading_count >= 2) else None
     return meta
 
 
