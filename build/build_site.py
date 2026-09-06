@@ -6,6 +6,7 @@ content/ja/*.md (YAML frontmatter + Markdown本文) を読み込み、docs/ に�
 使い方:
     python build_site.py
 """
+import json
 import os
 import re
 import shutil
@@ -22,6 +23,7 @@ CONTENT_DIR = ROOT / "content"
 OUTPUT_DIR = ROOT / "docs"  # GitHub Pages の公開元（/docs）
 TEMPLATE_DIR = Path(__file__).resolve().parent / "templates"
 ASSETS_IMAGES_DIR = ROOT / "assets" / "images"
+BOARDS_CONFIG = ROOT / "data" / "boards.json"
 
 # 公開先のURL（末尾スラッシュなし）。GitHub Pages のリポジトリ名が決まったら書き換える。
 # 環境変数 ANTS_SITE_URL があればそちらを優先する。
@@ -39,6 +41,69 @@ BREADCRUMB_HOME = "TOP"
 POPULAR_SLUGS = ["damage-calculation", "beginner-guide", "news"]
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
+
+# 掲示板の差し込み位置。本文に置いたこのトークンを、設定済みなら埋め込みHTMLに、
+# 未設定なら「まだ設置されていない」旨の案内に置き換える。
+GISCUS_TOKEN = "[[GISCUS]]"
+FORM_TOKEN = "[[GOOGLE_FORM]]"
+
+NOT_READY_NOTE = (
+    '<p class="source-note">{}</p>'
+)
+
+
+def load_boards_config():
+    if not BOARDS_CONFIG.exists():
+        return {}
+    return json.loads(BOARDS_CONFIG.read_text(encoding="utf-8"))
+
+
+def build_giscus_html(cfg):
+    g = (cfg or {}).get("giscus") or {}
+    if not (g.get("repo") and g.get("repo_id") and g.get("category_id")):
+        return NOT_READY_NOTE.format(
+            "質問掲示板はまだ設置作業中です。設置が終わるまでは、"
+            "このサイトの誤りへの指摘だけでも情報提供フォームから送っていただけると助かります。"
+        )
+    return (
+        '<div class="board-embed">'
+        '<script src="https://giscus.app/client.js"'
+        ' data-repo="{repo}"'
+        ' data-repo-id="{repo_id}"'
+        ' data-category="{category}"'
+        ' data-category-id="{category_id}"'
+        ' data-mapping="pathname"'
+        ' data-strict="1"'
+        ' data-reactions-enabled="1"'
+        ' data-emit-metadata="0"'
+        ' data-input-position="top"'
+        ' data-theme="preferred_color_scheme"'
+        ' data-lang="ja"'
+        ' data-loading="lazy"'
+        ' crossorigin="anonymous" async></script>'
+        "</div>"
+    ).format(
+        repo=g["repo"],
+        repo_id=g["repo_id"],
+        category=g.get("category", "Q&A"),
+        category_id=g["category_id"],
+    )
+
+
+def build_form_html(cfg):
+    url = (cfg or {}).get("google_form_embed_url") or ""
+    if not url:
+        return NOT_READY_NOTE.format(
+            "投稿フォームはまだ設置作業中です。設置が終わるまでは、"
+            "下に挙げた項目を書き添えてSNS等で教えていただければ同じように扱えます。"
+        )
+    return (
+        '<div class="board-embed">'
+        '<iframe src="{url}" width="100%" height="1200" frameborder="0"'
+        ' marginheight="0" marginwidth="0" loading="lazy"'
+        ' title="情報提供フォーム">読み込んでいます…</iframe>'
+        "</div>"
+    ).format(url=url)
 
 
 def slugify_unicode(value: str, separator: str) -> str:
@@ -65,6 +130,11 @@ def parse_page(path: Path):
         extension_configs={"toc": {"slugify": slugify_unicode}},
     )
     html_body = md.convert(body_md)
+    if GISCUS_TOKEN in html_body or FORM_TOKEN in html_body:
+        cfg = load_boards_config()
+        for token, html in ((GISCUS_TOKEN, build_giscus_html(cfg)), (FORM_TOKEN, build_form_html(cfg))):
+            # markdownは単独行のトークンを<p>で包むので、まず段落ごと置き換える
+            html_body = html_body.replace("<p>%s</p>" % token, html).replace(token, html)
     # toc拡張が生成する目次には最上位の<div class="toc">ラッパーが付くので中身だけ使う
     toc_html = md.toc
     heading_count = len(re.findall(r"<h[23]", html_body))

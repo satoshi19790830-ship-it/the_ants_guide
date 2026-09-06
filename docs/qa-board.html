@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title }} | The Ants 攻略</title>
-<meta name="description" content="{{ description }}">
-<link rel="canonical" href="{{ canonical_url }}">
+<title>質問掲示板 | The Ants 攻略</title>
+<meta name="description" content="The Ants の攻略について質問できる掲示板。仕様が分からないところ、編成の相談、このサイトの記述への疑問など。">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/qa-board.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="The Ants 攻略">
-<meta property="og:title" content="{{ title }}">
-<meta property="og:description" content="{{ description }}">
-<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:title" content="質問掲示板">
+<meta property="og:description" content="The Ants の攻略について質問できる掲示板。仕様が分からないところ、編成の相談、このサイトの記述への疑問など。">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/qa-board.html">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
 <style>
@@ -162,53 +162,139 @@
 </head>
 <body>
 <header class="top">
-  <a class="site-title" href="{{ home_href }}"><span class="mark">🐜</span>The Ants 攻略</a>
+  <a class="site-title" href="index.html"><span class="mark">🐜</span>The Ants 攻略</a>
   <div class="search">
     <span class="icon">⌕</span>
-    <input type="text" id="site-search" placeholder="{{ search_placeholder }}" autocomplete="off">
+    <input type="text" id="site-search" placeholder="記事を検索…" autocomplete="off">
   </div>
 </header>
 <div class="layout">
   <nav class="sidebar">
     <div class="side-block">
-      <h3>{{ popular_label }}</h3>
+      <h3>人気記事</h3>
       <ul class="popular-list">
-        {% for item in popular %}
-        <li><span class="rank">{{ loop.index }}</span><a href="{{ item.href }}">{{ item.title }}</a></li>
-        {% endfor %}
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">ダメージ計算を検証する</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">序盤攻略ガイド</a></li>
+        
+        <li><span class="rank">3</span><a href="news.html">最新情報</a></li>
+        
       </ul>
     </div>
 
     <div class="side-block navlinks">
-      {% for category, items in nav %}
-      <h3 class="cat-heading">{{ category }}</h3>
+      
+      <h3 class="cat-heading">はじめに</h3>
       <div class="cat-group">
-        {% for item in items %}
-        <a href="{{ item.href }}" data-title="{{ item.title | lower }}" class="{{ 'active' if item.slug == slug else '' }}">{{ item.title }}</a>
-        {% endfor %}
+        
+        <a href="index.html" data-title="the ants 攻略サイトへようこそ" class="">The Ants 攻略サイトへようこそ</a>
+        
       </div>
-      {% endfor %}
+      
+      <h3 class="cat-heading">最新情報</h3>
+      <div class="cat-group">
+        
+        <a href="news.html" data-title="最新情報" class="">最新情報</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">特集</h3>
+      <div class="cat-group">
+        
+        <a href="gamera-collab.html" data-title="ガメラ コラボ特集" class="">ガメラ コラボ特集</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">掲示板</h3>
+      <div class="cat-group">
+        
+        <a href="qa-board.html" data-title="質問掲示板" class="active">質問掲示板</a>
+        
+        <a href="report-board.html" data-title="情報提供掲示板" class="">情報提供掲示板</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">攻略</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="序盤攻略ガイド" class="">序盤攻略ガイド</a>
+        
+        <a href="ant-types.html" data-title="蟻の種類とステータス" class="">蟻の種類とステータス</a>
+        
+        <a href="alliance-pvp.html" data-title="アライアンスとpvp" class="">アライアンスとPvP</a>
+        
+        <a href="growth-systems.html" data-title="育成システム早見" class="">育成システム早見</a>
+        
+        <a href="events.html" data-title="イベントと対戦モード" class="">イベントと対戦モード</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">図鑑</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="アリ・中立生物図鑑" class="">アリ・中立生物図鑑</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">検証プロジェクト</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="ダメージ計算を検証する" class="">ダメージ計算を検証する</a>
+        
+      </div>
+      
     </div>
   </nav>
   <main>
-    {% if not is_home %}
-    <div class="breadcrumb"><a href="{{ home_href }}">{{ breadcrumb_home }}</a> &raquo; {% if category %}{{ category }} &raquo; {% endif %}{{ title }}</div>
-    {% endif %}
+    
+    <div class="breadcrumb"><a href="index.html">TOP</a> &raquo; 掲示板 &raquo; 質問掲示板</div>
+    
     <div class="card">
-      <h1>{{ title }}</h1>
-      {% if updated %}<div class="updated">{{ updated_label }}: {{ updated }}</div>{% endif %}
-      {% if toc %}
+      <h1>質問掲示板</h1>
+      <div class="updated">最終更新: 2026-09-06</div>
+      
       <div class="toc-box">
-        <div class="toc-heading">{{ toc_label }}</div>
-        {{ toc | safe }}
+        <div class="toc-heading">目次</div>
+        <div class="toc">
+<ul>
+<li><a href="#こういう質問に向いています">こういう質問に向いています</a></li>
+<li><a href="#答えられないこと">答えられないこと</a></li>
+<li><a href="#書かないでほしいこと">書かないでほしいこと</a></li>
+<li><a href="#掲示板">掲示板</a></li>
+</ul>
+</div>
+
       </div>
-      {% endif %}
-      {{ content | safe }}
+      
+      <p>分からないことを書き込める場所です。<strong>答えるのは管理人と、気づいた他の読者</strong>です。すぐには答えが付かないこともあります。</p>
+<h2 id="こういう質問に向いています">こういう質問に向いています</h2>
+<ul>
+<li>「公式ヘルプを読んでも意味が分からない」— このサイトは公式ヘルプの要約が中心なので、そこの解釈の質問は答えやすいです</li>
+<li>「この編成でいいのか」— 隊列の並びや属性の組み合わせ。<a href="damage-calculation.html">ダメージ計算と行動順</a> を見たうえでの質問だと具体的に返せます</li>
+<li>「サイトのこの記述が、自分の画面と違う」— <strong>これが一番ありがたい質問です。</strong> 実際に読者からの指摘で直したところがあります（習性レベルの説明が丸ごと間違っていました）</li>
+<li>「図鑑にこのアリが載っていない」— 手が回っていないだけの可能性が高いので、遠慮なくどうぞ</li>
+</ul>
+<h2 id="答えられないこと">答えられないこと</h2>
+<ul>
+<li><strong>課金トラブル・アカウントの復旧・BANの相談</strong> — ゲーム内のサポート窓口へお願いします。ここでは何もできません</li>
+<li><strong>リアルタイムの戦況相談</strong> — 更新が追いつきません。アライアンスのチャットのほうが早いです</li>
+<li>数値の裏が取れていないことは「分からない」と答えます。推測で埋めない方針です</li>
+</ul>
+<h2 id="書かないでほしいこと">書かないでほしいこと</h2>
+<ul>
+<li><strong>アカウント情報</strong>（ID・パスワード・連携先）。誰にも教えないでください</li>
+<li><strong>他人が特定できる情報</strong> — 他プレイヤーの座標、アライアンス内のやり取りの引用、名指しの批判</li>
+<li><strong>招待コード・リンクの貼り付け</strong>（宣伝目的の書き込みは消します）</li>
+<li>公式のお知らせや他サイトの文章の<strong>まるごとの転載</strong>。要約とURLでお願いします</li>
+</ul>
+<h2 id="掲示板">掲示板</h2>
+<p class="source-note">質問掲示板はまだ設置作業中です。設置が終わるまでは、このサイトの誤りへの指摘だけでも情報提供フォームから送っていただけると助かります。</p>
     </div>
   </main>
 </div>
 <footer>
-  {{ footer_text }}
+  © The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）
 </footer>
 <script>
 (function () {
