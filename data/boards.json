@@ -1,10 +1,10 @@
 {
   "_comment": "掲示板の設置設定。値が空のあいだ、該当ページには埋め込みの代わりに未設置の案内が出る。設定手順は data/boards_setup.md を参照。",
   "giscus": {
-    "repo": "",
-    "repo_id": "",
+    "repo": "satoshi19790830-ship-it/the_ants_guide",
+    "repo_id": "R_kgDOUQC1Xw",
     "category": "Q&A",
-    "category_id": ""
+    "category_id": "DIC_kwDOUQC1X84DE_ui"
   },
   "google_form_embed_url": ""
 }
