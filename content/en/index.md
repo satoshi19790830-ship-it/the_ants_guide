@@ -15,6 +15,7 @@ This site has two goals:
 
 ## Contents
 
+- [Gamera Collaboration](gamera-collab.html) — The Ants × Gamera: dates, rewards and the teaser story
 - [Beginner Guide](beginner-guide.html) — Tutorial tips and queen leveling priority
 - [Ant Types & Stats](ant-types.html) — Soldier ant and special ant categories and how to read stats
 - [Alliance & PvP](alliance-pvp.html) — Why joining an alliance matters, PvP basics
