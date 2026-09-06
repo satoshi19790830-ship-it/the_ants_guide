@@ -27,7 +27,7 @@ BOARDS_CONFIG = ROOT / "data" / "boards.json"
 
 # 公開先のURL（末尾スラッシュなし）。GitHub Pages のリポジトリ名が決まったら書き換える。
 # 環境変数 ANTS_SITE_URL があればそちらを優先する。
-SITE_URL = os.environ.get("ANTS_SITE_URL", "https://example.github.io/the-ants-guide").rstrip("/")
+SITE_URL = os.environ.get("ANTS_SITE_URL", "https://satoshi19790830-ship-it.github.io/the_ants_guide").rstrip("/")
 
 LANG = "ja"
 FOOTER = "© The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）"
