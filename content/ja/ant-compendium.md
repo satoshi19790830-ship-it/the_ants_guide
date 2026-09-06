@@ -96,7 +96,7 @@ updated: 2026-09-06
 
 ### アオシマカアリ（S6 支援・シューター）
 
-<img class="screenshot" src="../images/special-ant-aoshimaka.png" alt="アオシマカアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-aoshimaka.png" alt="アオシマカアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -114,7 +114,7 @@ updated: 2026-09-06
 
 ### ブルドッグアリ（S6 メレー・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-bulldog.png" alt="ブルドッグアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-bulldog.png" alt="ブルドッグアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -132,7 +132,7 @@ updated: 2026-09-06
 
 ### ヒシマダラビロードアリ（S6 支援・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-hishimadara-birodo.png" alt="ヒシマダラビロードアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-hishimadara-birodo.png" alt="ヒシマダラビロードアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -150,7 +150,7 @@ updated: 2026-09-06
 
 ### アカアゴハリアリ（S6 メレー・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-akaagohari.png" alt="アカアゴハリアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-akaagohari.png" alt="アカアゴハリアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -168,7 +168,7 @@ updated: 2026-09-06
 
 ### ツチバタケアリ（S6 支援・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-tsuchibatake.png" alt="ツチバタケアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-tsuchibatake.png" alt="ツチバタケアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -186,7 +186,7 @@ updated: 2026-09-06
 
 ### トラフビロードアリ（S6 支援・シューター）
 
-<img class="screenshot" src="../images/special-ant-torafubirodo.png" alt="トラフビロードアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-torafubirodo.png" alt="トラフビロードアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -204,7 +204,7 @@ updated: 2026-09-06
 
 ### フタバハリアリ（S6 レンジ・シューター）
 
-<img class="screenshot" src="../images/special-ant-futabahari.png" alt="フタバハリアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-futabahari.png" alt="フタバハリアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -222,7 +222,7 @@ updated: 2026-09-06
 
 ### コハクハナアリ（S6 メレー・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-kohakuhana.png" alt="コハクハナアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-kohakuhana.png" alt="コハクハナアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -240,7 +240,7 @@ updated: 2026-09-06
 
 ### テントウアリ（S6 レンジ・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-tentou.png" alt="テントウアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-tentou.png" alt="テントウアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、未突破）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -258,7 +258,7 @@ updated: 2026-09-06
 
 ### オオアゴアリ（S5 レンジ・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-ooagoari.png" alt="オオアゴアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-ooagoari.png" alt="オオアゴアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力641,290）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -276,7 +276,7 @@ updated: 2026-09-06
 
 ### アオケアリ（S5 支援・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-aokeari.png" alt="アオケアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-aokeari.png" alt="アオケアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力1,113,290）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -294,7 +294,7 @@ updated: 2026-09-06
 
 ### アオクロケアリ（S5 メレー・シューター）
 
-<img class="screenshot" src="../images/special-ant-aokuroke.png" alt="アオクロケアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-aokuroke.png" alt="アオクロケアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力698,490）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -311,7 +311,7 @@ updated: 2026-09-06
 
 ### アオスジホソアシアリ（S5 レンジ・シューター）
 
-<img class="screenshot" src="../images/special-ant-aosuji.png" alt="アオスジホソアシアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-aosuji.png" alt="アオスジホソアシアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力1,152,090）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -329,7 +329,7 @@ updated: 2026-09-06
 
 ### レインボーアカアシアリ（S5 レンジ・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-rainbow-akaashi.png" alt="レインボーアカアシアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-rainbow-akaashi.png" alt="レインボーアカアシアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力829,690）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -347,7 +347,7 @@ updated: 2026-09-06
 
 ### 幻彩ハネアリ（S5 レンジ・シューター）
 
-<img class="screenshot" src="../images/special-ant-gensai-hane.png" alt="幻彩ハネアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-gensai-hane.png" alt="幻彩ハネアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力1,613,390）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -365,7 +365,7 @@ updated: 2026-09-06
 
 ### キンバネアリ（S5 メレー・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-kinbane.png" alt="キンバネアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-kinbane.png" alt="キンバネアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
 
 > 判明しているスキルは3個のみです（未突破のため、残りのスキル画面が撮影されていません）。
@@ -380,7 +380,7 @@ updated: 2026-09-06
 
 ### シルバーミツツボアリ（S5 レンジ・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-silver-mitsutsubo.png" alt="シルバーミツツボアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-silver-mitsutsubo.png" alt="シルバーミツツボアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、未突破）</div>
 
 > 判明しているスキルは7個のみです（撮影範囲の都合で8個目のスキル画面が含まれていませんでした）。
@@ -399,7 +399,7 @@ updated: 2026-09-06
 
 ### スペルキリオサスナンベイゾアリ（S4 レンジ・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-spelchirio.png" alt="スペルキリオサスナンベイゾアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-spelchirio.png" alt="スペルキリオサスナンベイゾアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -417,7 +417,7 @@ updated: 2026-09-06
 
 ### ハネナシハンミョウ（S4 メレー・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-hanenashihanmyo.png" alt="ハネナシハンミョウ ステータス画面">
+<img class="screenshot" src="images/special-ant-hanenashihanmyo.png" alt="ハネナシハンミョウ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -435,7 +435,7 @@ updated: 2026-09-06
 
 ### フェイドール・マイナー（S4 レンジ・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-feidor-minor.png" alt="フェイドール・マイナー ステータス画面">
+<img class="screenshot" src="images/special-ant-feidor-minor.png" alt="フェイドール・マイナー ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -453,7 +453,7 @@ updated: 2026-09-06
 
 ### キアシカマバチアリ（S4 支援・シューター）
 
-<img class="screenshot" src="../images/special-ant-kiashi-kamabachi.png" alt="キアシカマバチアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-kiashi-kamabachi.png" alt="キアシカマバチアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -471,7 +471,7 @@ updated: 2026-09-06
 
 ### アンセレフィラ・ペデストリス（S4 支援・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-anselephila.png" alt="アンセレフィラ・ペデストリス ステータス画面">
+<img class="screenshot" src="images/special-ant-anselephila.png" alt="アンセレフィラ・ペデストリス ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -489,7 +489,7 @@ updated: 2026-09-06
 
 ### 野牛ハキリアリ（S4 メレー・ガーディアン）
 
-<img class="screenshot" src="../images/special-ant-yagyu-hakiri.png" alt="野牛ハキリアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-yagyu-hakiri.png" alt="野牛ハキリアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力910,290）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -507,7 +507,7 @@ updated: 2026-09-06
 
 ### 幻彩メダマハネアリ（S4 メレー・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-gensai-medama.png" alt="幻彩メダマハネアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-gensai-medama.png" alt="幻彩メダマハネアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力868,090）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -525,7 +525,7 @@ updated: 2026-09-06
 
 ### キオビシリアゲアリ（S3 支援・シューター）
 
-<img class="screenshot" src="../images/special-ant-kiobi-shiriage.png" alt="キオビシリアゲアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-kiobi-shiriage.png" alt="キオビシリアゲアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力910,290）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -543,7 +543,7 @@ updated: 2026-09-06
 
 ### ザサハラ銀アリ（S3 レンジ・シューター）
 
-<img class="screenshot" src="../images/special-ant-zasahara-gin.png" alt="ザサハラ銀アリ ステータス画面">
+<img class="screenshot" src="images/special-ant-zasahara-gin.png" alt="ザサハラ銀アリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力641,290）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -561,7 +561,7 @@ updated: 2026-09-06
 
 ### ゴールデンクリスタルアリ（S1 レンジ・キャリヤー）
 
-<img class="screenshot" src="../images/special-ant-golden-crystal.png" alt="ゴールデンクリスタルアリ ステータス画面">
+<img class="screenshot" src="images/special-ant-golden-crystal.png" alt="ゴールデンクリスタルアリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、戦闘力813,990）</div>
 
 | スキル名 | 分類 | 効果 |
@@ -581,7 +581,7 @@ updated: 2026-09-06
 
 ### 氷晶サソリ
 
-<img class="screenshot" src="../images/neutral-hyosho-sasori-status.png" alt="氷晶サソリ ステータス画面">
+<img class="screenshot" src="images/neutral-hyosho-sasori-status.png" alt="氷晶サソリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-20実測、★X11、戦闘力341,550）</div>
 
 | 項目 | 数値 |
@@ -613,7 +613,7 @@ updated: 2026-09-06
 
 ### 瑠璃カマキリ
 
-<img class="screenshot" src="../images/neutral-ruri-kamakiri-status.png" alt="瑠璃カマキリ ステータス画面">
+<img class="screenshot" src="images/neutral-ruri-kamakiri-status.png" alt="瑠璃カマキリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、★X11、戦闘力341,550）</div>
 
 | 項目 | 数値 |
@@ -631,7 +631,7 @@ updated: 2026-09-06
 
 固有スキル: 戦闘中、各ターン開始時に100%の確率で味方のランダムな2行列の通常攻撃回数+1（1ターン持続）。第1ターンは味方全行列が通常攻撃後、60%の確率でそのターン中に発動済みのダメージスキルを1回追加発動（複数ある場合はランダムで1つ）。この確率は毎ターン10%ずつ減少する。
 
-<img class="screenshot" src="../images/neutral-talent-tree-overview.png" alt="中立生物タレントツリー全体図">
+<img class="screenshot" src="images/neutral-talent-tree-overview.png" alt="中立生物タレントツリー全体図">
 <div class="screenshot-caption">タレントツリー全体図（基礎／狂熱／全能の3ルート）</div>
 
 このアカウントで確認できたタレントノードの一部（全ノードの網羅ではありません）:
@@ -654,7 +654,7 @@ updated: 2026-09-06
 
 ### 銀藍クワガタ
 
-<img class="screenshot" src="../images/neutral-ginran-kuwagata-status.png" alt="銀藍クワガタ ステータス画面">
+<img class="screenshot" src="images/neutral-ginran-kuwagata-status.png" alt="銀藍クワガタ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、★X11、戦闘力341,550）</div>
 
 | 項目 | 数値 |
@@ -688,7 +688,7 @@ updated: 2026-09-06
 
 ### 針尾ドクサソリ
 
-<img class="screenshot" src="../images/neutral-hario-dokusasori-status.png" alt="針尾ドクサソリ ステータス画面">
+<img class="screenshot" src="images/neutral-hario-dokusasori-status.png" alt="針尾ドクサソリ ステータス画面">
 <div class="screenshot-caption">自分のアカウントのステータス画面（2026-07-19実測、★X11、戦闘力341,550）</div>
 
 | 項目 | 数値 |

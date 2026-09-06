@@ -3,18 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title }} | The Ants 攻略 / The Ants Guide</title>
+<title>{{ title }} | The Ants 攻略</title>
 <meta name="description" content="{{ description }}">
 <link rel="canonical" href="{{ canonical_url }}">
-<link rel="alternate" hreflang="ja" href="{{ ja_url }}">
-<link rel="alternate" hreflang="en" href="{{ en_url }}">
-<link rel="alternate" hreflang="x-default" href="{{ ja_url }}">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="The Ants 攻略 / The Ants Guide">
+<meta property="og:site_name" content="The Ants 攻略">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ canonical_url }}">
-<meta property="og:locale" content="{{ 'ja_JP' if lang == 'ja' else 'en_US' }}">
+<meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
 <style>
   :root {
@@ -74,9 +71,6 @@
     border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
   }
   header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
-  .lang-switch { margin-left: auto; display: flex; gap: 0.5rem; }
-  .lang-switch a { color: var(--fg-muted); font-size: 0.85rem; padding: 0.2rem 0.5rem; border: 1px solid var(--border); border-radius: var(--radius); }
-  .lang-switch a.active { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 700; }
 
   .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
   nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
@@ -149,14 +143,10 @@
 </head>
 <body>
 <header class="top">
-  <a class="site-title" href="{{ home_href }}"><span class="mark">🐜</span>The Ants 攻略 / The Ants Guide</a>
+  <a class="site-title" href="{{ home_href }}"><span class="mark">🐜</span>The Ants 攻略</a>
   <div class="search">
     <span class="icon">⌕</span>
     <input type="text" id="site-search" placeholder="{{ search_placeholder }}" autocomplete="off">
-  </div>
-  <div class="lang-switch">
-    <a href="{{ ja_href }}" class="{{ 'active' if lang == 'ja' else '' }}">日本語</a>
-    <a href="{{ en_href }}" class="{{ 'active' if lang == 'en' else '' }}">English</a>
   </div>
 </header>
 <div class="layout">

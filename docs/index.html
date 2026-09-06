@@ -1,1 +1,302 @@
-<!DOCTYPE html><meta charset='utf-8'><meta http-equiv='refresh' content='0; url=ja/index.html'><a href='ja/index.html'>The Ants 攻略サイトへ</a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ants 攻略サイトへようこそ | The Ants 攻略</title>
+<meta name="description" content="The Ants(ザ・アンツ)非公式攻略サイト。公式ヘルプの日本語一次情報、実アカウントの実測データ、ダメージ計算の検証プロジェクト。">
+<link rel="canonical" href="https://example.github.io/the-ants-guide/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Ants 攻略">
+<meta property="og:title" content="The Ants 攻略サイトへようこそ">
+<meta property="og:description" content="The Ants(ザ・アンツ)非公式攻略サイト。公式ヘルプの日本語一次情報、実アカウントの実測データ、ダメージ計算の検証プロジェクト。">
+<meta property="og:url" content="https://example.github.io/the-ants-guide/">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0d13;
+    --bg-alt: #0e1119;
+    --bg-card: #11151f;
+    --fg: #e3e8f2;
+    --fg-muted: #7c8798;
+    --accent: #52d6e8;
+    --accent-2: #8b7cf6;
+    --border: #202636;
+    --radius: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #eef1f6;
+      --bg-alt: #e6eaf1;
+      --bg-card: #ffffff;
+      --fg: #12141c;
+      --fg-muted: #5b6472;
+      --accent: #0e93a8;
+      --accent-2: #6a55d6;
+      --border: #d8dee8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  }
+  header.top .site-title {
+    font-weight: 800; letter-spacing: 0.02em; color: var(--fg);
+    display: flex; align-items: center; gap: 0.5rem; font-size: 1.05rem;
+  }
+  header.top .site-title .mark { color: var(--accent); }
+  header.top .search {
+    flex: 1; min-width: 160px; max-width: 320px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    display: flex; align-items: center; padding: 0.3rem 0.6rem; gap: 0.4rem;
+  }
+  header.top .search input {
+    border: none; background: transparent; color: var(--fg); outline: none; width: 100%; font-size: 0.9rem;
+  }
+  header.top .search .icon { color: var(--fg-muted); font-size: 0.85rem; }
+
+  .layout { display: flex; max-width: 1140px; margin: 0 auto; gap: 1.8rem; padding: 1.5rem; align-items: flex-start; }
+  nav.sidebar { flex: 0 0 230px; position: sticky; top: 4.2rem; }
+
+  .side-block h3 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--fg-muted); margin: 1.1rem 0 0.5rem; border-left: 3px solid var(--accent); padding-left: 0.5rem;
+  }
+  .popular-list { list-style: none; margin: 0; padding: 0; }
+  .popular-list li { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.25rem 0; }
+  .popular-list .rank {
+    flex: 0 0 auto; font-weight: 800; font-size: 0.78rem; color: var(--bg);
+    background: var(--accent-2); border-radius: var(--radius); padding: 0 0.4rem;
+  }
+  .popular-list a { color: var(--fg); font-size: 0.88rem; }
+  .popular-list a:hover { color: var(--accent); }
+
+  nav.sidebar .navlinks a { display: block; color: var(--fg); text-decoration: none; padding: 0.28rem 0.1rem; font-size: 0.92rem; border-left: 2px solid transparent; padding-left: 0.5rem; }
+  nav.sidebar .navlinks a:hover { color: var(--accent); }
+  nav.sidebar .navlinks a.active { color: var(--accent); font-weight: 700; border-left-color: var(--accent); }
+  nav.sidebar .navlinks a.hidden-by-search { display: none; }
+  nav.sidebar .navlinks h3.hidden-by-search { display: none; }
+
+  main { flex: 1; min-width: 0; }
+  .breadcrumb { font-size: 0.8rem; color: var(--fg-muted); margin-bottom: 0.6rem; }
+  .breadcrumb a { color: var(--fg-muted); }
+  .breadcrumb a:hover { color: var(--accent); }
+
+  main .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border); border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.6rem 2rem 2rem;
+  }
+  main h1 { color: var(--fg); margin-top: 0; font-size: 1.6rem; border-left: 5px solid var(--accent); padding-left: 0.6rem; }
+  main h2 { color: var(--fg); border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; margin-top: 2.2rem; font-size: 1.2rem; }
+  main h2::before { content: "// "; color: var(--accent); }
+  main h3 { color: var(--fg); margin-top: 1.5rem; font-size: 1.02rem; }
+  main table { border-collapse: collapse; width: 100%; margin: 1rem 0; overflow-x: auto; display: block; }
+  main table th, main table td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
+  main table th { background: rgba(82,214,232,0.1); color: var(--accent); font-size: 0.85rem; }
+  main code { background: rgba(82,214,232,0.12); padding: 0.1rem 0.35rem; border-radius: var(--radius); }
+  main pre { background: rgba(82,214,232,0.06); padding: 1rem; border-radius: var(--radius); overflow-x: auto; }
+  main blockquote { border-left: 3px solid var(--accent-2); margin: 1rem 0; padding: 0.4rem 1rem; color: var(--fg-muted); background: rgba(139,124,246,0.06); }
+
+  .toc-box {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.8rem 1.2rem; margin: 1rem 0 1.6rem; font-size: 0.88rem;
+  }
+  .toc-box .toctitle { display: none; }
+  .toc-box ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+  .toc-box > .toc-heading { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+
+  .source-note { color: var(--fg-muted); font-size: 0.85rem; border-left: 3px solid var(--border); padding-left: 0.75rem; margin: 1rem 0; }
+
+  .screenshot {
+    max-width: 340px; width: 100%; display: block; margin: 0.8rem 0;
+    border: 1px solid var(--border); border-radius: var(--radius);
+  }
+  .screenshot-caption { color: var(--fg-muted); font-size: 0.78rem; margin: -0.4rem 0 1rem; }
+
+  .updated { color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  footer { text-align: center; color: var(--fg-muted); font-size: 0.85rem; padding: 2rem 1rem; }
+
+  @media (max-width: 780px) {
+    .layout { flex-direction: column; }
+    nav.sidebar { flex: none; position: static; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="site-title" href="index.html"><span class="mark">🐜</span>The Ants 攻略</a>
+  <div class="search">
+    <span class="icon">⌕</span>
+    <input type="text" id="site-search" placeholder="記事を検索…" autocomplete="off">
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar">
+    <div class="side-block">
+      <h3>人気記事</h3>
+      <ul class="popular-list">
+        
+        <li><span class="rank">1</span><a href="damage-calculation.html">ダメージ計算を検証する</a></li>
+        
+        <li><span class="rank">2</span><a href="beginner-guide.html">序盤攻略ガイド</a></li>
+        
+        <li><span class="rank">3</span><a href="news.html">最新情報</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="side-block navlinks">
+      
+      <h3 class="cat-heading">はじめに</h3>
+      <div class="cat-group">
+        
+        <a href="index.html" data-title="the ants 攻略サイトへようこそ" class="active">The Ants 攻略サイトへようこそ</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">最新情報</h3>
+      <div class="cat-group">
+        
+        <a href="news.html" data-title="最新情報" class="">最新情報</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">特集</h3>
+      <div class="cat-group">
+        
+        <a href="gamera-collab.html" data-title="ガメラ コラボ特集" class="">ガメラ コラボ特集</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">攻略</h3>
+      <div class="cat-group">
+        
+        <a href="beginner-guide.html" data-title="序盤攻略ガイド" class="">序盤攻略ガイド</a>
+        
+        <a href="ant-types.html" data-title="蟻の種類とステータス" class="">蟻の種類とステータス</a>
+        
+        <a href="alliance-pvp.html" data-title="アライアンスとpvp" class="">アライアンスとPvP</a>
+        
+        <a href="growth-systems.html" data-title="育成システム早見" class="">育成システム早見</a>
+        
+        <a href="events.html" data-title="イベントと対戦モード" class="">イベントと対戦モード</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">図鑑</h3>
+      <div class="cat-group">
+        
+        <a href="ant-compendium.html" data-title="アリ・中立生物図鑑" class="">アリ・中立生物図鑑</a>
+        
+      </div>
+      
+      <h3 class="cat-heading">検証プロジェクト</h3>
+      <div class="cat-group">
+        
+        <a href="damage-calculation.html" data-title="ダメージ計算を検証する" class="">ダメージ計算を検証する</a>
+        
+      </div>
+      
+    </div>
+  </nav>
+  <main>
+    
+    <div class="card">
+      <h1>The Ants 攻略サイトへようこそ</h1>
+      <div class="updated">最終更新: 2026-09-06</div>
+      
+      <div class="toc-box">
+        <div class="toc-heading">目次</div>
+        <div class="toc">
+<ul>
+<li><a href="#最新情報">最新情報</a></li>
+<li><a href="#攻略">攻略</a></li>
+<li><a href="#図鑑検証">図鑑・検証</a></li>
+<li><a href="#このサイトについて">このサイトについて</a></li>
+</ul>
+</div>
+
+      </div>
+      
+      <p><strong>The Ants: Underground Kingdom（日本語名: ザ・アンツ）</strong> の非公式・有志運営の攻略サイトです。</p>
+<p>書いているのは主に次の3つです。</p>
+<ol>
+<li><strong>公式の一次情報を日本語で整理したもの</strong> — 公式ヘルプセンターと公式サイトのアップデート告知を読み、要点をまとめています（原文の転載はしません）</li>
+<li><strong>自分のアカウントで実測したデータ</strong> — 女王アリの全レベル、孵化地の全レベル、特化アリのスキル文の逐語書き起こしなど</li>
+<li><strong>ダメージ計算式を検証するプロジェクト</strong> — 公式が公開していない計算式を、実データから逆算する試み</li>
+</ol>
+<h2 id="最新情報">最新情報</h2>
+<ul>
+<li><a href="news.html">最新情報</a> — 公式のアップデート告知・シーズン調整・イベントを日付順に</li>
+<li><a href="gamera-collab.html">ガメラ コラボ特集</a> — The Ants × 大怪獣ガメラ。内容・期間・開催までのストーリー</li>
+</ul>
+<h2 id="攻略">攻略</h2>
+<ul>
+<li><a href="beginner-guide.html">序盤攻略</a> — 実際に何日かかるのか、どこで詰まるのか。プレイヤー3人の記録から</li>
+<li><a href="ant-types.html">蟻の種類とステータス</a> — 兵蟻・特化アリの分類、孵化地の全レベル、覚醒</li>
+<li><a href="growth-systems.html">育成システム早見</a> — 細菌・遺伝子・細胞・真菌・兵種改造・宝物・勲章。どのシステムが何に効くか</li>
+<li><a href="alliance-pvp.html">アライアンスとPvP</a> — 戦闘の基本ルール、掠奪と偵察、蟻王争奪戦</li>
+<li><a href="events.html">イベントと対戦モード</a> — 水晶鉱坑、特化アリ対決、勇気の試練など常設・定期のイベント</li>
+</ul>
+<h2 id="図鑑検証">図鑑・検証</h2>
+<ul>
+<li><a href="ant-compendium.html">アリ・中立生物図鑑</a> — 特化アリ27体・中立生物4体を、実アカウントの画面から逐語で収録（作りかけ）</li>
+<li><a href="damage-calculation.html">ダメージ計算を検証する</a> — 戦闘がどう進むかの整理と、実データによる検証プロジェクト</li>
+</ul>
+<h2 id="このサイトについて">このサイトについて</h2>
+<ul>
+<li>個人が趣味で運営する非公式サイトです。The Ants の運営会社・開発元とは関係ありません</li>
+<li><strong>公式の文面をそのまま転載することはしません。</strong> 要約した上で出典へのリンクを添えています</li>
+<li>SNS等に投稿された画像も転載せず、出典へのリンク紹介のみとしています</li>
+<li>掲載している画像は、自分のアカウントの画面を切り抜いたものです</li>
+<li><strong>情報の誤りに気づいた方はぜひ教えてください。</strong> 公式の文面だけでは読み違える箇所があり、実際に指摘を受けて直したところもあります</li>
+</ul>
+    </div>
+  </main>
+</div>
+<footer>
+  © The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）
+</footer>
+<script>
+(function () {
+  var input = document.getElementById('site-search');
+  if (!input) return;
+  var groups = document.querySelectorAll('nav.sidebar .navlinks .cat-group');
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    groups.forEach(function (group) {
+      var anyVisible = false;
+      group.querySelectorAll('a').forEach(function (a) {
+        var hit = !q || (a.dataset.title || '').indexOf(q) !== -1;
+        a.classList.toggle('hidden-by-search', !hit);
+        if (hit) anyVisible = true;
+      });
+      var heading = group.previousElementSibling;
+      if (heading && heading.classList.contains('cat-heading')) {
+        heading.classList.toggle('hidden-by-search', !anyVisible);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

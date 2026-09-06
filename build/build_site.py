@@ -1,7 +1,7 @@
 """The Ants 攻略サイト ビルドスクリプト。
 
-content/ja/*.md, content/en/*.md (YAML frontmatter + Markdown本文) を読み込み、
-output/ja/, output/en/ に静的HTMLを書き出す。
+content/ja/*.md (YAML frontmatter + Markdown本文) を読み込み、docs/ に静的HTMLを
+書き出す。日本語のみの単一言語サイト（英語版は2026-09-06に廃止）。
 
 使い方:
     python build_site.py
@@ -27,16 +27,13 @@ ASSETS_IMAGES_DIR = ROOT / "assets" / "images"
 # 環境変数 ANTS_SITE_URL があればそちらを優先する。
 SITE_URL = os.environ.get("ANTS_SITE_URL", "https://example.github.io/the-ants-guide").rstrip("/")
 
-LANGS = ["ja", "en"]
-FOOTER = {
-    "ja": "© The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）",
-    "en": "© The Ants Guide Project (unofficial, community-run)",
-}
-UPDATED_LABEL = {"ja": "最終更新", "en": "Last updated"}
-SEARCH_PLACEHOLDER = {"ja": "記事を検索…", "en": "Search articles…"}
-TOC_LABEL = {"ja": "目次", "en": "On this page"}
-POPULAR_LABEL = {"ja": "人気記事", "en": "Popular"}
-BREADCRUMB_HOME = {"ja": "TOP", "en": "TOP"}
+LANG = "ja"
+FOOTER = "© The Ants 攻略プロジェクト（非公式・プレイヤー有志運営）"
+UPDATED_LABEL = "最終更新"
+SEARCH_PLACEHOLDER = "記事を検索…"
+TOC_LABEL = "目次"
+POPULAR_LABEL = "人気記事"
+BREADCRUMB_HOME = "TOP"
 
 # サイト全体で固定表示する人気記事ランキング（スラッグ順）
 POPULAR_SLUGS = ["damage-calculation", "beginner-guide", "news"]
@@ -114,18 +111,22 @@ def build_popular(pages):
     return items
 
 
-def write_sitemap(pages_by_lang):
+def page_url(slug: str) -> str:
+    """公開URL。トップはディレクトリURL（/）を正とする。"""
+    return f"{SITE_URL}/" if slug == "index" else f"{SITE_URL}/{slug}.html"
+
+
+def write_sitemap(pages):
     """検索エンジンに全ページを伝える sitemap.xml を出力する。"""
     urls = []
-    for lang, pages in pages_by_lang.items():
-        for page in pages:
-            lastmod = page.get("updated") or date.today().isoformat()
-            urls.append(
-                f"  <url>\n"
-                f"    <loc>{SITE_URL}/{lang}/{page['slug']}.html</loc>\n"
-                f"    <lastmod>{lastmod}</lastmod>\n"
-                f"  </url>"
-            )
+    for page in pages:
+        lastmod = page.get("updated") or date.today().isoformat()
+        urls.append(
+            f"  <url>\n"
+            f"    <loc>{page_url(page['slug'])}</loc>\n"
+            f"    <lastmod>{lastmod}</lastmod>\n"
+            f"  </url>"
+        )
     xml = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -139,55 +140,39 @@ def main():
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     template = env.get_template("base.html")
 
-    pages_by_lang = {lang: load_lang_pages(lang) for lang in LANGS}
+    pages = load_lang_pages(LANG)
+    if not pages:
+        raise SystemExit("[build] content/ja に記事がありません")
 
-    for lang in LANGS:
-        pages = pages_by_lang[lang]
-        if not pages:
-            continue
-        nav = build_nav(pages)
-        popular = build_popular(pages)
-        out_dir = OUTPUT_DIR / lang
-        out_dir.mkdir(parents=True, exist_ok=True)
-
-        for page in pages:
-            is_home = page["slug"] == "index"
-            html = template.render(
-                lang=lang,
-                title=page["title"],
-                description=page.get("description", ""),
-                content=page["html"],
-                toc=page["toc"],
-                toc_label=TOC_LABEL[lang],
-                updated=page.get("updated"),
-                updated_label=UPDATED_LABEL[lang],
-                nav=nav,
-                popular=popular,
-                popular_label=POPULAR_LABEL[lang],
-                category=page.get("category", ""),
-                is_home=is_home,
-                breadcrumb_home=BREADCRUMB_HOME[lang],
-                search_placeholder=SEARCH_PLACEHOLDER[lang],
-                slug=page["slug"],
-                home_href=f"../{lang}/index.html" if not is_home else "index.html",
-                ja_href=f"../ja/{page['slug']}.html",
-                en_href=f"../en/{page['slug']}.html",
-                footer_text=FOOTER[lang],
-                canonical_url=f"{SITE_URL}/{lang}/{page['slug']}.html",
-                ja_url=f"{SITE_URL}/ja/{page['slug']}.html",
-                en_url=f"{SITE_URL}/en/{page['slug']}.html",
-            )
-            (out_dir / f"{page['slug']}.html").write_text(html, encoding="utf-8")
-        print(f"[build] {lang}: {len(pages)} pages -> {out_dir}")
-
-    # ルート直下からja/index.htmlへリダイレクト
-    redirect_html = (
-        "<!DOCTYPE html><meta charset='utf-8'>"
-        "<meta http-equiv='refresh' content='0; url=ja/index.html'>"
-        "<a href='ja/index.html'>The Ants 攻略サイトへ</a>"
-    )
+    nav = build_nav(pages)
+    popular = build_popular(pages)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUTPUT_DIR / "index.html").write_text(redirect_html, encoding="utf-8")
+
+    for page in pages:
+        is_home = page["slug"] == "index"
+        html = template.render(
+            lang=LANG,
+            title=page["title"],
+            description=page.get("description", ""),
+            content=page["html"],
+            toc=page["toc"],
+            toc_label=TOC_LABEL,
+            updated=page.get("updated"),
+            updated_label=UPDATED_LABEL,
+            nav=nav,
+            popular=popular,
+            popular_label=POPULAR_LABEL,
+            category=page.get("category", ""),
+            is_home=is_home,
+            breadcrumb_home=BREADCRUMB_HOME,
+            search_placeholder=SEARCH_PLACEHOLDER,
+            slug=page["slug"],
+            home_href="index.html",
+            footer_text=FOOTER,
+            canonical_url=page_url(page["slug"]),
+        )
+        (OUTPUT_DIR / f"{page['slug']}.html").write_text(html, encoding="utf-8")
+    print(f"[build] {len(pages)} pages -> {OUTPUT_DIR}")
 
     if ASSETS_IMAGES_DIR.exists():
         out_images_dir = OUTPUT_DIR / "images"
@@ -196,7 +181,7 @@ def main():
         shutil.copytree(ASSETS_IMAGES_DIR, out_images_dir)
         print(f"[build] images: {len(list(out_images_dir.glob('*')))} files -> {out_images_dir}")
 
-    write_sitemap(pages_by_lang)
+    write_sitemap(pages)
     (OUTPUT_DIR / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8"
     )

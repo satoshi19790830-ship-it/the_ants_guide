@@ -19,7 +19,7 @@
 HTTPで叩くときはこのCookieを付ける。
 
     python scripts/fetch_news.py            # RSS取得 → data/news.json を更新
-    python scripts/fetch_news.py --render   # data/news.json → content/{ja,en}/news.md を生成
+    python scripts/fetch_news.py --render   # data/news.json → content/ja/news.md を生成
     python scripts/fetch_news.py --all      # 取得と生成を続けて行う
 
 日本語・英語の要約は自動生成しない。取得直後は summary_ja / summary_en が空のまま
@@ -262,7 +262,7 @@ def cmd_render() -> None:
     if not items:
         print("[render] 要約済みの項目が無いため生成しない。先に data/news.json を埋めること。")
         return
-    for lang in ("ja", "en"):
+    for lang in ("ja",):
         path = CONTENT_DIR / lang / "news.md"
         path.write_text(render_lang(lang, items), encoding="utf-8")
         print(f"[render] {path} ({len(items)}件)")

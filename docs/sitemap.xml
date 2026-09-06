@@ -1,83 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/index.html</loc>
+    <loc>https://example.github.io/the-ants-guide/</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/news.html</loc>
+    <loc>https://example.github.io/the-ants-guide/news.html</loc>
     <lastmod>2026-09-05</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/gamera-collab.html</loc>
+    <loc>https://example.github.io/the-ants-guide/gamera-collab.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/beginner-guide.html</loc>
+    <loc>https://example.github.io/the-ants-guide/beginner-guide.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/ant-types.html</loc>
+    <loc>https://example.github.io/the-ants-guide/ant-types.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/alliance-pvp.html</loc>
+    <loc>https://example.github.io/the-ants-guide/alliance-pvp.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/growth-systems.html</loc>
+    <loc>https://example.github.io/the-ants-guide/growth-systems.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/events.html</loc>
+    <loc>https://example.github.io/the-ants-guide/events.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/ant-compendium.html</loc>
+    <loc>https://example.github.io/the-ants-guide/ant-compendium.html</loc>
     <lastmod>2026-09-06</lastmod>
   </url>
   <url>
-    <loc>https://example.github.io/the-ants-guide/ja/damage-calculation.html</loc>
-    <lastmod>2026-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/index.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/news.html</loc>
-    <lastmod>2026-09-05</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/gamera-collab.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/beginner-guide.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/ant-types.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/alliance-pvp.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/growth-systems.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/events.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/ant-compendium.html</loc>
-    <lastmod>2026-09-06</lastmod>
-  </url>
-  <url>
-    <loc>https://example.github.io/the-ants-guide/en/damage-calculation.html</loc>
+    <loc>https://example.github.io/the-ants-guide/damage-calculation.html</loc>
     <lastmod>2026-07-19</lastmod>
   </url>
 </urlset>
