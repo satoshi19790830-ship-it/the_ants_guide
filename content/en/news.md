@@ -43,6 +43,8 @@ Map terrain and fortress positions were rebalanced for fairness.
 
 The announcement post for the Gamera collaboration. See the same-day "Explore the Mysterious Continent" post for the actual event details.
 
+The full write-up is on the [Gamera Collaboration](gamera-collab.html) page.
+
 ### [The Ants × Gamera | Explore the Mysterious Continent](https://theantsforum.allstarunion.com/t/the-ants-x-gamera-explore-the-mysterious-continent/56382)
 
 2026-08-31
@@ -51,11 +53,15 @@ A collaboration event with the Gamera kaiju film series, running August 31 to Se
 
 Players dig tiles on a mysterious continent to uncover rewards. Special glowing tiles can trigger extra in-game events, and digging turns up items such as stone tablets.
 
+The full write-up is on the [Gamera Collaboration](gamera-collab.html) page.
+
 ### [The Ants × Gamera | 3 Days Until the Collaboration Begins!](https://theantsforum.allstarunion.com/t/the-ants-x-gamera-3-days-until-the-collaboration-begins/56371)
 
 2026-08-28
 
 A countdown post ahead of the collaboration. The event itself started on August 31.
+
+The full write-up is on the [Gamera Collaboration](gamera-collab.html) page.
 
 ### [[The Ants] Aug 17 Scheduled Maintenance Notice](https://theantsforum.allstarunion.com/t/the-ants-aug-17-scheduled-maintenance-notice/56335)
 

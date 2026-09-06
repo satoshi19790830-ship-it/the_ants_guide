@@ -45,6 +45,8 @@ updated: 2026-09-05
 
 ガメラとのコラボ開催を告知する投稿。内容の詳細は同日公開の「Explore the Mysterious Continent」を参照。
 
+内容と開催までの経緯は [ガメラ コラボ特集](gamera-collab.html) にまとめています。
+
 ### [The Ants × ガメラ コラボ「Explore the Mysterious Continent」](https://theantsforum.allstarunion.com/t/the-ants-x-gamera-explore-the-mysterious-continent/56382)
 
 2026-08-31
@@ -53,11 +55,15 @@ updated: 2026-09-05
 
 未知の大陸のマスを掘って報酬を掘り当てる形式で、特別に光るマスを掘ると追加の出来事が起きることがある。掘り進める中で石板などのアイテムが手に入る。
 
+内容と開催までの経緯は [ガメラ コラボ特集](gamera-collab.html) にまとめています。
+
 ### [The Ants × ガメラ コラボ開始3日前](https://theantsforum.allstarunion.com/t/the-ants-x-gamera-3-days-until-the-collaboration-begins/56371)
 
 2026-08-28
 
 コラボ開始までのカウントダウン告知。イベント本編は8月31日開始。
+
+内容と開催までの経緯は [ガメラ コラボ特集](gamera-collab.html) にまとめています。
 
 ### [8月17日 定期メンテナンス](https://theantsforum.allstarunion.com/t/the-ants-aug-17-scheduled-maintenance-notice/56335)
 

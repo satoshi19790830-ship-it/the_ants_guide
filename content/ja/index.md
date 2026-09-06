@@ -15,6 +15,7 @@ updated: 2026-07-19
 
 ## コンテンツ
 
+- [ガメラ コラボ特集](gamera-collab.html) — The Ants × 大怪獣ガメラ。内容・期間・開催までのストーリー
 - [序盤攻略](beginner-guide.html) — チュートリアル〜女王アリレベル上げの優先順位
 - [蟻の種類とステータス](ant-types.html) — 兵蟻・特化アリの分類とステータスの見方
 - [アライアンスとPvP](alliance-pvp.html) — アライアンス加入の重要性、対人戦の基本
