@@ -2,7 +2,7 @@
 title: イベントと対戦モード
 description: The Ants の水晶鉱坑・特化アリ対決・勇気の試練・トビトカゲバトル・アライアンス試練・遷移の旅など、常設と定期のイベントを一覧で整理。
 category: 攻略
-order: 23
+order: 24
 updated: 2026-09-06
 ---
 

@@ -2,7 +2,7 @@
 title: アライアンスとPvP
 description: The Ants のアライアンス加入の重要性、掠奪・最強戦域戦などPvPの基礎知識。
 category: 攻略
-order: 21
+order: 23
 updated: 2026-09-06
 ---
 
