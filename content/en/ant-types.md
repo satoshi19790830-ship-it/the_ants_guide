@@ -71,22 +71,31 @@ Orange is 3.93% even on a supreme hatch, and 0.02% on a normal one — roughly o
 - **Combat-type** — deployed in troops, up to **three per troop** once you have the required evolutions
 - **Develop-type** — never fights; stationed at a specific structure to boost its output
 
-Each ant then has a combination of two attributes (rarely three) that fixes its role.
+Each ant carries two tags (rarely three). **The first is its combat type, the second its attribute.** When the [Compendium](ant-compendium.html) lists "Melee / Guardian", that means combat type Melee, attribute Guardian.
 
-**Combat-type attributes**
+**Combat type - Melee, Ranged, Support**
 
-| Attribute | Meaning | Best placement |
+Where the ant attacks from, which decides where it sits in the formation.
+
+| Combat type | Meaning | Best placement |
 |---|---|---|
 | Melee | Attacks at short range (1-3 units) | Front, middle |
 | Ranged | Attacks at long range (4-5 units) | Middle, back |
 | Support | Attacks that debuff the enemy | Middle |
-| Guardian / Shooter / Carrier | Skills only work when the squad is made of that soldier type | With the matching soldier type |
-| Universal | Skills work regardless of squad composition | Anywhere |
-| Hunt | Skills only work when hunting wild creatures | Anywhere |
 
-**Develop-type attributes**
+**Attribute - Guardian, Shooter, Carrier**
 
-The first attribute is Gather, Military or Develop; the second fixes the target. Gather pairs with meat, wet soil, sand, plant or honeydew; Military pairs with the Guardian, Shooter or Carrier nest; Develop pairs with trade (Ladybug), healing pools, insects, or the Construction Center.
+The attribute decides which squads the ant's skills work in. This is the one you build a line-up around.
+
+| Attribute | Skills work when |
+|---|---|
+| Guardian / Shooter / Carrier | The squad is made only of that soldier type |
+| Universal | Regardless of squad composition |
+| Hunt | Only when hunting wild creatures |
+
+**Develop-type tags**
+
+For develop-type ants the first tag is Gather, Military or Develop, and the second fixes the target. Gather pairs with meat, wet soil, sand, plant or honeydew; Military pairs with the Guardian, Shooter or Carrier nest; Develop pairs with trade (Ladybug), healing pools, insects, or the Construction Center.
 
 ### Star-Up and skill upgrade costs
 
@@ -100,13 +109,6 @@ Skill levels are raised with Spores:
 
 That is 1,245 spores to take one skill from level 1 to 10. The back half is steep, so concentrating on one ant beats spreading spores across several.
 
-### Special ants you cannot hatch (25)
-
-These 25 never drop from "Hatch Special Ants" and must be obtained another way, such as fragment synthesis.
-
-Myrmarachne Formicaria, Myrmecotypus Rettenmeyeri, Pheidole Neitneri, Lathy Sniffer, Ghost Ant, Proatta, White Velvet, Brown Rogue, Dark Hercules, Golden Venom, Banshee Panda, Amber Glider, Giant Destructor, Flat Shield, Acid Ant, Urchin Ant, Crimson Healer, Red Foot, Green Head, Yellow Spider, Strober, Texas Turtle, Bright Blue Ant, Strobe Ant, Atta Leafcutter
-
-A few Green and Blue ants carry two second attributes: Black Stripe (Carrier/Shooter), Northern Sugar (Guardian/Carrier), Black Shield (Guardian/Shooter) and Black Fire (Guardian/Carrier). The Green Slender Ant and Brown Glider have only one attribute, Universal, which lets them be used as either combat-type or develop-type.
 > Tier lists ranking special ants by strength are common on Chinese community sites, but they change frequently with balance updates, so I don't publish a fixed ranking here — check current guide sites for the latest.
 
 ### Skill damage follows "base% (+special ant Lv × coefficient%)"
@@ -129,7 +131,7 @@ How ATK and DEF actually translate into damage is not officially documented. I'm
 
 External sources used for this page. Figures measured on my own account are noted inline where they appear.
 
-- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Special_Ants">Fandom: The Ants Underground Kingdom Wiki, "Special Ants"</a> — total count, per-colour skill counts and hatching odds, the combat/develop attribute system, Star-Up conditions, spore costs, and the 25 non-hatchable ants. Community wiki (CC BY-SA)
+- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Special_Ants">Fandom: The Ants Underground Kingdom Wiki, "Special Ants"</a> — total count, per-colour skill counts and hatching odds, the combat type and attribute system, Star-Up conditions and spore costs. Community wiki (CC BY-SA)
 
 - Sources: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>, <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a> (community wiki)
 - Source: <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>

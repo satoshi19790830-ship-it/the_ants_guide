@@ -102,22 +102,31 @@ Lv25まではダメージ増幅・軽減幅は常に0%で、**昇格1段階ご�
 - **戦闘型** — 部隊に編成して戦わせる。必要な進化を進めた状態で、**1部隊あたり最大3体**まで入れられる
 - **開発型** — 戦闘には出ず、特定の建物に配置して産出を上げる
 
-さらに各アリは2つ（まれに3つ）の属性の組み合わせで役割が決まります。日本語版のゲーム内では「メレー」「レンジ」「支援」と表示されます（[アリ・中立生物図鑑](ant-compendium.html) の各項目はゲーム内表記のまま載せています）。
+各アリには2つ（まれに3つ）のタグが付きます。**1つ目が戦闘型、2つ目が属性**です。[アリ・中立生物図鑑](ant-compendium.html) で「メレー・ガーディアン」と書いているのは、戦闘型がメレー、属性がガーディアンという意味です。
 
-**戦闘型の属性**
+**戦闘型 — メレー・レンジ・支援**
 
-| 属性 | 意味 | 向いている配置 |
+どこから攻撃するかで、隊列のどこに置くかが決まります。
+
+| 戦闘型 | 意味 | 向いている配置 |
 |---|---|---|
 | メレー（近接／Melee） | 射程1〜3の短射程で攻撃する | 前列・中列 |
 | レンジ（遠隔／Ranged） | 射程4〜5の長射程で攻撃する | 中列・後列 |
 | 支援（Support） | 敵にデバフをかける攻撃が主体 | 中列 |
-| ガーディアン／シューター／キャリヤー | その兵種だけで小隊を組んだときにスキルが機能する | 対応する兵種と一緒に |
-| ユニバーサル（Universal） | 小隊の構成に関係なくスキルが機能する | どこでも |
-| ハント（Hunt） | 野生生物の狩りのときだけスキルが機能する | どこでも |
 
-**開発型の属性**
+**属性 — ガーディアン・シューター・キャリヤー**
 
-1つ目の属性が「採集（Gather）／軍事（Military）／開発（Develop）」のどれかで、2つ目の属性で対象が決まります。採集系は肉・湿土・砂・植物・甘露のいずれか、軍事系はガーディアン／シューター／キャリヤーの巣、開発系は交易（テントウムシ）・治療（治療池）・昆虫・建築（建設センター）が対象です。
+属性は、そのアリのスキルがどんな小隊で機能するかを決めます。編成を組むときはこちらを見ます。
+
+| 属性 | スキルが機能する条件 |
+|---|---|
+| ガーディアン／シューター／キャリヤー | その兵種だけで小隊を組んだとき |
+| ユニバーサル（Universal） | 小隊の構成に関係なく機能する |
+| ハント（Hunt） | 野生生物の狩りのときだけ機能する |
+
+**開発型のタグ**
+
+開発型のアリは、1つ目のタグが「採集（Gather）／軍事（Military）／開発（Develop）」のどれかで、2つ目のタグで対象が決まります。採集系は肉・湿土・砂・植物・甘露のいずれか、軍事系はガーディアン／シューター／キャリヤーの巣、開発系は交易（テントウムシ）・治療（治療池）・昆虫・建築（建設センター）が対象です。
 
 ### スターアップとスキル強化のコスト
 
@@ -130,16 +139,6 @@ Lv25まではダメージ増幅・軽減幅は常に0%で、**昇格1段階ご�
 | 必要な胞子 | 20 | 30 | 45 | 60 | 90 | 130 | 200 | 270 | 400 |
 
 Lv1からLv10まで上げると合計1,245個。後半が急に重くなるので、複数体を中途半端に上げるより1体に集中したほうが早く戦力になります。
-
-### 孵化では入手できない特化アリ（25体）
-
-次の25体は「特化アリ孵化」からは出ず、かけら合成などの別ルートでのみ入手できます。
-
-Myrmarachne Formicaria／Myrmecotypus Rettenmeyeri／Pheidole Neitneri／Lathy Sniffer／Ghost Ant／Proatta／White Velvet／Brown Rogue／Dark Hercules／Golden Venom／Banshee Panda／Amber Glider／Giant Destructor／Flat Shield／Acid Ant／Urchin Ant／Crimson Healer／Red Foot／Green Head／Yellow Spider／Strober／Texas Turtle／Bright Blue Ant／Strobe Ant／Atta Leafcutter
-
-（英語版での名称です。日本語版での対応名が確認できていないため、そのまま載せています。）
-
-緑・青の一部には2つ目の属性を2つ持つアリがいます（Black Stripe＝キャリヤー／シューター、Northern Sugar＝ガーディアン／キャリヤー、Black Shield＝ガーディアン／シューター、Black Fire＝ガーディアン／キャリヤー）。また緑の Slender Ant と Brown Glider は属性がユニバーサル1つだけで、戦闘型としても開発型としても使えます。
 
 > 特化アリの強さランキング（Tier表）は中国コミュニティサイトなどで頻繁に更新されており、アップデートのたびに変動するため、このサイトでは固定のランキングとしては掲載しません。最新のTier表は各攻略サイトを都度確認することをおすすめします。
 
@@ -164,7 +163,7 @@ Myrmarachne Formicaria／Myrmecotypus Rettenmeyeri／Pheidole Neitneri／Lathy S
 このページを書くのに使った外部の情報源です。自分のアカウントで実測した分は、本文中のその場所に書いています。
 
 - <a href="https://faq-help-center.center-public-production.allstarunion.com/SmtQMzNiSFphYToxNjc4NTIzMjQ3Om1hc3Rlcg==">The Ants 公式ヘルプセンター（日本語）</a> — 蟻塚行軍編隊のアンロック条件、特化アリ覚醒の仕様
-- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Special_Ants">Fandom: The Ants Underground Kingdom Wiki「Special Ants」</a> — 総数73体、色別のスキル数と孵化排出率、戦闘型／開発型の属性体系、スターアップの条件、胞子の必要量、孵化で入手できない25体。コミュニティWiki（CC BY-SA）
+- <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Special_Ants">Fandom: The Ants Underground Kingdom Wiki「Special Ants」</a> — 総数73体、色別のスキル数と孵化排出率、戦闘型と属性の体系、スターアップの条件、胞子の必要量。コミュニティWiki（CC BY-SA）
 
 - <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Shooter_Ant">Fandom Wiki: Shooter Ant</a>／<a href="https://the-ants-underground-kingdom.fandom.com/wiki/Guardian_Ant">Guardian Ant</a>（コミュニティWiki）
 - <a href="https://the-ants-underground-kingdom.fandom.com/wiki/Awakening">Fandom Wiki: Awakening</a>

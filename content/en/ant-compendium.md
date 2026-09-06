@@ -25,7 +25,7 @@ The bigger picture — skill counts by rarity, hatching odds, the attribute syst
 
 **S6**
 
-| Name | Attributes |
+| Name | Combat type / Attribute |
 |---|---|
 | [Brute Ant](#brute-ant-s6-melee-guardian) | Melee / Guardian |
 | [Spotted Velvet](#spotted-velvet-s6-support-carrier) | Support / Carrier |
@@ -38,7 +38,7 @@ The bigger picture — skill counts by rarity, hatching odds, the attribute syst
 
 **S5**
 
-| Name | Attributes |
+| Name | Combat type / Attribute |
 |---|---|
 | [Giant Jaw](#giant-jaw-s5-ranged-guardian) | Ranged / Guardian |
 | [Blue Velvet](#blue-velvet-s5-support-guardian) | Support / Guardian |
@@ -50,7 +50,7 @@ The bigger picture — skill counts by rarity, hatching odds, the attribute syst
 
 **S4**
 
-| Name | Attributes |
+| Name | Combat type / Attribute |
 |---|---|
 | [Spelchirio Ant](#spelchirio-ant-s4-ranged-guardian) | Ranged / Guardian |
 | [Wingless Tiger Beetle](#wingless-tiger-beetle-s4-melee-carrier) | Melee / Carrier |
@@ -61,20 +61,20 @@ The bigger picture — skill counts by rarity, hatching odds, the attribute syst
 
 **S3**
 
-| Name | Attributes |
+| Name | Combat type / Attribute |
 |---|---|
 | [Crematogaster Inflata](#crematogaster-inflata-s3-support-shooter) | Support / Shooter |
 | [Saharan Silver Ant](#saharan-silver-ant-s3-ranged-shooter) | Ranged / Shooter |
 
 **S1**
 
-| Name | Attributes |
+| Name | Combat type / Attribute |
 |---|---|
 | [Golden Crystal](#golden-crystal-s1-ranged-carrier) | Ranged / Carrier |
 
 **?**
 
-| Name | Attributes |
+| Name | Combat type / Attribute |
 |---|---|
 | [(unnamed — Anselephila pedestris, S4 Support / Carrier)](#unnamed-anselephila-pedestris-s4-support-carrier) |  |
 | [Golden Chaser (Kinbane Ant, S5 Melee / Carrier)](#golden-chaser-kinbane-ant-s5-melee-carrier) |  |
