@@ -1,7 +1,17 @@
 {
   "source": "https://theantsforum.allstarunion.com",
-  "fetched_at": "2026-09-05T23:36:56+00:00",
+  "fetched_at": "2026-09-12T09:54:08+00:00",
   "items": [
+    {
+      "id": "56407",
+      "date": "2026-09-09",
+      "title_en": "[Important Notice\\] The Ants Limited-Time Top-Up Benefits Event End Date Announced",
+      "url": "https://theantsforum.allstarunion.com/t/important-notice-the-ants-limited-time-top-up-benefits-event-end-date-announced/56407",
+      "category": "Game Updates",
+      "title_ja": "チャージ限定特典イベント、終了日を10月31日に確定",
+      "summary_ja": "5月25日開始の期間限定チャージ特典イベントについて、終了日時が2026年10月31日23:59:59（UTC）に正式決定したとの告知。まだ希望の報酬ティアに届いていないプレイヤーに向けて、残り期間内でのチャージ達成を呼びかける内容で、新しい情報を追加するものではなく既存イベントの終了日確定のみを知らせるもの。",
+      "summary_en": "Official notice confirming the end date for the limited-time top-up benefits event that began on May 25, 2026: it will close at 23:59:59 UTC on October 31, 2026. The post encourages players who have not yet reached their target reward tier to complete their top-up goals before the event ends; no new rewards or content are introduced."
+    },
     {
       "id": "56398",
       "date": "2026-09-05",

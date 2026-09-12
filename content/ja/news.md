@@ -3,7 +3,7 @@ title: 最新情報
 description: The Ants の公式アップデート・シーズン調整・コラボイベントの最新情報を、日付順にまとめています。
 category: 最新情報
 order: 5
-updated: 2026-09-05
+updated: 2026-09-09
 ---
 
 公式フォーラムで発表された内容を、日付の新しい順にまとめています。各項目の見出しから公式の原文（英語）に飛べます。
@@ -11,6 +11,12 @@ updated: 2026-09-05
 アップデート告知は公式サイトの日本語版（theants.allstarunion.com/ja/news）の表記に合わせています。フォーラムでしか発表されていない項目は、英語からの訳が混ざります。
 
 ## 2026年9月
+
+### [チャージ限定特典イベント、終了日を10月31日に確定](https://theantsforum.allstarunion.com/t/important-notice-the-ants-limited-time-top-up-benefits-event-end-date-announced/56407)
+
+2026-09-09
+
+5月25日開始の期間限定チャージ特典イベントについて、終了日時が2026年10月31日23:59:59（UTC）に正式決定したとの告知。まだ希望の報酬ティアに届いていないプレイヤーに向けて、残り期間内でのチャージ達成を呼びかける内容で、新しい情報を追加するものではなく既存イベントの終了日確定のみを知らせるもの。
 
 ### [S6「異変荒野」シーズンの大型調整](https://theantsforum.allstarunion.com/t/s6-mutated-barren-season-major-adjustment-announcement/56398)
 
