@@ -2,7 +2,7 @@
 import re
 from pathlib import Path
 
-DOCS = Path(r"C:\Users\user\Desktop\個人用\自動化試作\the_ants_project\docs")
+DOCS = Path(__file__).resolve().parent.parent / "docs"
 
 bad = set()
 checked = 0
